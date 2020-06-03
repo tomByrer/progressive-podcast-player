@@ -1,0 +1,857 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<title>Progressive Podcast Player</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<h1>Progressive Podcast Player</h1>
+<p>Enter some text in the input below and press return  or the "play" button to hear it. change voices using the dropdown menu.</p>
+
+
+<div class="controls">
+	<button id="startDemo" onclick="playSpeachDemo()">Play Demo</button>
+	<button id="randomStart" onclick="playSpeachDemo('random')">Play Random</button>
+	<br>
+	<button id="pauseAll" class="hide" onclick="pauseAll()">Pause</button>
+	<br>
+	<span id="toggleMode" class="toggle toggle-off ">
+		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbMode" class="toggle" onclick="toggleTag(this.parentNode)" role="switch"><label for="cbMode" class="toggle">Toggle</label>
+		<span class="band band-on" onclick="clickBandTag(this.parentNode,true)">MP3</span>
+	</span>
+	<br>
+
+</div>
+
+<div id=mediaWrapper class="cover">
+	<audio
+		id="mediaPlayer"
+		class="hide"
+		controls
+		src="http 203~cross-origin fetches.192.mp3">
+			Sorry, your browser does not support the <code>audio</code> slement.
+	</audio>
+</div>
+<article id="transcript"><ol id="timedtext"><li class="v1" id=32509 onclick="j(32509)">I want to talk about
+cross-origin fetches.</li><li class="v1" id=42099 onclick="j(42099)">these are things
+we're going to look at.</li><li class="v2" id=43920 onclick="j(43920)">Cookies, CERF,
+CORS, CORB, CORP, COEP.</li><li class="v1" id=46210 onclick="j(46210)">Yep,
+well done, actually.</li><li class="v1" id=49327 onclick="j(49327)">If you're playing
+this in fast motion,</li><li class="v1" id=50910 onclick="j(50910)">you'll miss that all right, so.</li><li class="v2" id=52590 onclick="j(52590)">Do they do
+this on purpose?</li><li class="v1" id=54490 onclick="j(54490)">What, how
+they like used four-letter C</li><li class="v1" id=57110 onclick="j(57110)">words for the worst things?</li><li class="v1" id=58710 onclick="j(58710)">Yes.</li><li class="v1" id=59210 onclick="j(59210)">I think that probably
+is intentional.</li><li class="v2" id=60752 onclick="j(60752)">So CORS is
+a four-letter word.</li><li class="v1" id=63050 onclick="j(63050)">Yes, it is.</li><li class="v1" id=64400 onclick="j(64400)">These are all C bombs.</li><li class="v1" id=65420 onclick="j(65420)">Cookies isn't.</li><li class="v2" id=67100 onclick="j(67100)">But why is this not--</li><li class="v2" id=68630 onclick="j(68630)">why is this one--</li><li class="v2" id=69860 onclick="j(69860)">never mind.</li><li class="v1" id=70505 onclick="j(70505)">Never mind.</li><li class="v1" id=71630 onclick="j(71630)">That's what I say.</li><li class="v1" id=73700 onclick="j(73700)">We're going to go back in time.</li><li class="v1" id=75450 onclick="j(75450)">This is 1993.</li><li class="v1" id=78920 onclick="j(78920)">This happened.</li><li class="v2" id=80180 onclick="j(80180)">Oh, this was a new thing.</li><li class="v1" id=81560 onclick="j(81560)">This
+was a new thing.</li><li class="v2" id=82070 onclick="j(82070)">This wasn't on the
+blog at that point in time.</li><li class="v1" id=82970 onclick="j(82970)">Yes.</li><li class="v1" id=83300 onclick="j(83300)">This is in Mosaic.</li><li class="v1" id=84260 onclick="j(84260)">The image tag arrives.</li><li class="v1" id=85790 onclick="j(85790)">And I think--</li><li class="v2" id=87128 onclick="j(87128)">I hadn't touched
+a computer at this point.</li><li class="v1" id=89170 onclick="j(89170)">Well, I was nine,</li><li class="v1" id=91160 onclick="j(91160)">so I had, but not
+on the internet.</li><li class="v1" id=93342 onclick="j(93342)">I wasn't allowed on the
+internet at that point.</li><li class="v1" id=95300 onclick="j(95300)">Also, no one in
+Carlo where I grew up</li><li class="v1" id=97370 onclick="j(97370)">knew what the internet was.</li><li class="v1" id=98660 onclick="j(98660)">This was a community
+that found tin foil to be</li><li class="v1" id=100880 onclick="j(100880)">too technologically advanced.</li><li class="v0" id=102770 onclick="j(102770)">[LAUGHTER]</li><li class="v1" id=103270 onclick="j(103270)">Anyway image tag
+arrives in Mosaic,</li><li class="v1" id=105870 onclick="j(105870)">and I think I've done so
+much research into this,</li><li class="v1" id=109333 onclick="j(109333)">and I'm still not confident.</li><li class="v1" id=110500 onclick="j(110500)">But I'm going to say anyway.</li><li class="v1" id=111040 onclick="j(111040)">I'm just going to
+go full confidence.</li><li class="v1" id=112330 onclick="j(112330)">This was the first
+sub-resource the web ever had.</li><li class="v2" id=116920 onclick="j(116920)">Like if the
+camera would correct it.</li><li class="v2" id=119247 onclick="j(119247)">Like, Jake.</li><li class="v1" id=119750 onclick="j(119750)">I was waiting
+for someone to crawl out</li><li class="v1" id=120830 onclick="j(120830)">of the camera and go--</li><li class="v2" id=122033 onclick="j(122033)">Well, actually.</li><li class="v1" id=122950 onclick="j(122950)">Actually,
+that was just weird SGML.</li><li class="v2" id=124500 onclick="j(124500)">OK.</li><li class="v2" id=125000 onclick="j(125000)">That probably was.</li><li class="v1" id=125793 onclick="j(125793)">Yes,
+first sub-resource.</li><li class="v1" id=127460 onclick="j(127460)">That landed, and also
+interestingly, oh,</li><li class="v1" id=130100 onclick="j(130100)">look at that.</li><li class="v1" id=131670 onclick="j(131670)">It can be cross origin.</li><li class="v2" id=133880 onclick="j(133880)">Was the concept of
+an origin even established?</li><li class="v1" id=137030 onclick="j(137030)">Nope.</li><li class="v1" id=139550 onclick="j(139550)">But at the time, they would
+have said, different domain,</li><li class="v1" id=142020 onclick="j(142020)">I guess.</li><li class="v2" id=142520 onclick="j(142520)">So if Facebook existed,
+that would be leaking.</li><li class="v1" id=144795 onclick="j(144795)">Yeah.</li><li class="v1" id=145670 onclick="j(145670)">Well, we'll get onto that.</li><li class="v1" id=147127 onclick="j(147127)">We will get onto that
+because they weren't leaking</li><li class="v1" id=149210 onclick="j(149210)">a lot of the time because
+cookies hadn't been invented</li><li class="v1" id=151460 onclick="j(151460)">yet because they came along
+in 1994 as Netscape 0.9 beta.</li><li class="v1" id=155538 onclick="j(155538)">That arrived.</li><li class="v2" id=156080 onclick="j(156080)">Look at that
+research number.</li><li class="v1" id=157130 onclick="j(157130)">I know.</li><li class="v1" id=157700 onclick="j(157700)">I didn't even look at
+the notes for that.</li><li class="v2" id=159408 onclick="j(159408)">What?</li><li class="v2" id=160060 onclick="j(160060)">Do you know what
+motivated cookies?</li><li class="v1" id=161808 onclick="j(161808)">State.</li><li class="v1" id=162725 onclick="j(162725)">State and HTTP.</li><li class="v1" id=164180 onclick="j(164180)">So things like login because
+it was entirely stateless</li><li class="v1" id=167400 onclick="j(167400)">before that, but they
+wanted some way--</li><li class="v2" id=169040 onclick="j(169040)">But it's still stateless.</li><li class="v1" id=169840 onclick="j(169840)">--to
+know [INAUDIBLE] user.</li><li class="v1" id=170990 onclick="j(170990)">Except cookies are
+sent every time.</li><li class="v1" id=172730 onclick="j(172730)">That's stateless.</li><li class="v2" id=173100 onclick="j(173100)">Still stateless.</li><li class="v1" id=173710 onclick="j(173710)">Is that not state?</li><li class="v2" id=175010 onclick="j(175010)">The protocol
+is stateless.</li><li class="v2" id=176385 onclick="j(176385)">You send state with
+the stateless protocol</li><li class="v2" id=178205 onclick="j(178205)">so that the protocol
+doesn't have to hold it.</li><li class="v1" id=180080 onclick="j(180080)">Fine.</li><li class="v1" id=180650 onclick="j(180650)">Fine.</li><li class="v1" id=181190 onclick="j(181190)">OK.</li><li class="v1" id=181853 onclick="j(181853)">I would count that as state.</li><li class="v1" id=183020 onclick="j(183020)">Shut up.</li><li class="v1" id=183660 onclick="j(183660)">Right, next year, 1995.</li><li class="v1" id=185530 onclick="j(185530)">Look what lands.</li><li class="v2" id=186910 onclick="j(186910)">Look at all
+these sub-resources.</li><li class="v1" id=188750 onclick="j(188750)">All these
+sub-resources, but importantly,</li><li class="v1" id=190550 onclick="j(190550)">script.</li><li class="v1" id=191060 onclick="j(191060)">So this is Netscape Navigator 2.</li><li class="v2" id=192472 onclick="j(192472)">How many people know
+that this frame and not iframe?</li><li class="v1" id=194930 onclick="j(194930)">Yeah,
+that's a frame, not iframe.</li><li class="v1" id=196460 onclick="j(196460)">I've not used a
+frame for so long.</li><li class="v2" id=197877 onclick="j(197877)">That was the only
+thing I ever used when</li><li class="v2" id=200690 onclick="j(200690)">I was a kid playing with HTML.</li><li class="v2" id=203310 onclick="j(203310)">Love it.</li><li class="v2" id=203810 onclick="j(203810)">Always had the sidebar,
+the site nav in a frame</li><li class="v2" id=206297 onclick="j(206297)">because you could drag it.</li><li class="v2" id=207380 onclick="j(207380)">Great.</li><li class="v1" id=207680 onclick="j(207680)">And
+would stay there.</li><li class="v2" id=209222 onclick="j(209222)">Yeah.</li><li class="v1" id=210140 onclick="j(210140)">It was perfect.</li><li class="v1" id=210590 onclick="j(210590)">And then your URL at
+the top never changed,</li><li class="v1" id=212390 onclick="j(212390)">which was useless.</li><li class="v1" id=213140 onclick="j(213140)">But never mind.</li><li class="v1" id=217250 onclick="j(217250)">Something bad had
+happened at this point.</li><li class="v1" id=220292 onclick="j(220292)">One of probably--</li><li class="v2" id=221000 onclick="j(221000)">You started saying, "Yo"?</li><li class="v1" id=222387 onclick="j(222387)">[LAUGHS] It
+was actually because if I had--</li><li class="v1" id=224845 onclick="j(224845)">so you're going to see some
+more code coming down here,</li><li class="v1" id=227190 onclick="j(227190)">and so I needed something
+short to put in there.</li><li class="v1" id=229190 onclick="j(229190)">And that's why that is.</li><li class="v1" id=230480 onclick="j(230480)">But the web made a
+huge mistake here,</li><li class="v1" id=233400 onclick="j(233400)">probably one of the
+biggest mistakes</li><li class="v1" id=235190 onclick="j(235190)">in the design of the web we
+ever made, and it's right here.</li><li class="v1" id=237890 onclick="j(237890)">And it's that-- no matter
+what site is containing these,</li><li class="v1" id=241010 onclick="j(241010)">the cookies for example.com will
+be sent with these requests.</li><li class="v2" id=245480 onclick="j(245480)">Right.</li><li class="v1" id=246528 onclick="j(246528)">And
+that was a big problem.</li><li class="v1" id=248320 onclick="j(248320)">And it was a problem
+that we continue</li><li class="v1" id=249862 onclick="j(249862)">to make [INAUDIBLE]
+of elements as well.</li><li class="v2" id=252490 onclick="j(252490)">I see here.</li><li class="v0" id=253240 onclick="j(253240)">[INAUDIBLE]</li><li class="v1" id=253740 onclick="j(253740)">Yeah, there you go.</li><li class="v1" id=255522 onclick="j(255522)">One more letter
+and that overflows.</li><li class="v2" id=256980 onclick="j(256980)">Why was it
+a mistake, Jake?</li><li class="v1" id=259070 onclick="j(259070)">We'll get onto that.</li><li class="v2" id=260570 onclick="j(260570)">Oh, OK.</li><li class="v1" id=261269 onclick="j(261269)">But it wasn't just</li><li class="v1" id=262686 onclick="j(262686)">a mistake for
+sub-resources, it was also</li><li class="v1" id=264570 onclick="j(264570)">for some kinds of
+navigation as well.</li><li class="v1" id=266130 onclick="j(266130)">Because this would be sent
+with the cookies as well.</li><li class="v2" id=268297 onclick="j(268297)">Now that I
+can see as a mistake</li><li class="v2" id=269880 onclick="j(269880)">because I can send
+someone to a random form</li><li class="v2" id=271980 onclick="j(271980)">and suddenly delete their
+bank account or some crap.</li><li class="v2" id=275582 onclick="j(275582)">That doesn't seem good.</li><li class="v1" id=276540 onclick="j(276540)">That
+seems bad, doesn't it?</li><li class="v2" id=277670 onclick="j(277670)">It does seem bad.</li><li class="v1" id=278670 onclick="j(278670)">But this is how
+all of this stuff was built.</li><li class="v2" id=281428 onclick="j(281428)">Right.</li><li class="v1" id=281970 onclick="j(281970)">Big mistake.</li><li class="v1" id=283137 onclick="j(283137)">And I'll go through some
+examples of the horrible things</li><li class="v1" id=286043 onclick="j(286043)">that can happen.</li><li class="v2" id=286710 onclick="j(286710)">Great.</li><li class="v1" id=288087 onclick="j(288087)">But I
+do want to acknowledge</li><li class="v1" id=289920 onclick="j(289920)">that things were starting to
+go right at this point as well.</li><li class="v1" id=292420 onclick="j(292420)">So we had these frame
+objects, and these frames</li><li class="v1" id=294420 onclick="j(294420)">will tell you things
+about the images</li><li class="v1" id=296310 onclick="j(296310)">on the page, the forms on the
+page, the links on the page--</li><li class="v1" id=299320 onclick="j(299320)">so the basic JavaScript
+we had back in 1995.</li><li class="v1" id=302010 onclick="j(302010)">But they decided
+that you would only</li><li class="v1" id=304410 onclick="j(304410)">be able to access
+those properties if you</li><li class="v1" id=306150 onclick="j(306150)">were on the same--</li><li class="v2" id=307907 onclick="j(307907)">Origin.</li><li class="v1" id=308490 onclick="j(308490)">Origin!</li><li class="v2" id=309448 onclick="j(309448)">Bam!</li><li class="v1" id=310140 onclick="j(310140)">As the
+parent site or whatever.</li><li class="v1" id=312240 onclick="j(312240)">And the origin was decided to
+be scheme, host, port number.</li><li class="v1" id=317020 onclick="j(317020)">And there we go.</li><li class="v1" id=318870 onclick="j(318870)">So things were starting
+to become good.</li><li class="v1" id=320880 onclick="j(320880)">They were thinking
+of the objections</li><li class="v1" id=322380 onclick="j(322380)">that they should have
+thought of back at the start.</li><li class="v1" id=326110 onclick="j(326110)">Look at this!</li><li class="v2" id=326970 onclick="j(326970)">I have never written
+these lines, but I--</li><li class="v1" id=329130 onclick="j(329130)">I have!</li><li class="v2" id=330120 onclick="j(330120)">ActiveX, I remember as
+being the source of many evils.</li><li class="v1" id=334080 onclick="j(334080)">This
+is XMLHttp request.</li><li class="v1" id=336510 onclick="j(336510)">This is the first version of it.</li><li class="v1" id=338263 onclick="j(338263)">This is what it looked like.</li><li class="v2" id=339430 onclick="j(339430)">It started as
+an ActiveX object.</li><li class="v1" id=341020 onclick="j(341020)">Oh, yes!</li><li class="v1" id=342020 onclick="j(342020)">Yeah, it used to have this
+horrible tri-cache thing just</li><li class="v1" id=344400 onclick="j(344400)">to find the correct string
+of that that you needed.</li><li class="v1" id=346875 onclick="j(346875)">Because there were
+multiple versions of this.</li><li class="v1" id=348750 onclick="j(348750)">Anyway, whatever.</li><li class="v1" id=350153 onclick="j(350153)">It was horrible.</li><li class="v1" id=350820 onclick="j(350820)">But yeah, we did eventually
+get standardized.</li><li class="v1" id=353140 onclick="j(353140)">And it took a long time.</li><li class="v2" id=355320 onclick="j(355320)">Nine years!</li><li class="v1" id=356070 onclick="j(356070)">Another nine years</li><li class="v1" id=357487 onclick="j(357487)">before we started to get
+cross-origin of these.</li><li class="v1" id=363692 onclick="j(363692)">So this was the change.</li><li class="v1" id=364650 onclick="j(364650)">We had XHR in other
+browsers long before that,</li><li class="v1" id=366770 onclick="j(366770)">but this was the
+cross-origin one.</li><li class="v2" id=368947 onclick="j(368947)">With cookies?</li><li class="v2" id=369780 onclick="j(369780)">Without cookies?</li><li class="v1" id=370525 onclick="j(370525)">Well.</li><li class="v2" id=371400 onclick="j(371400)">Well.</li><li class="v1" id=373087 onclick="j(373087)">So I'm going
+fast-forward to modern code</li><li class="v1" id=375420 onclick="j(375420)">because it's all
+worked the same.</li><li class="v2" id=376353 onclick="j(376353)">Look at it.</li><li class="v2" id=376810 onclick="j(376810)">This nice.</li><li class="v2" id=377380 onclick="j(377380)">That's nice!</li><li class="v1" id=378030 onclick="j(378030)">And they
+decided that, for this to work,</li><li class="v1" id=380830 onclick="j(380830)">it would have to be
+an opt-in system.</li><li class="v1" id=384853 onclick="j(384853)">They don't want you
+to just be able to--</li><li class="v2" id=386520 onclick="j(386520)">Opt-in by the site
+providing the data, not me,</li><li class="v2" id=390240 onclick="j(390240)">the person who writes the code.</li><li class="v1" id=391590 onclick="j(391590)">Yes, because they</li><li class="v1" id=392340 onclick="j(392340)">didn't want you to just be able
+to go and grab someone's emails</li><li class="v1" id=394620 onclick="j(394620)">or whatever.</li><li class="v2" id=395130 onclick="j(395130)">Yeah.</li><li class="v1" id=395630 onclick="j(395630)">The same
+problem with the frame stuff,</li><li class="v1" id=398340 onclick="j(398340)">so you needed this to
+be an opt-in system,</li><li class="v1" id=400260 onclick="j(400260)">and that opt-in became CORS.</li><li class="v1" id=401947 onclick="j(401947)">And what it involved
+is the other side</li><li class="v1" id=403530 onclick="j(403530)">sending this back, that header.</li><li class="v1" id=406032 onclick="j(406032)">And there you go.</li><li class="v1" id=406740 onclick="j(406740)">You can now access the data.</li><li class="v2" id=408180 onclick="j(408180)">So basically, everyone is
+allowed to read this resource.</li><li class="v1" id=412200 onclick="j(412200)">Yes, exactly.</li><li class="v1" id=413830 onclick="j(413830)">But, like you
+picked up on before,</li><li class="v1" id=416310 onclick="j(416310)">the request would be
+sent without credentials.</li><li class="v1" id=418590 onclick="j(418590)">We call it-- which is cookies,
+cookies and some client cert.</li><li class="v2" id=421610 onclick="j(421610)">Can the site to opt-in
+to allow with credentials?</li><li class="v1" id=425250 onclick="j(425250)">Yes, it can.</li><li class="v1" id=426570 onclick="j(426570)">So you would do
+something like this.</li><li class="v1" id=428070 onclick="j(428070)">The same existed on XHR.</li><li class="v1" id=430950 onclick="j(430950)">But you would need this access
+control credentials true</li><li class="v1" id=434490 onclick="j(434490)">and your access
+control allow origin.</li><li class="v1" id=436273 onclick="j(436273)">You couldn't use star.</li><li class="v1" id=437190 onclick="j(437190)">Can't use star for this.</li><li class="v1" id=438650 onclick="j(438650)">It has to be the origin.</li><li class="v2" id=440040 onclick="j(440040)">But sometimes--
+so this is obviously</li><li class="v2" id=442080 onclick="j(442080)">headers in the response.</li><li class="v1" id=443550 onclick="j(443550)">Yes.</li><li class="v2" id=443910 onclick="j(443910)">Which means the
+request has already been sent,</li><li class="v2" id=446118 onclick="j(446118)">processed, and a response has
+been sent, which could already</li><li class="v2" id=448620 onclick="j(448620)">have done damage.</li><li class="v1" id=450520 onclick="j(450520)">So
+these are the slides--</li><li class="v1" id=452560 onclick="j(452560)">you're now talking about the
+slides I deleted from this</li><li class="v1" id=454852 onclick="j(454852)">because I thought
+they were boring.</li><li class="v1" id=456460 onclick="j(456460)">No, but you're right.</li><li class="v1" id=457150 onclick="j(457150)">So the way it was decided
+when this was an invented,</li><li class="v1" id=459317 onclick="j(459317)">it is like we don't need
+to worry about the request</li><li class="v1" id=462990 onclick="j(462990)">if it's already
+a kind of request</li><li class="v1" id=464700 onclick="j(464700)">that the browser
+can already send.</li><li class="v2" id=466450 onclick="j(466450)">Right</li><li class="v1" id=466950 onclick="j(466950)">So
+this, a request to there</li><li class="v1" id=469770 onclick="j(469770)">with credentials,
+it's an image tag.</li><li class="v1" id=471673 onclick="j(471673)">You can already do it.</li><li class="v2" id=472590 onclick="j(472590)">That's true.</li><li class="v1" id=473070 onclick="j(473070)">A post request,
+you can do that with a form.</li><li class="v1" id=475710 onclick="j(475710)">And there's also
+rules around the kinds</li><li class="v1" id=477450 onclick="j(477450)">of headers you can use.</li><li class="v1" id=478920 onclick="j(478920)">Like for a content type,
+the content type can be--</li><li class="v1" id=481710 onclick="j(481710)">for the body of the post, it
+can be URL-encoded, the x URL--</li><li class="v1" id=486778 onclick="j(486778)">I can't remember it
+off the top of my head.</li><li class="v2" id=488570 onclick="j(488570)">Yeah, thing--
+the long thing.</li><li class="v1" id=489570 onclick="j(489570)">Because
+you can do that with forms.</li><li class="v1" id=491250 onclick="j(491250)">Form multipart.</li><li class="v2" id=491615 onclick="j(491615)">Oh, I just remembered.</li><li class="v1" id=492490 onclick="j(492490)">Because
+you can do that with forms.</li><li class="v2" id=493237 onclick="j(493237)">If you want
+to deviate, you</li><li class="v2" id=494180 onclick="j(494180)">go into the whole
+preflight request thing.</li><li class="v2" id=495930 onclick="j(495930)">We're not going to talk
+about, I'm guessing.</li><li class="v1" id=497763 onclick="j(497763)">Content-- no.</li><li class="v1" id=499010 onclick="j(499010)">So if you deviate,
+it does a preflight</li><li class="v1" id=500825 onclick="j(500825)">where it has to
+go and ask first,</li><li class="v1" id=502200 onclick="j(502200)">"Can I make this request?"</li><li class="v1" id=503760 onclick="j(503760)">Absolutely.</li><li class="v1" id=504660 onclick="j(504660)">Interestingly, you
+can do a POST request</li><li class="v1" id=506340 onclick="j(506340)">with the content
+type text plain.</li><li class="v1" id=509280 onclick="j(509280)">And that's fine
+because you can already</li><li class="v1" id=511800 onclick="j(511800)">do that with the form element.</li><li class="v2" id=513390 onclick="j(513390)">Oh, they can?</li><li class="v1" id=514450 onclick="j(514450)">Yes.</li><li class="v2" id=514516 onclick="j(514516)">I did not know.</li><li class="v1" id=515433 onclick="j(515433)">Yes, this is like--</li><li class="v1" id=516891 onclick="j(516891)">I always forget about this.</li><li class="v1" id=518039 onclick="j(518039)">The encoding for form
+data text plain is--</li><li class="v2" id=523890 onclick="j(523890)">That's how I used
+to send emails to myself!</li><li class="v2" id=525990 onclick="j(525990)">It's just like value equals--</li><li class="v2" id=527510 onclick="j(527510)">or key equals--</li><li class="v1" id=528460 onclick="j(528460)">Which is
+almost entirely useless</li><li class="v1" id=530460 onclick="j(530460)">because if you have--</li><li class="v1" id=531830 onclick="j(531830)">because the line break
+separated, but your form values</li><li class="v1" id=534080 onclick="j(534080)">can have line breaks.</li><li class="v1" id=535120 onclick="j(535120)">So it's impossible to parse.</li><li class="v2" id=536850 onclick="j(536850)">True.</li><li class="v1" id=537760 onclick="j(537760)">But it exists.</li><li class="v2" id=539010 onclick="j(539010)">I made pages
+back in the day,</li><li class="v2" id=540870 onclick="j(540870)">I would have a contact me form,
+where you send emails to me,</li><li class="v2" id=543685 onclick="j(543685)">and I would use that.</li><li class="v1" id=544560 onclick="j(544560)">Yeah,
+then CGI script to do it.</li><li class="v1" id=546518 onclick="j(546518)">Yes, absolutely.</li><li class="v1" id=547267 onclick="j(547267)">But the point I want
+to make about this is--</li><li class="v1" id=549100 onclick="j(549100)">yeah, you have to--</li><li class="v2" id=550000 onclick="j(550000)">CGI script mail, too.</li><li class="v1" id=552290 onclick="j(552290)">Oh, with the body.</li><li class="v1" id=553790 onclick="j(553790)">Yes, fine.</li><li class="v1" id=555170 onclick="j(555170)">You have to send
+the origin back.</li><li class="v2" id=557600 onclick="j(557600)">The exact
+origin, not star.</li><li class="v1" id=559017 onclick="j(559017)">You can't do star</li><li class="v1" id=560392 onclick="j(560392)">if you're doing credentials.</li><li class="v2" id=561878 onclick="j(561878)">Interesting.</li><li class="v1" id=562670 onclick="j(562670)">So how
+would you get this?</li><li class="v1" id=564700 onclick="j(564700)">Because how do you get--</li><li class="v2" id=565330 onclick="j(565330)">From the request, right?</li><li class="v1" id=566390 onclick="j(566390)">From the request.</li><li class="v1" id=567765 onclick="j(567765)">Now, at the time we had
+the referrer header.</li><li class="v2" id=569962 onclick="j(569962)">The infamously
+misspelled referrer header.</li><li class="v1" id=572130 onclick="j(572130)">The
+misspelled referrer header.</li><li class="v1" id=574088 onclick="j(574088)">But also, the often
+absent referrer header.</li><li class="v2" id=575880 onclick="j(575880)">True.</li><li class="v1" id=576380 onclick="j(576380)">Because
+internet safety software--</li><li class="v1" id=578480 onclick="j(578480)">actually, I'm not
+even going to do that,</li><li class="v1" id=579650 onclick="j(579650)">because this is actually
+a good piece of safety.</li><li class="v1" id=581650 onclick="j(581650)">Leaking the path of where
+you were on the previous site</li><li class="v1" id=584030 onclick="j(584030)">is actually quite
+privacy invasive.</li><li class="v2" id=586072 onclick="j(586072)">Or could-- yeah.</li><li class="v1" id=587030 onclick="j(587030)">Because it could
+have your user names, account,</li><li class="v1" id=589250 onclick="j(589250)">user numbers, all of
+that sort of stuff.</li><li class="v2" id=590780 onclick="j(590780)">True.</li><li class="v1" id=591260 onclick="j(591260)">So a
+lot of this software</li><li class="v1" id=592968 onclick="j(592968)">would just remove the referrer.</li><li class="v2" id=594290 onclick="j(594290)">Yeah.</li><li class="v1" id=595160 onclick="j(595160)">But then that
+means it's useless for this.</li><li class="v2" id=597080 onclick="j(597080)">True.</li><li class="v1" id=597580 onclick="j(597580)">So we invented
+a new header, origin, and that's</li><li class="v1" id=600620 onclick="j(600620)">sent with the request.</li><li class="v1" id=602910 onclick="j(602910)">So it doesn't have all of the
+path data that would be leaky,</li><li class="v1" id=605840 onclick="j(605840)">it just says the
+origin it came from.</li><li class="v2" id=606740 onclick="j(606740)">Was this header invented
+as a response to this problem?</li><li class="v1" id=609270 onclick="j(609270)">Yes.</li><li class="v2" id=609710 onclick="j(609710)">That's interesting.</li><li class="v1" id=610470 onclick="j(610470)">Yeah,
+it is exactly that.</li><li class="v1" id=612178 onclick="j(612178)">So that exists on CORS requests,
+and that's how that works.</li><li class="v2" id=615470 onclick="j(615470)">I think it comes
+pretty much any request now.</li><li class="v1" id=617670 onclick="j(617670)">We'll get on to that.</li><li class="v1" id=620610 onclick="j(620610)">So, the point I want
+to make about this,</li><li class="v1" id=623360 onclick="j(623360)">and I wanted to get here a
+lot quicker than we have,</li><li class="v1" id=626710 onclick="j(626710)">but here we are.</li><li class="v1" id=627950 onclick="j(627950)">Is that adding this is almost
+always safe, almost always.</li><li class="v2" id=632780 onclick="j(632780)">And yet,
+almost nobody does it.</li><li class="v1" id=635750 onclick="j(635750)">Yes, more the pity.</li><li class="v1" id=638420 onclick="j(638420)">So when these requests are
+sent without cookies and stuff,</li><li class="v1" id=641600 onclick="j(641600)">the question we
+get a lot is, why</li><li class="v1" id=644617 onclick="j(644617)">do we need an opt in if
+it's sent without cookies?</li><li class="v2" id=646700 onclick="j(646700)">Yeah.</li><li class="v1" id=647560 onclick="j(647560)">And the
+problem is intranets,</li><li class="v1" id=649638 onclick="j(649638)">because they're not
+protected with cookies.</li><li class="v2" id=651430 onclick="j(651430)">True.</li><li class="v1" id=652520 onclick="j(652520)">IoT devices
+all around your house.</li><li class="v1" id=656340 onclick="j(656340)">A lot people will run dev
+servers that have seat--</li><li class="v2" id=659330 onclick="j(659330)">Yeah.</li><li class="v1" id=659900 onclick="j(659900)">Right.</li><li class="v1" id=660200 onclick="j(660200)">And so, you don't want--
+if you're visiting a site,</li><li class="v1" id=662325 onclick="j(662325)">for me to just be able
+to go to 1270011--</li><li class="v2" id=664640 onclick="j(664640)">Yeah, go to my router
+web interface and do shenanigans</li><li class="v2" id=667680 onclick="j(667680)">with it.</li><li class="v1" id=668180 onclick="j(668180)">Exactly, yeah.</li><li class="v2" id=668990 onclick="j(668990)">Yeah.</li><li class="v1" id=669500 onclick="j(669500)">So this
+is almost always safe.</li><li class="v2" id=672290 onclick="j(672290)">Except when it isn't.</li><li class="v1" id=673507 onclick="j(673507)">So the rule is--</li><li class="v1" id=674840 onclick="j(674840)">I would say the rule is, go
+to the URL in a incognito tab</li><li class="v1" id=680580 onclick="j(680580)">so there's no cookies
+there and look at it.</li><li class="v1" id=682758 onclick="j(682758)">And if you are happy with
+the world seeing that--</li><li class="v2" id=684800 onclick="j(684800)">From your phone,
+on mobile internet.</li><li class="v1" id=687007 onclick="j(687007)">Well, no,
+from whatever connection</li><li class="v1" id=689090 onclick="j(689090)">that you can access it from.</li><li class="v1" id=691200 onclick="j(691200)">So if you access your
+router and it says your name</li><li class="v1" id=693890 onclick="j(693890)">on it in an incognito
+tab, then you're like,</li><li class="v1" id=696147 onclick="j(696147)">I'm unhappy with that, so it
+shouldn't have this header.</li><li class="v1" id=698480 onclick="j(698480)">But if you're happy with
+the content and the source,</li><li class="v1" id=700760 onclick="j(700760)">you can put that header on it.</li><li class="v1" id=702060 onclick="j(702060)">That is the vast majority
+of stuff on the web.</li><li class="v2" id=703750 onclick="j(703750)">But nobody's following
+that guidance, Jake.</li><li class="v2" id=705410 onclick="j(705410)">Because we've tried--</li><li class="v1" id=706000 onclick="j(706000)">That's why
+I'm saying it right now.</li><li class="v1" id=707630 onclick="j(707630)">I'm hoping that
+everyone's going to go,</li><li class="v1" id=708650 onclick="j(708650)">oh, I'll go and add
+it to all my stuff.</li><li class="v1" id=710250 onclick="j(710250)">You know?</li><li class="v2" id=710450 onclick="j(710450)">Nobody is, let's be real.</li><li class="v1" id=711650 onclick="j(711650)">Right.</li><li class="v1" id=712567 onclick="j(712567)">Let's get back to these.</li><li class="v1" id=714140 onclick="j(714140)">So I was saying that this is
+a huge mistake for the web.</li><li class="v2" id=716810 onclick="j(716810)">Yo.</li><li class="v1" id=717740 onclick="j(717740)">Yo.</li><li class="v1" id=718580 onclick="j(718580)">Yo, what up?</li><li class="v1" id=719690 onclick="j(719690)">This up.</li><li class="v0" id=720623 onclick="j(720623)">[LAUGHTER]</li><li class="v1" id=723800 onclick="j(723800)">Am I cool?</li><li class="v1" id=724580 onclick="j(724580)">Am I cool now?</li><li class="v2" id=726830 onclick="j(726830)">If you weren't
+already white,</li><li class="v2" id=729280 onclick="j(729280)">you would be so much
+whiter right now.</li><li class="v1" id=731285 onclick="j(731285)">Impossible.</li><li class="v1" id=732410 onclick="j(732410)">I feel like I'm going
+red, I'm embarrassed.</li><li class="v1" id=734202 onclick="j(734202)">Right.</li><li class="v1" id=735890 onclick="j(735890)">So we got this problem
+here that, you know,</li><li class="v1" id=737990 onclick="j(737990)">you've got a URL that gets
+the current user's avatar.</li><li class="v1" id=740970 onclick="j(740970)">Now, I can do a load event
+to tell if this loads.</li><li class="v1" id=744770 onclick="j(744770)">And by that, I can determine
+you are locked into example.com.</li><li class="v1" id=747804 onclick="j(747804)">Bad.</li><li class="v2" id=748803 onclick="j(748803)">Oh, yeah.</li><li class="v2" id=749470 onclick="j(749470)">OK.</li><li class="v1" id=749770 onclick="j(749770)">Right?</li><li class="v2" id=750140 onclick="j(750140)">I see where you're going.</li><li class="v1" id=750950 onclick="j(750950)">So this -0,
+this is a sort of convention.</li><li class="v1" id=753650 onclick="j(753650)">- SPEAKER 2: Dash-0.</li><li class="v1" id=754550 onclick="j(754550)">Dash-0, hello.</li><li class="v1" id=756590 onclick="j(756590)">Dash-0, that's my rap name.</li><li class="v2" id=758704 onclick="j(758704)">[LAUGHS]</li><li class="v1" id=761848 onclick="j(761848)">So, yeah.</li><li class="v1" id=762890 onclick="j(762890)">We've got that -0, it's
+the original avatar</li><li class="v1" id=765920 onclick="j(765920)">the user uploaded.</li><li class="v1" id=766855 onclick="j(766855)">But then from that, I can
+get the width and height,</li><li class="v1" id=768980 onclick="j(768980)">and now that's user
+identifiable data.</li><li class="v2" id=771218 onclick="j(771218)">Potentially.</li><li class="v1" id=772010 onclick="j(772010)">Because that's more</li><li class="v1" id=772820 onclick="j(772820)">likely to be unique
+than that other stuff</li><li class="v1" id=774600 onclick="j(774600)">if it's the original
+version they uploaded.</li><li class="v1" id=776695 onclick="j(776695)">This is all leaking of data
+that shouldn't really happen.</li><li class="v1" id=779070 onclick="j(779070)">It does, thanks to these
+bad mistakes that were made.</li><li class="v1" id=781820 onclick="j(781820)">And we're only recently
+started to fix some of these.</li><li class="v2" id=784163 onclick="j(784163)">I mean,
+it's a hard problem</li><li class="v2" id=785580 onclick="j(785580)">because backwards
+compatibility is</li><li class="v2" id=787220 onclick="j(787220)">one of the uppermost
+goals on the web.</li><li class="v1" id=789380 onclick="j(789380)">Absolutely.</li><li class="v2" id=790505 onclick="j(790505)">Just breaking that
+will probably break--</li><li class="v2" id=792690 onclick="j(792690)">or changing that will break a
+good amount of existing sites.</li><li class="v1" id=795495 onclick="j(795495)">Or will it?</li><li class="v1" id=796620 onclick="j(796620)">Or will it?</li><li class="v1" id=797610 onclick="j(797610)">So this is one of the fixes,
+you put in your cookie.</li><li class="v1" id=800270 onclick="j(800270)">So this is how the site would
+deal your log in cookies,</li><li class="v1" id=803215 onclick="j(803215)">you've got your
+session ID or whatever.</li><li class="v1" id=804840 onclick="j(804840)">But look at this.</li><li class="v2" id=806600 onclick="j(806600)">Lax.</li><li class="v1" id=807300 onclick="j(807300)">Same site lax.</li><li class="v1" id=808550 onclick="j(808550)">And what this means is,
+only send this cookie</li><li class="v1" id=811820 onclick="j(811820)">if the request
+came from my site.</li><li class="v2" id=814320 onclick="j(814320)">OK.</li><li class="v1" id=814820 onclick="j(814820)">So that means
+it would not be sent with this.</li><li class="v1" id=817362 onclick="j(817362)">If this is on
+evil.com, or whatever,</li><li class="v1" id=819080 onclick="j(819080)">the session cookie would
+not go along with this,</li><li class="v1" id=821250 onclick="j(821250)">so that this would
+always fail to load.</li><li class="v1" id=822530 onclick="j(822530)">Or then you would get--</li><li class="v2" id=822890 onclick="j(822890)">Right.</li><li class="v2" id=823150 onclick="j(823150)">But now that site has
+been broken, which--</li><li class="v1" id=825040 onclick="j(825040)">Well, not really.</li><li class="v1" id=825460 onclick="j(825460)">Well, only if it expected
+to be able to display</li><li class="v1" id=827600 onclick="j(827600)">avatars on oversight.</li><li class="v2" id=828590 onclick="j(828590)">Which was reasonable
+to expect, right?</li><li class="v1" id=830480 onclick="j(830480)">Some-- maybe.</li><li class="v1" id=832040 onclick="j(832040)">But then, well-- if you--</li><li class="v1" id=835340 onclick="j(835340)">I would say not, right?</li><li class="v1" id=836540 onclick="j(836540)">You don't want a single
+URL to deal out your avatar</li><li class="v1" id=839998 onclick="j(839998)">because you're logged in.</li><li class="v2" id=841040 onclick="j(841040)">Probably.</li><li class="v2" id=841100 onclick="j(841100)">I mean--</li><li class="v1" id=841220 onclick="j(841220)">Because
+it's an information leak.</li><li class="v1" id=842890 onclick="j(842890)">There are cases where you
+want that, in which case</li><li class="v1" id=844720 onclick="j(844720)">you need to do something else.</li><li class="v1" id=845970 onclick="j(845970)">And you probably need to
+change your code right now,</li><li class="v1" id=849920 onclick="j(849920)">because Chrome 80 made a change.</li><li class="v2" id=852880 onclick="j(852880)">Oh, yeah.</li><li class="v1" id=853978 onclick="j(853978)">We've decided
+that if this says nothing</li><li class="v1" id=856270 onclick="j(856270)">about same site cookies, we are
+going to assume same site lax.</li><li class="v2" id=860830 onclick="j(860830)">Yeah.</li><li class="v1" id=862860 onclick="j(862860)">Actually, no.</li><li class="v1" id=865120 onclick="j(865120)">We filmed this
+episode a month ago,</li><li class="v1" id=867370 onclick="j(867370)">and a lot has changed
+in the world since then.</li><li class="v1" id=869448 onclick="j(869448)">This cookie change that
+we're talking about</li><li class="v1" id=871240 onclick="j(871240)">actually broke a
+few important sites</li><li class="v1" id=873442 onclick="j(873442)">like government sites
+and shopping sites,</li><li class="v1" id=875150 onclick="j(875150)">and we felt like now especially
+is a bad time to be doing that.</li><li class="v1" id=878302 onclick="j(878302)">So we've actually
+rolled the change back.</li><li class="v1" id=880010 onclick="j(880010)">We're still going to
+be doing it eventually,</li><li class="v1" id=881843 onclick="j(881843)">but we've rolled
+it back for now.</li><li class="v1" id=883588 onclick="j(883588)">Check out the link
+in the description</li><li class="v1" id=885130 onclick="j(885130)">for more details on that.</li><li class="v1" id=886670 onclick="j(886670)">And in the meantime,
+back to the episode.</li><li class="v1" id=889890 onclick="j(889890)">So that means, yeah, if you
+have one of those services where</li><li class="v1" id=892390 onclick="j(892390)">you want people to
+be able to log--</li><li class="v1" id=893848 onclick="j(893848)">it's not going to work unless
+you go in and say, same site.</li><li class="v2" id=897208 onclick="j(897208)">Doesn't lax
+stand for relaxed?</li><li class="v2" id=898750 onclick="j(898750)">Like the--</li><li class="v1" id=899500 onclick="j(899500)">Yes, it does.</li><li class="v2" id=900280 onclick="j(900280)">So there is also
+an even stricter version.</li><li class="v1" id=902270 onclick="j(902270)">There
+is a stricter version.</li><li class="v2" id=903220 onclick="j(903220)">Oh, wow.</li><li class="v1" id=903845 onclick="j(903845)">The
+stricter version</li><li class="v1" id=905470 onclick="j(905470)">works for navigations as well.</li><li class="v1" id=909103 onclick="j(909103)">So even if you navigate
+from site A to site B,</li><li class="v1" id=911020 onclick="j(911020)">it will not send
+site these cookies.</li><li class="v2" id=912580 onclick="j(912580)">Interesting.</li><li class="v1" id=913240 onclick="j(913240)">That is strict.</li><li class="v1" id=914320 onclick="j(914320)">Which is really--</li><li class="v2" id=915028 onclick="j(915028)">So if have a
+link, here, go to GitHub</li><li class="v2" id=916870 onclick="j(916870)">and you press the link--</li><li class="v1" id=918180 onclick="j(918180)">You
+would be logged out</li><li class="v1" id=919805 onclick="j(919805)">if they used same site strict.</li><li class="v2" id=921370 onclick="j(921370)">Interesting.</li><li class="v1" id=923038 onclick="j(923038)">Which is why
+lax is really the simplest</li><li class="v1" id=925330 onclick="j(925330)">one to use, unless
+you want to go</li><li class="v1" id=926920 onclick="j(926920)">above and beyond for some
+certain bits and pieces.</li><li class="v1" id=930010 onclick="j(930010)">So yeah, Chrome 80
+made this change.</li><li class="v1" id=931510 onclick="j(931510)">Firefox is going to as well.</li><li class="v1" id=932560 onclick="j(932560)">But same site cookies
+in general, well</li><li class="v1" id=934170 onclick="j(934170)">supported across
+all of the browsers.</li><li class="v2" id=936000 onclick="j(936000)">Yup.</li><li class="v1" id=937823 onclick="j(937823)">And it also
+solves this problem, which you</li><li class="v1" id=940240 onclick="j(940240)">mentioned earlier on as well.</li><li class="v2" id=941410 onclick="j(941410)">Yeah.</li><li class="v1" id=941740 onclick="j(941740)">Where I can
+have a form and I can submit it,</li><li class="v1" id=943890 onclick="j(943890)">but even though this
+is a full navigation,</li><li class="v1" id=945730 onclick="j(945730)">it won't send those cookies
+even if there's lax.</li><li class="v1" id=948140 onclick="j(948140)">Right?</li><li class="v2" id=948640 onclick="j(948640)">Yeah.</li><li class="v1" id=948910 onclick="j(948910)">It's fine.</li><li class="v1" id=950120 onclick="j(950120)">But what if you can't
+do that for some reason?</li><li class="v1" id=952810 onclick="j(952810)">What if you can't change
+your cookies or whatever,</li><li class="v1" id=955090 onclick="j(955090)">how can you protect
+yourself from this?</li><li class="v1" id=956715 onclick="j(956715)">This is SRF, this is, yeah.</li><li class="v2" id=958360 onclick="j(958360)">Yes, with CSRF,
+tokens and stuff.</li><li class="v1" id=960325 onclick="j(960325)">You can use
+the tokens, they're a horror.</li><li class="v2" id=962700 onclick="j(962700)">It's hard.</li><li class="v2" id=963570 onclick="j(963570)">It's annoying.</li><li class="v1" id=964330 onclick="j(964330)">There is
+a way you can do it in--</li><li class="v1" id=965560 onclick="j(965560)">I wouldn't say modern browsers.</li><li class="v1" id=966880 onclick="j(966880)">I mean, for quite a while
+now, there's much easier ways.</li><li class="v1" id=969770 onclick="j(969770)">Another thing you sort of
+alluded to, this header.</li><li class="v1" id=973510 onclick="j(973510)">This header was originally
+designed for CORS</li><li class="v1" id=976480 onclick="j(976480)">but we've started
+adding it-- well,</li><li class="v1" id=978050 onclick="j(978050)">we've since added it to
+lots of other requests.</li><li class="v2" id=980170 onclick="j(980170)">Yeah.</li><li class="v2" id=980860 onclick="j(980860)">I don't think I've ever seen
+one without it, to be honest.</li><li class="v1" id=983320 onclick="j(983320)">A GET request.</li><li class="v2" id=984753 onclick="j(984753)">The first
+navigation, yeah.</li><li class="v2" id=986170 onclick="j(986170)">Because--</li><li class="v1" id=986670 onclick="j(986670)">And
+all GET requests.</li><li class="v1" id=989020 onclick="j(989020)">A CORS GET request will have it,
+all other GET requests won't.</li><li class="v2" id=991688 onclick="j(991688)">Interesting.</li><li class="v1" id=992480 onclick="j(992480)">The reason
+is backwards compatibility.</li><li class="v1" id=994960 onclick="j(994960)">There was enough
+servers out there</li><li class="v1" id=997360 onclick="j(997360)">that were using the
+presence of this</li><li class="v1" id=1000090 onclick="j(1000090)">to decide it was a CORS request.</li><li class="v2" id=1001767 onclick="j(1001767)">Of course they did.</li><li class="v2" id=1002850 onclick="j(1002850)">OK, sure.</li><li class="v1" id=1003350 onclick="j(1003350)">Yeah.</li><li class="v2" id=1004225 onclick="j(1004225)">Sure.</li><li class="v1" id=1004800 onclick="j(1004800)">Exactly.</li><li class="v1" id=1005800 onclick="j(1005800)">So it's added to post
+requests and all of that.</li><li class="v1" id=1008100 onclick="j(1008100)">It's just non CORS GET requests
+don't have this header.</li><li class="v2" id=1011738 onclick="j(1011738)">Right.</li><li class="v1" id=1012280 onclick="j(1012280)">But it doesn't
+matter, because it was a post,</li><li class="v1" id=1013040 onclick="j(1013040)">so you're fine.</li><li class="v1" id=1013680 onclick="j(1013680)">So you can just check
+to see that this</li><li class="v1" id=1015150 onclick="j(1015150)">is the origin you're expecting.</li><li class="v2" id=1015790 onclick="j(1015790)">On the code
+for your post handler,</li><li class="v2" id=1016930 onclick="j(1016930)">you say, must have the
+origin header, and if so,</li><li class="v2" id=1019440 onclick="j(1019440)">not doing it.</li><li class="v1" id=1020130 onclick="j(1020130)">Exactly.</li><li class="v2" id=1020750 onclick="j(1020750)">Yeah, makes sense.</li><li class="v1" id=1021750 onclick="j(1021750)">Yeah.</li><li class="v1" id=1021960 onclick="j(1021960)">And that's a nice
+easy way, you don't</li><li class="v1" id=1022890 onclick="j(1022890)">need all of the the SRF
+tokens and all that kind</li><li class="v1" id=1024890 onclick="j(1024890)">of stuff, nice easy way.</li><li class="v1" id=1027099 onclick="j(1027099)">Another example.</li><li class="v1" id=1029430 onclick="j(1029430)">So again, I can
+use the load event</li><li class="v1" id=1033420 onclick="j(1033420)">to know that you
+work at example.com.</li><li class="v1" id=1035994 onclick="j(1035994)">Or you are in a position
+where you have access</li><li class="v1" id=1038160 onclick="j(1038160)">to their intranet, because
+the logo loaded, didn't it?</li><li class="v2" id=1040907 onclick="j(1040907)">It did.</li><li class="v1" id=1041490 onclick="j(1041490)">And this is
+not something that is typically</li><li class="v1" id=1044040 onclick="j(1044040)">solved with cookies.</li><li class="v1" id=1046117 onclick="j(1046117)">A lot of intranets
+assume they're safe</li><li class="v1" id=1047700 onclick="j(1047700)">just because they're
+on an internal network.</li><li class="v1" id=1049080 onclick="j(1049080)">They're not, but they do.</li><li class="v1" id=1050320 onclick="j(1050320)">Right?</li><li class="v2" id=1050470 onclick="j(1050470)">Yeah.</li><li class="v1" id=1050970 onclick="j(1050970)">So here I'm
+detecting quite a lot about you</li><li class="v1" id=1053780 onclick="j(1053780)">as a user.</li><li class="v1" id=1055410 onclick="j(1055410)">How do we solve this?</li><li class="v1" id=1058470 onclick="j(1058470)">This is CORP. So this
+is a header that you</li><li class="v1" id=1062100 onclick="j(1062100)">add onto the image
+thing that says,</li><li class="v1" id=1065280 onclick="j(1065280)">this can only be
+embedded same-site.</li><li class="v2" id=1066858 onclick="j(1066858)">Ah.</li><li class="v2" id=1068490 onclick="j(1068490)">OK, so if you use this resource
+on anything but the same site,</li><li class="v2" id=1071880 onclick="j(1071880)">it will just--</li><li class="v1" id=1072600 onclick="j(1072600)">Fail to load.</li><li class="v2" id=1073910 onclick="j(1073910)">OK.</li><li class="v1" id=1074410 onclick="j(1074410)">Yeah.</li><li class="v1" id=1074550 onclick="j(1074550)">So you would look
+like you were not</li><li class="v1" id=1076350 onclick="j(1076350)">within the CORP,
+the example.com.</li><li class="v1" id=1078168 onclick="j(1078168)">It would just look like you
+didn't have access to that.</li><li class="v2" id=1080460 onclick="j(1080460)">That makes sense.</li><li class="v1" id=1081460 onclick="j(1081460)">So there you go.</li><li class="v1" id=1082920 onclick="j(1082920)">Next problem.</li><li class="v1" id=1085110 onclick="j(1085110)">Now, this is a case where--</li><li class="v1" id=1087440 onclick="j(1087440)">this wouldn't be solved
+by same-site cookies.</li><li class="v2" id=1089643 onclick="j(1089643)">Because you would
+never put a resource policy</li><li class="v2" id=1091810 onclick="j(1091810)">header on an HTML file?</li><li class="v1" id=1093030 onclick="j(1093030)">Well, so you
+could, but you might not,</li><li class="v1" id=1096450 onclick="j(1096450)">or you might have
+forgotten or something.</li><li class="v1" id=1098400 onclick="j(1098400)">A lot of servers--</li><li class="v1" id=1098760 onclick="j(1098760)">I mean, many servers out
+there have not done this.</li><li class="v2" id=1100870 onclick="j(1100870)">Yeah.</li><li class="v1" id=1101553 onclick="j(1101553)">Obviously
+this is not going to load.</li><li class="v2" id=1103720 onclick="j(1103720)">No.</li><li class="v1" id=1104280 onclick="j(1104280)">But it is
+going to bring this HTML</li><li class="v1" id=1106380 onclick="j(1106380)">file into the process.</li><li class="v2" id=1107525 onclick="j(1107525)">Ah, and then we're--</li><li class="v1" id=1108650 onclick="j(1108650)">It means the
+coding is done in process.</li><li class="v2" id=1110250 onclick="j(1110250)">Yeah.</li><li class="v2" id=1110420 onclick="j(1110420)">And then we're back
+in Spectre land.</li><li class="v1" id=1112000 onclick="j(1112000)">Spectre, Meltdown,</li><li class="v1" id=1113440 onclick="j(1113440)">those CPU bugs that will let you
+hammer away at certain things</li><li class="v1" id=1117000 onclick="j(1117000)">and start maybe trying
+to read some of the data.</li><li class="v1" id=1119600 onclick="j(1119600)">So this is a problem,
+that is fixed by CORB.</li><li class="v1" id=1122910 onclick="j(1122910)">There it is, look at it.</li><li class="v1" id=1125220 onclick="j(1125220)">It's beautiful.</li><li class="v1" id=1125920 onclick="j(1125920)">This is Cross Origin
+Read Blocking.</li><li class="v1" id=1128817 onclick="j(1128817)">I had to memorize
+that, because I knew</li><li class="v1" id=1130400 onclick="j(1130400)">I was going to get that wrong.</li><li class="v2" id=1131540 onclick="j(1131540)">So it's not resource
+blocking, no, no, it's</li><li class="v2" id=1132510 onclick="j(1132510)">read blocking.</li><li class="v1" id=1133093 onclick="j(1133093)">Read blocking,
+definitely read blocking.</li><li class="v1" id=1135540 onclick="j(1135540)">And how this works
+is, as part of fetch,</li><li class="v1" id=1137980 onclick="j(1137980)">before things entered
+the process, what it does</li><li class="v1" id=1140640 onclick="j(1140640)">is it looks at
+particular mine types,</li><li class="v1" id=1144000 onclick="j(1144000)">it looks to see if it has
+the no-sniff header on,</li><li class="v1" id=1147282 onclick="j(1147282)">and it can get
+straight to it then.</li><li class="v1" id=1148740 onclick="j(1148740)">But Chrome will also do things
+like, if this looks like HTML</li><li class="v1" id=1153040 onclick="j(1153040)">and it's not a CORS request,
+not letting it through.</li><li class="v2" id=1157235 onclick="j(1157235)">Oh, so it
+prevents it from ever</li><li class="v2" id=1159120 onclick="j(1159120)">getting to the process.</li><li class="v1" id=1160355 onclick="j(1160355)">Yeah.</li><li class="v2" id=1161230 onclick="j(1161230)">But it has to be
+a header on the response?</li><li class="v1" id=1163560 onclick="j(1163560)">No, so--</li><li class="v2" id=1164560 onclick="j(1164560)">Oh, so CORB
+is just a technology.</li><li class="v1" id=1167940 onclick="j(1167940)">CORB.</li><li class="v2" id=1168990 onclick="j(1168990)">CORB.</li><li class="v1" id=1169523 onclick="j(1169523)">Oh, I
+feel like I'm going mad.</li><li class="v1" id=1171440 onclick="j(1171440)">CORB is just like a--</li><li class="v2" id=1172995 onclick="j(1172995)">A feature in Chrome.</li><li class="v1" id=1174120 onclick="j(1174120)">Yes.</li><li class="v1" id=1174570 onclick="j(1174570)">Well, yeah.</li><li class="v2" id=1175100 onclick="j(1175100)">It's not like CORB
+is in the header, or--</li><li class="v1" id=1176990 onclick="j(1176990)">No,
+it's not a header.</li><li class="v1" id=1178320 onclick="j(1178320)">It's in the fetch spec.</li><li class="v1" id=1179430 onclick="j(1179430)">And in the fetch spec
+version, you have to do some--</li><li class="v1" id=1182010 onclick="j(1182010)">you have to have no-sniff
+on the response to say,</li><li class="v1" id=1184920 onclick="j(1184920)">don't look at this to see
+if it's an image or not.</li><li class="v1" id=1187910 onclick="j(1187910)">But you see, when it's
+got no-sniff and--</li><li class="v2" id=1189900 onclick="j(1189900)">So it knows
+if you're saying,</li><li class="v2" id=1190920 onclick="j(1190920)">I guarantee that I set
+the correct mine type</li><li class="v2" id=1192890 onclick="j(1192890)">on the content type header.</li><li class="v1" id=1194040 onclick="j(1194040)">Yes, exactly.</li><li class="v1" id=1195248 onclick="j(1195248)">And then it just goes, HTML
+cannot be a sub resource.</li><li class="v1" id=1197710 onclick="j(1197710)">Gone.</li><li class="v2" id=1198210 onclick="j(1198210)">Gotcha.</li><li class="v1" id=1198700 onclick="j(1198700)">I mean, if
+it's a CORS request, it can.</li><li class="v1" id=1200100 onclick="j(1200100)">But you know, this code
+isn't run for CORS requests.</li><li class="v2" id=1202660 onclick="j(1202660)">OK.</li><li class="v1" id=1203220 onclick="j(1203220)">So, yeah.</li><li class="v1" id=1204262 onclick="j(1204262)">What will happen is it
+will look at and go,</li><li class="v1" id=1206263 onclick="j(1206263)">this-- and Chrome will do extra
+sort of sniffing around it</li><li class="v1" id=1208680 onclick="j(1208680)">as well, and go, oh, this
+looks a bit like HTML.</li><li class="v1" id=1210680 onclick="j(1210680)">I'm just not going
+to let this through.</li><li class="v1" id=1212345 onclick="j(1212345)">It does the same with JSON,
+does the same with XML.</li><li class="v2" id=1214470 onclick="j(1214470)">I wouldn't
+let JSON through.</li><li class="v1" id=1215780 onclick="j(1215780)">Yeah, exactly.</li><li class="v1" id=1217030 onclick="j(1217030)">There you go.</li><li class="v1" id=1218910 onclick="j(1218910)">Final one, here you go.</li><li class="v2" id=1220900 onclick="j(1220900)">COEP.</li><li class="v1" id=1221460 onclick="j(1221460)">This is COEP.</li><li class="v1" id=1222668 onclick="j(1222668)">CO-EP, I've heard it pronounced.</li><li class="v1" id=1224050 onclick="j(1224050)">Yeah.</li><li class="v1" id=1225035 onclick="j(1225035)">And so this is
+something that you</li><li class="v1" id=1226410 onclick="j(1226410)">would use on your HTML page.</li><li class="v2" id=1229600 onclick="j(1229600)">And COEP requires CORB.</li><li class="v1" id=1230850 onclick="j(1230850)">Yes, it does.</li><li class="v1" id=1232250 onclick="j(1232250)">Are you following along?</li><li class="v1" id=1233360 onclick="j(1233360)">There's going to be
+a test after this.</li><li class="v1" id=1235540 onclick="j(1235540)">Hope you're concentrating.</li><li class="v1" id=1236760 onclick="j(1236760)">And what you're saying here,
+is you're making a declaration</li><li class="v1" id=1240330 onclick="j(1240330)">that everything on
+your page is either</li><li class="v1" id=1243585 onclick="j(1243585)">going to be CORS or authorized
+by some other means.</li><li class="v1" id=1247500 onclick="j(1247500)">That site is going to
+opt into including it,</li><li class="v1" id=1250120 onclick="j(1250120)">and the opt in would
+be using the CORP,</li><li class="v1" id=1252930 onclick="j(1252930)">but a specific
+opt-in to saying this</li><li class="v1" id=1254430 onclick="j(1254430)">can be embedded cross-origin.</li><li class="v2" id=1256540 onclick="j(1256540)">OK.</li><li class="v2" id=1257040 onclick="j(1257040)">So this would-- then if--</li><li class="v2" id=1261300 onclick="j(1261300)">wait, but hold on.</li><li class="v2" id=1262132 onclick="j(1262132)">Images still work if they had
+no-sniff and the correct mine</li><li class="v2" id=1264590 onclick="j(1264590)">type.</li><li class="v1" id=1265487 onclick="j(1265487)">Yes,
+but now if you've</li><li class="v1" id=1267070 onclick="j(1267070)">got this header on your page,
+they will start failing.</li><li class="v2" id=1269470 onclick="j(1269470)">Oh, accept--</li><li class="v1" id=1269770 onclick="j(1269770)">Because you're saying,</li><li class="v1" id=1271353 onclick="j(1271353)">I am saying I am opting
+into this stricter model.</li><li class="v2" id=1274150 onclick="j(1274150)">On a per
+sub resource basis.</li><li class="v1" id=1276287 onclick="j(1276287)">On a
+per sub resource basis.</li><li class="v1" id=1278120 onclick="j(1278120)">And the reason for that is
+to opt into more powerful</li><li class="v1" id=1282030 onclick="j(1282030)">features, because we now know--</li><li class="v2" id=1283920 onclick="j(1283920)">Right.</li><li class="v1" id=1284500 onclick="j(1284500)">Once
+you've done this,</li><li class="v1" id=1285100 onclick="j(1285100)">you're in a position where
+you don't really have anything</li><li class="v1" id=1287490 onclick="j(1287490)">to Spectre Meltdown.</li><li class="v2" id=1288370 onclick="j(1288370)">Yeah.</li><li class="v1" id=1288990 onclick="j(1288990)">Right?</li><li class="v1" id=1289907 onclick="j(1289907)">So that's the point
+where we can go,</li><li class="v1" id=1291420 onclick="j(1291420)">oh, we can give you
+high resolution timers.</li><li class="v1" id=1293880 onclick="j(1293880)">Oh, we can give you--</li><li class="v2" id=1294780 onclick="j(1294780)">But only if--</li><li class="v1" id=1295560 onclick="j(1295560)">--a shared array
+buffer, that sort of stuff.</li><li class="v2" id=1296580 onclick="j(1296580)">If we can
+guarantee that there's</li><li class="v2" id=1297480 onclick="j(1297480)">no sensitive data
+in your process.</li><li class="v1" id=1299100 onclick="j(1299100)">And this
+enforces that guarantee.</li><li class="v2" id=1301142 onclick="j(1301142)">So if I
+remember correctly--</li><li class="v2" id=1302680 onclick="j(1302680)">and I'm excited about
+this not because it's</li><li class="v2" id=1305280 onclick="j(1305280)">so easy to understand,
+but because I</li><li class="v2" id=1308280 onclick="j(1308280)">think this is the headers that
+would allow us to bring shared</li><li class="v2" id=1311658 onclick="j(1311658)">array buffers back.</li><li class="v1" id=1312450 onclick="j(1312450)">That is it.</li><li class="v2" id=1312780 onclick="j(1312780)">For everyone.</li><li class="v1" id=1313170 onclick="j(1313170)">It
+is exactly that.</li><li class="v2" id=1314100 onclick="j(1314100)">Yes.</li><li class="v1" id=1314600 onclick="j(1314600)">Yes.</li><li class="v1" id=1315020 onclick="j(1315020)">Because that high resolution
+time, it's all of that stuff</li><li class="v1" id=1317395 onclick="j(1317395)">that we've had to take out
+because of Meltdown, Spectre,</li><li class="v1" id=1319830 onclick="j(1319830)">it can come back.</li><li class="v2" id=1320550 onclick="j(1320550)">Because if
+and when we get this,</li><li class="v2" id=1323100 onclick="j(1323100)">we'll also get threats for
+wireless and all this stuff</li><li class="v2" id=1325350 onclick="j(1325350)">on mobile, on the
+other browsers.</li><li class="v1" id=1327157 onclick="j(1327157)">Yep.</li><li class="v2" id=1327990 onclick="j(1327990)">So in that sense, yay.</li><li class="v1" id=1330208 onclick="j(1330208)">Yay, excellent.</li><li class="v2" id=1331500 onclick="j(1331500)">In terms of
+understanding it, whew.</li><li class="v1" id=1334307 onclick="j(1334307)">And that
+is pretty much everything</li><li class="v1" id=1336390 onclick="j(1336390)">I wanted to talk about.</li><li class="v1" id=1337590 onclick="j(1337590)">Because we can't--
+we've got quite a lot.</li><li class="v1" id=1340460 onclick="j(1340460)">But I want to
+acknowledge that there's</li><li class="v1" id=1342355 onclick="j(1342355)">a-- we looked at a certain
+class of problems here.</li><li class="v1" id=1344810 onclick="j(1344810)">And this is where one
+site is stealing stuff</li><li class="v1" id=1347910 onclick="j(1347910)">from another site, or
+making the other site</li><li class="v1" id=1350010 onclick="j(1350010)">do things it didn't want to do.</li><li class="v1" id=1351460 onclick="j(1351460)">And that makes the user
+sad, because they lose data,</li><li class="v1" id=1354840 onclick="j(1354840)">or they have their
+privacy invaded.</li><li class="v1" id=1356940 onclick="j(1356940)">There is a whole other
+class of problems</li><li class="v1" id=1359640 onclick="j(1359640)">where site A and site B,
+totally fine with sharing data,</li><li class="v1" id=1365280 onclick="j(1365280)">but the user is sad about it.</li><li class="v2" id=1367275 onclick="j(1367275)">Oh, that's
+the tracking problem.</li><li class="v1" id=1368900 onclick="j(1368900)">This is
+cross-site tracking, and--</li><li class="v2" id=1371060 onclick="j(1371060)">This is not that,
+that is a separate problem.</li><li class="v1" id=1373140 onclick="j(1373140)">And I want to
+spend a whole episode on that</li><li class="v1" id=1374760 onclick="j(1374760)">at some point, because there's
+a lot of interesting things</li><li class="v1" id=1376710 onclick="j(1376710)">happening in that space.</li><li class="v1" id=1377680 onclick="j(1377680)">So that's a shout forward
+to another episode</li><li class="v1" id=1379513 onclick="j(1379513)">some other time.</li><li class="v2" id=1380473 onclick="j(1380473)">Oh, stay
+tuned on that one.</li><li class="v1" id=1381890 onclick="j(1381890)">But
+that's enough for now.</li></ol></article><form id=synthWrapper>
+	<button id="play" type="submit">Play</button>
+	<input type="text" class="txt" value="test synthesiser">
+	<div>
+		<label for="rate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
+		<div class="rate-value">1</div>
+		<div class="clearfix"></div>
+	</div>
+	<div>
+		<label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+		<div class="pitch-value">1</div>
+		<div class="clearfix"></div>
+	</div>
+	<select>
+	</select>
+	</form>
+	<textarea id="log" name="out">logOutput</textarea><br>
+	<button onclick="copyLog()">Copy log</button>
+	<script>let voicePacks = [
+	{
+		name: "none",
+		voice: "Microsoft Hanhan Desktop - Chinese (Taiwan)",
+		rate: 1,
+		pitch: 0.9,
+	},
+	{
+		name: "Jake",
+		voice: "Microsoft David Desktop - English (United States)",
+		rate: 0.9,
+		pitch: 0.1,
+	},
+	{
+		name: "Surma",
+		voice: "Microsoft Zira Desktop - English (United States)",
+		rate: 0.95,
+		pitch: 0.6,
+	},
+];
+let actions = {hear:[32509,42099,43920,46210,49327,50910,52590,54490,57110,58710,59210,60752,63050,64400,65420,67100,68630,69860,70505,71630,73700,75450,78920,80180,81560,82070,82970,83300,84260,85790,87128,89170,91160,93342,95300,97370,98660,100880,102770,103270,105870,109333,110500,111040,112330,116920,119247,119750,120830,122033,122950,124500,125000,125793,127460,130100,131670,133880,137030,139550,142020,142520,144795,145670,147127,149210,151460,155538,156080,157130,157700,159408,160060,161808,162725,164180,167400,169040,169840,170990,172730,173100,173710,175010,176385,178205,180080,180650,181190,181853,183020,183660,185530,186910,188750,190550,191060,192472,194930,196460,197877,200690,203310,203810,206297,207380,207680,209222,210140,210590,212390,213140,217250,220292,221000,222387,224845,227190,229190,230480,233400,235190,237890,241010,245480,246528,248320,249862,252490,253240,253740,255522,256980,259070,260570,261269,262686,264570,266130,268297,269880,271980,275582,276540,277670,278670,281428,281970,283137,286043,286710,288087,289920,292420,294420,296310,299320,302010,304410,306150,307907,308490,309448,310140,312240,317020,318870,320880,322380,326110,326970,329130,330120,334080,336510,338263,339430,341020,342020,344400,346875,348750,350153,350820,353140,355320,356070,357487,363692,364650,366770,368947,369780,370525,371400,373087,375420,376353,376810,377380,378030,380830,384853,386520,390240,391590,392340,394620,395130,395630,398340,400260,401947,403530,406032,406740,408180,412200,413830,416310,418590,421610,425250,426570,428070,430950,434490,436273,437190,438650,440040,442080,443550,443910,446118,448620,450520,452560,454852,456460,457150,459317,462990,464700,466450,466950,469770,471673,472590,473070,475710,477450,478920,481710,486778,488570,489570,491250,491615,492490,493237,494180,495930,497763,499010,500825,502200,503760,504660,506340,509280,511800,513390,514450,514516,515433,516891,518039,523890,525990,527510,528460,530460,531830,534080,535120,536850,537760,539010,540870,543685,544560,546518,547267,549100,550000,552290,553790,555170,557600,559017,560392,561878,562670,564700,565330,566390,567765,569962,572130,574088,575880,576380,578480,579650,581650,584030,586072,587030,589250,590780,591260,592968,594290,595160,597080,597580,600620,602910,605840,606740,609270,609710,610470,612178,615470,617670,620610,623360,626710,627950,632780,635750,638420,641600,644617,646700,647560,649638,651430,652520,656340,659330,659900,660200,662325,664640,667680,668180,668990,669500,672290,673507,674840,680580,682758,684800,687007,689090,691200,693890,696147,698480,700760,702060,703750,705410,706000,707630,708650,710250,710450,711650,712567,714140,716810,717740,718580,719690,720623,723800,724580,726830,729280,731285,732410,734202,735890,737990,740970,744770,747804,748803,749470,749770,750140,750950,753650,754550,756590,758704,761848,762890,765920,766855,768980,771218,772010,772820,774600,776695,779070,781820,784163,785580,787220,789380,790505,792690,795495,796620,797610,800270,803215,804840,806600,807300,808550,811820,814320,814820,817362,819080,821250,822530,822890,823150,825040,825460,827600,828590,830480,832040,835340,836540,839998,841040,841100,841220,842890,844720,845970,849920,852880,853978,856270,860830,862860,865120,867370,869448,871240,873442,875150,878302,880010,881843,883588,885130,886670,889890,892390,893848,897208,898750,899500,900280,902270,903220,903845,905470,909103,911020,912580,913240,914320,915028,916870,918180,919805,921370,923038,925330,926920,930010,931510,932560,934170,936000,937823,940240,941410,941740,943890,945730,948140,948640,948910,950120,952810,955090,956715,958360,960325,962700,963570,964330,965560,966880,969770,973510,976480,978050,980170,980860,983320,984753,986170,986670,989020,991688,992480,994960,997360,1000090,1001767,1002850,1003350,1004225,1004800,1005800,1008100,1011738,1012280,1013040,1013680,1015150,1015790,1016930,1019440,1020130,1020750,1021750,1021960,1022890,1024890,1027099,1029430,1033420,1035994,1038160,1040907,1041490,1044040,1046117,1047700,1049080,1050320,1050470,1050970,1053780,1055410,1058470,1062100,1065280,1066858,1068490,1071880,1072600,1073910,1074410,1074550,1076350,1078168,1080460,1081460,1082920,1085110,1087440,1089643,1091810,1093030,1096450,1098400,1098760,1100870,1101553,1103720,1104280,1106380,1107525,1108650,1110250,1110420,1112000,1113440,1117000,1119600,1122910,1125220,1125920,1128817,1130400,1131540,1132510,1133093,1135540,1137980,1140640,1144000,1147282,1148740,1153040,1157235,1159120,1160355,1161230,1163560,1164560,1167940,1168990,1169523,1171440,1172995,1174120,1174570,1175100,1176990,1178320,1179430,1182010,1184920,1187910,1189900,1190920,1192890,1194040,1195248,1197710,1198210,1198700,1200100,1202660,1203220,1204262,1206263,1208680,1210680,1212345,1214470,1215780,1217030,1218910,1220900,1221460,1222668,1224050,1225035,1226410,1229600,1230850,1232250,1233360,1235540,1236760,1240330,1243585,1247500,1250120,1252930,1254430,1256540,1257040,1261300,1262132,1264590,1265487,1267070,1269470,1269770,1271353,1274150,1276287,1278120,1282030,1283920,1284500,1285100,1287490,1288370,1288990,1289907,1291420,1293880,1294780,1295560,1296580,1297480,1299100,1301142,1302680,1305280,1308280,1311658,1312450,1312780,1313170,1314100,1314600,1315020,1317395,1319830,1320550,1323100,1325350,1327157,1327990,1330208,1331500,1334307,1336390,1337590,1340460,1342355,1344810,1347910,1350010,1351460,1354840,1356940,1359640,1365280,1367275,1368900,1371060,1373140,1374760,1376710,1377680,1379513,1380473,1381890]}
+let synth = window.speechSynthesis
+const $mediaWrapper = document.getElementById("mediaWrapper")
+const $mediaPlayer = document.getElementById("mediaPlayer")
+const $cbModeMedia = document.getElementById("cbMode")
+const $pauseAll = document.getElementById("pauseAll")
+const $toggleMode = document.getElementById("toggleMode")
+const $cueList = document.getElementById("timedtext")
+let $curCue = $cueList.firstChild
+let $curCapton = $cueList.firstChild
+const $log = document.getElementById('log');
+
+let isFirstPlay = true
+$cbModeMedia.checked = false  // false = use synth
+let isPlayToStop = false
+let curCue = 0 //int
+let curID = 0
+let sayTimeout = null
+// actions is obj added by build script
+let hearLength = actions.hear.length
+let mediaStatus = 'paused' // consider 'opened' later?
+
+function getRandomInt(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min)) + min
+}
+// switchAudio()  why is this here?  typo?
+async function highlightLine( closest=findNearUnder() ) {
+	$curCapton.classList.remove('speaking')
+	$curCapton = document.getElementById( closest )
+	$curCapton.classList.add('spoke', 'speaking')
+	$curCapton.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
+}
+async function playMedia( closest=curCue*0.001 ) {
+	logit(`startPlay `+ $mediaPlayer.currentTime)
+  try {
+    await $mediaPlayer.play()
+    // playButton.classList.add("playing");
+  } catch(err) {
+    // playButton.classList.remove("playing");
+  }
+}
+
+function logit( t ){
+	console.log(t)
+	$log.value += `\n`+ t
+	$log.scrollTop = $log.scrollHeight
+}
+function copyLog(){
+  /* Select the text field */
+  $log.select()
+  $log.setSelectionRange(0, 99999) /*For mobile devices*/
+  document.execCommand("copy")
+  alert("Copied the text: " + $log.value);
+}
+
+function switchAudio(){
+	if ( $cbModeMedia.checked ){
+		modeSynth()
+		$curCapton.classList.remove('speaking')
+	} else {
+		modeAudio()
+	}
+	// !$cbModeMedia.checked = $cbModeMedia.checked
+	isFirstPlay = false
+}
+
+/**
+ * start to process TimedText click
+ * @param mseconds element id marker, happens to be time
+ */
+async function j( mseconds ){
+	if (isFirstPlay){
+		logit(`first play on Jump`)
+		switchAudio()
+		showMediaGUI()
+	}
+	if (!$cbModeMedia.checked){
+		isPlayToStop = false
+		let arrLines = []
+		curID = Date.now()
+		let i = actions.hear.indexOf(mseconds)
+		logit(`clicked sec=`+ mseconds +` idx=`+ i)
+
+		const len = i + 3
+		for( i; (i<=len); i++ ){
+			arrLines.push({
+				actID: curID,
+				mseconds: actions.hear[i],
+			})
+			logit(`cued sec=`+ mseconds +` idx=`+ i)
+		}
+
+		if (synth.speaking) {
+			await clearThenCB(arrLines, queueArray)
+		} else {
+			await queueArray(arrLines)
+		}
+	} else {
+		$mediaPlayer.currentTime = mseconds * 0.001
+		// $mediaPlayer.play() automatic
+	}
+}
+
+function pauseAll(){
+	// if (!$cbModeMedia.checked){
+		clearSpeech({ all:true })
+	// } else {
+		$mediaPlayer.pause()
+	// }
+}
+/* ui.js */
+
+function clickBandTag(node, status){
+	// assumes only 1 checkbox per parent group
+	// const $cbModeMedia = id.getElementsByTagName('input')[0];
+	logit(`set `+ $cbModeMedia.id +` to `+ status +` cb=`+ $cbModeMedia.checked)
+	if ( $cbModeMedia.checked !== status ){
+		$cbModeMedia.checked = status
+		toggleTag( node )
+	}
+}
+function toggleTag( $node ){
+	isChecked =  $node.getElementsByTagName('input')[0].checked
+	logit(`checkbox `+ $cbModeMedia.id +` to `+ isChecked)
+	logit(`toggle.id `+ $node.id +` classList `+ $node.classList)
+	$node.classList.toggle('toggle-on', isChecked)
+	$node.classList.toggle('toggle-off', !isChecked)
+	// $node.classList.remove( 'toggle-o'+ (isChecked ? 'ff' : 'n') )
+	// $node.classList.add( 'toggle-o'+ (isChecked ? 'n' : 'ff') )
+}
+/* media.js */
+// NOTE times are always in ms, though $mediaPlayer.currentTime is in decimal seconds
+let closest = 0
+let closestOld = 0
+let idxPrevious = 0
+let curTime = 0
+function findNearUnder( arr=actions.hear, val=curTime ){
+	return Math.max.apply(null, arr.filter(
+		function( v ){
+			return v <= val}
+	))
+}
+$mediaPlayer.ontimeupdate = function(){
+	// $curCapton.classList.remove('spoke')
+	curTime = $mediaPlayer.currentTime * 1000
+	logit( `play time~`+ curTime )
+	closest = findNearUnder()
+	if ( closest !== closestOld ){	
+		logit( `closest under~`+closest )
+		if ( !$cbModeMedia.checked ) {
+			$mediaPlayer.pause()
+			j( closest )
+			return
+		} else {
+			// don't highlight until playing
+			if ( mediaStatus==='playing' ) highlightLine( closest )
+			closestOld = closest
+			if ( mediaStatus==='paused'){
+				highlightLine(closest)
+				logit( `▶ unpause` )
+				playMedia(closest)
+			}
+		}
+	}
+}
+
+function modeAudio(){
+	$mediaWrapper.classList.add('active')
+	// $synthWrapper.classList.remove('active')
+	logit('fliped to audio')
+}
+
+$mediaPlayer.addEventListener('play', (event) => {
+  // logit(`|> play event`)
+	if ( !$cbModeMedia.checked ){
+		$mediaPlayer.pause()
+		logit(`|| stay paused`)
+	}
+})
+
+$mediaPlayer.addEventListener('pause', function(){
+	logit( `⏸️pause time~`+ getMediaTime() +`ms` )
+	mediaStatus = 'paused'
+	
+	if ( !$cbModeMedia.checked ){
+		logit(`|| stay paused media, play synth`)
+		j( findNearUnder() )
+	}
+})
+
+$mediaPlayer.onplaying = function(){
+	logit( `▶️playing time~`+ getMediaTime() +`ms` )
+	mediaStatus = 'playing'
+}
+
+function getMediaTime(){
+	return $mediaPlayer.currentTime*1000 //ms
+}/* synth.js */
+const $synthWrapper = document.getElementById("synthWrapper")
+const $inputForm = document.querySelector('form');
+const $inputTxt = document.querySelector('.txt');
+const $voiceSelect = document.querySelector('select');
+const $pitch = document.getElementById('pitch');
+const $pitchValue = document.querySelector('.pitch-value');
+const $rate = document.getElementById('rate')
+const $rateValue = document.querySelector('.rate-value')
+let arrTemp = []
+
+/*
+ * fill voice info for both UX & db
+ */
+let osVoices = []
+let allVoices = []
+function populateVoiceList(){
+  osVoices = synth.getVoices().sort(function (a, b) {
+      const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
+      if ( aname < bname ) return -1;
+      else if ( aname == bname ) return 0;
+      else return +1;
+  });
+  var selectedIndex = $voiceSelect.selectedIndex < 0 ? 0 : $voiceSelect.selectedIndex
+  $voiceSelect.innerHTML = ''
+  for(i = 0; i < osVoices.length ; i++) {
+		// populate array for later use
+    let tempVoice = {}
+    tempVoice.default = osVoices[i].default
+    tempVoice.lang = osVoices[i].lang
+    tempVoice.localService = osVoices[i].localService
+    tempVoice.name = osVoices[i].name
+    tempVoice.voiceURI = osVoices[i].voiceURI
+    allVoices[i] = tempVoice
+
+    let option = document.createElement('option')
+    option.textContent = tempVoice.name + ' (' + tempVoice.lang + ')';
+    
+    if(tempVoice.default) {
+      option.textContent += ' -- DEFAULT'
+    }
+
+    option.setAttribute('data-lang', tempVoice.lang)
+    option.setAttribute('data-name', tempVoice.name)
+    $voiceSelect.appendChild(option);
+  }
+	$voiceSelect.selectedIndex = selectedIndex
+}
+populateVoiceList();
+if (synth.onvoiceschanged !== undefined) {
+  synth.onvoiceschanged = populateVoiceList;
+}
+logit(`allVoices = 
+`+ allVoices)
+$inputForm.onsubmit = function(event){
+	event.preventDefault()
+	if ($inputTxt.value !== '') {
+		speakLine({ text:$inputTxt.value })
+	}
+  $inputTxt.blur()
+}
+$pitch.onchange = function(){ $pitchValue.textContent = $pitch.value }
+$rate.onchange = function(){ $rateValue.textContent = $rate.value }
+$voiceSelect.onchange = function(){ speakLine() }
+
+function modeSynth(){
+	$mediaWrapper.classList.remove('active')
+	$synthWrapper.classList.add('active')
+	logit('flip to synth')
+}
+
+function playSpeachDemo( arg='' ){
+	isPlayToStop = false
+	let idxStart = 0
+	if (arg==='random') { idxStart = getRandomInt(0, hearLength-5) }
+	logit(`🏃🏼 playSpeachDemo@`+ idxStart +` arg=`+  arg)
+	$cueList.children[ idxStart ].click()
+	const timeoutID = window.setTimeout( showMediaGUI, getRandomInt(22, 77) )
+	// const timeoutID = window.setTimeout( showMediaGUI, getRandomInt(2222, 5555) )
+}
+function showMediaGUI(){
+	$mediaWrapper.classList.remove('cover')
+	$mediaPlayer.classList.add("show")
+	$mediaPlayer.classList.remove('hide')
+	$toggleMode.classList.add("show")
+	$toggleMode.classList.remove("hide")
+	$pauseAll.classList.add("show")
+	$pauseAll.classList.remove("hide")
+}
+
+
+async function queueArray( arr ){
+	for ( i = 0; ( (i < arr.length) && !isPlayToStop) ; i++ ){
+		if (arr[i].actID !== curID) break
+		curCue = arr[i].mseconds
+		$curCue = document.getElementById( curCue )
+		arr[i].text = $curCue.textContent
+		arr[i].vox = $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
+		logit( `prep:`+ curCue +` actID:`+ arr[i].actID +` # `+ i +` voice:`+ arr[i].voice +`
+		`+ arr[i].text )  
+		// highlight
+		$curCue.classList.add('spoke', 'speaking')
+		const $futureCue = $curCue
+		// location.href = "#" work around old Webkit bug
+		// location.href = `#`+ $curCue.previousSibling.id
+		//fIX scrollIntoView Firfox compat, might need previousSibling
+		$curCue.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
+		await speakLine(arr[i])
+		logit( `line `+ i +` done ✔️` )
+		$futureCue.classList.remove('speaking')
+		if ( $cbModeMedia.checked ){
+			// play next cue line in media
+			const t = actions.hear.indexOf( curCue )
+			$mediaPlayer.currentTime = actions.hear[t+1] * 0.001
+			// playMedia() automatic
+			break
+		}
+	}
+}
+
+async function clearThenCB(arrLines, cb){
+	logit(`clear then speek`)
+	synth.cancel()
+	isPlayToStop = false
+	// timer needed to ensure SECOND line is spoken
+	if (sayTimeout !== null) clearTimeout(sayTimeout)
+	sayTimeout = setTimeout(function(){
+		cb(arrLines)
+		logit(`sayTimeout ⏱️`)
+	}, 444 ) // long timeout needed to prevent lines skipped on many jumps
+	
+}
+
+async function clearSpeech({
+	all=false,
+}={}){
+	logit(`🆑 clearing, stop all = `+  all)
+	if (all===true) isPlayToStop = true
+	// cancel the current utterance
+	if (synth.speaking) {
+		logit(`synth.speaking, now to cancel 🛑`)
+		synth.cancel()
+	}
+}
+
+/**
+ * Use speach synth for 1 segement
+ * @param {Object} obj
+ * @param {string} obj.text - words to be spoken
+ * @param {number} obj.fPitch - float 0-2
+ * @param {number} obj.fRate - float 0-2
+ */
+async function speakLine({
+	text = '',
+	vox = 0,
+}={}){
+	let sayThis = new SpeechSynthesisUtterance(text)
+	sayThis.pitch = voicePacks[vox].pitch
+	sayThis.rate = voicePacks[vox].rate
+	sayThis.voice = osVoices[vox]
+	synth.speak(sayThis)
+
+	return new Promise( resolve =>{
+		logit(`resolve returned curCue:`+ curCue)
+		sayThis.onend = resolve
+	})
+}
+</script>
+<h3>README</h3>
+<p>@2020 Tom Byrer released <a href="https://www.gnu.org/licenses/agpl-3.0.en.html">AGPLv3</a></p>
+<p>Talk source: <a http="https://youtu.be/vfAHa5GBLio">Cross-origin fetches - HTTP 203</a>,  License
+  Creative Commons Attribution license (reuse allowed) </p>
+</body></html>

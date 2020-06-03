@@ -1,0 +1,4589 @@
+{
+	"info": {
+		"note": "this entire 'info' object is not part of original file",
+		"source": "https://youtu.be/vfAHa5GBLio",
+		"title": "Cross-origin fetches - HTTP 203",
+		"channel": " Google Chrome Developers",
+		"datePulled": "2020-04-09",
+		"license": "CC BY"
+	},
+	"voices": [
+		"none",
+		"JAKE ARCHIBALD",
+		"SURMA"
+	],
+	"tt": [
+		{
+			"s": 32509,
+			"d": 2664,
+			"t": "I want to talk about\ncross-origin fetches.",
+			"v": 1
+		},
+		{
+			"s": 42099,
+			"d": 1833,
+			"t": "these are things\nwe're going to look at.",
+			"v": 1
+		},
+		{
+			"s": 43920,
+			"d": 2290,
+			"t": "Cookies, CERF,\nCORS, CORB, CORP, COEP.",
+			"v": 2
+		},
+		{
+			"s": 46210,
+			"d": 3117,
+			"t": "Yep,\nwell done, actually.",
+			"v": 1
+		},
+		{
+			"s": 49327,
+			"d": 1583,
+			"t": "If you're playing\nthis in fast motion,",
+			"v": 1
+		},
+		{
+			"s": 50910,
+			"d": 1680,
+			"t": "you'll miss that all right, so.",
+			"v": 1
+		},
+		{
+			"s": 52590,
+			"d": 1900,
+			"t": "Do they do\nthis on purpose?",
+			"v": 2
+		},
+		{
+			"s": 54490,
+			"d": 2620,
+			"t": "What, how\nthey like used four-letter C",
+			"v": 1
+		},
+		{
+			"s": 57110,
+			"d": 1600,
+			"t": "words for the worst things?",
+			"v": 1
+		},
+		{
+			"s": 58710,
+			"d": 500,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 59210,
+			"d": 1542,
+			"t": "I think that probably\nis intentional.",
+			"v": 1
+		},
+		{
+			"s": 60752,
+			"d": 2298,
+			"t": "So CORS is\na four-letter word.",
+			"v": 2
+		},
+		{
+			"s": 63050,
+			"d": 1350,
+			"t": "Yes, it is.",
+			"v": 1
+		},
+		{
+			"s": 64400,
+			"d": 1020,
+			"t": "These are all C bombs.",
+			"v": 1
+		},
+		{
+			"s": 65420,
+			"d": 1680,
+			"t": "Cookies isn't.",
+			"v": 1
+		},
+		{
+			"s": 67100,
+			"d": 1530,
+			"t": "But why is this not--",
+			"v": 2
+		},
+		{
+			"s": 68630,
+			"d": 1230,
+			"t": "why is this one--",
+			"v": 2
+		},
+		{
+			"s": 69860,
+			"d": 645,
+			"t": "never mind.",
+			"v": 2
+		},
+		{
+			"s": 70505,
+			"d": 1125,
+			"t": "Never mind.",
+			"v": 1
+		},
+		{
+			"s": 71630,
+			"d": 2070,
+			"t": "That's what I say.",
+			"v": 1
+		},
+		{
+			"s": 73700,
+			"d": 1750,
+			"t": "We're going to go back in time.",
+			"v": 1
+		},
+		{
+			"s": 75450,
+			"d": 3470,
+			"t": "This is 1993.",
+			"v": 1
+		},
+		{
+			"s": 78920,
+			"d": 1260,
+			"t": "This happened.",
+			"v": 1
+		},
+		{
+			"s": 80180,
+			"d": 1380,
+			"t": "Oh, this was a new thing.",
+			"v": 2
+		},
+		{
+			"s": 81560,
+			"d": 510,
+			"t": "This\nwas a new thing.",
+			"v": 1
+		},
+		{
+			"s": 82070,
+			"d": 900,
+			"t": "This wasn't on the\nblog at that point in time.",
+			"v": 2
+		},
+		{
+			"s": 82970,
+			"d": 330,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 83300,
+			"d": 960,
+			"t": "This is in Mosaic.",
+			"v": 1
+		},
+		{
+			"s": 84260,
+			"d": 1530,
+			"t": "The image tag arrives.",
+			"v": 1
+		},
+		{
+			"s": 85790,
+			"d": 1338,
+			"t": "And I think--",
+			"v": 1
+		},
+		{
+			"s": 87128,
+			"d": 2042,
+			"t": "I hadn't touched\na computer at this point.",
+			"v": 2
+		},
+		{
+			"s": 89170,
+			"d": 1990,
+			"t": "Well, I was nine,",
+			"v": 1
+		},
+		{
+			"s": 91160,
+			"d": 2182,
+			"t": "so I had, but not\non the internet.",
+			"v": 1
+		},
+		{
+			"s": 93342,
+			"d": 1958,
+			"t": "I wasn't allowed on the\ninternet at that point.",
+			"v": 1
+		},
+		{
+			"s": 95300,
+			"d": 2070,
+			"t": "Also, no one in\nCarlo where I grew up",
+			"v": 1
+		},
+		{
+			"s": 97370,
+			"d": 1290,
+			"t": "knew what the internet was.",
+			"v": 1
+		},
+		{
+			"s": 98660,
+			"d": 2220,
+			"t": "This was a community\nthat found tin foil to be",
+			"v": 1
+		},
+		{
+			"s": 100880,
+			"d": 1890,
+			"t": "too technologically advanced.",
+			"v": 1
+		},
+		{
+			"s": 102770,
+			"d": 500,
+			"t": "[LAUGHTER]",
+			"v": 0
+		},
+		{
+			"s": 103270,
+			"d": 2600,
+			"t": "Anyway image tag\narrives in Mosaic,",
+			"v": 1
+		},
+		{
+			"s": 105870,
+			"d": 3463,
+			"t": "and I think I've done so\nmuch research into this,",
+			"v": 1
+		},
+		{
+			"s": 109333,
+			"d": 1167,
+			"t": "and I'm still not confident.",
+			"v": 1
+		},
+		{
+			"s": 110500,
+			"d": 540,
+			"t": "But I'm going to say anyway.",
+			"v": 1
+		},
+		{
+			"s": 111040,
+			"d": 1290,
+			"t": "I'm just going to\ngo full confidence.",
+			"v": 1
+		},
+		{
+			"s": 112330,
+			"d": 2042,
+			"t": "This was the first\nsub-resource the web ever had.",
+			"v": 1
+		},
+		{
+			"s": 116920,
+			"d": 2327,
+			"t": "Like if the\ncamera would correct it.",
+			"v": 2
+		},
+		{
+			"s": 119247,
+			"d": 503,
+			"t": "Like, Jake.",
+			"v": 2
+		},
+		{
+			"s": 119750,
+			"d": 1080,
+			"t": "I was waiting\nfor someone to crawl out",
+			"v": 1
+		},
+		{
+			"s": 120830,
+			"d": 1203,
+			"t": "of the camera and go--",
+			"v": 1
+		},
+		{
+			"s": 122033,
+			"d": 917,
+			"t": "Well, actually.",
+			"v": 2
+		},
+		{
+			"s": 122950,
+			"d": 1550,
+			"t": "Actually,\nthat was just weird SGML.",
+			"v": 1
+		},
+		{
+			"s": 124500,
+			"d": 500,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 125000,
+			"d": 793,
+			"t": "That probably was.",
+			"v": 2
+		},
+		{
+			"s": 125793,
+			"d": 1667,
+			"t": "Yes,\nfirst sub-resource.",
+			"v": 1
+		},
+		{
+			"s": 127460,
+			"d": 2640,
+			"t": "That landed, and also\ninterestingly, oh,",
+			"v": 1
+		},
+		{
+			"s": 130100,
+			"d": 1570,
+			"t": "look at that.",
+			"v": 1
+		},
+		{
+			"s": 131670,
+			"d": 2210,
+			"t": "It can be cross origin.",
+			"v": 1
+		},
+		{
+			"s": 133880,
+			"d": 3150,
+			"t": "Was the concept of\nan origin even established?",
+			"v": 2
+		},
+		{
+			"s": 137030,
+			"d": 2520,
+			"t": "Nope.",
+			"v": 1
+		},
+		{
+			"s": 139550,
+			"d": 2470,
+			"t": "But at the time, they would\nhave said, different domain,",
+			"v": 1
+		},
+		{
+			"s": 142020,
+			"d": 500,
+			"t": "I guess.",
+			"v": 1
+		},
+		{
+			"s": 142520,
+			"d": 2275,
+			"t": "So if Facebook existed,\nthat would be leaking.",
+			"v": 2
+		},
+		{
+			"s": 144795,
+			"d": 875,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 145670,
+			"d": 1457,
+			"t": "Well, we'll get onto that.",
+			"v": 1
+		},
+		{
+			"s": 147127,
+			"d": 2083,
+			"t": "We will get onto that\nbecause they weren't leaking",
+			"v": 1
+		},
+		{
+			"s": 149210,
+			"d": 2250,
+			"t": "a lot of the time because\ncookies hadn't been invented",
+			"v": 1
+		},
+		{
+			"s": 151460,
+			"d": 4078,
+			"t": "yet because they came along\nin 1994 as Netscape 0.9 beta.",
+			"v": 1
+		},
+		{
+			"s": 155538,
+			"d": 542,
+			"t": "That arrived.",
+			"v": 1
+		},
+		{
+			"s": 156080,
+			"d": 1050,
+			"t": "Look at that\nresearch number.",
+			"v": 2
+		},
+		{
+			"s": 157130,
+			"d": 570,
+			"t": "I know.",
+			"v": 1
+		},
+		{
+			"s": 157700,
+			"d": 1708,
+			"t": "I didn't even look at\nthe notes for that.",
+			"v": 1
+		},
+		{
+			"s": 159408,
+			"d": 652,
+			"t": "What?",
+			"v": 2
+		},
+		{
+			"s": 160060,
+			"d": 1748,
+			"t": "Do you know what\nmotivated cookies?",
+			"v": 2
+		},
+		{
+			"s": 161808,
+			"d": 917,
+			"t": "State.",
+			"v": 1
+		},
+		{
+			"s": 162725,
+			"d": 1455,
+			"t": "State and HTTP.",
+			"v": 1
+		},
+		{
+			"s": 164180,
+			"d": 3220,
+			"t": "So things like login because\nit was entirely stateless",
+			"v": 1
+		},
+		{
+			"s": 167400,
+			"d": 1640,
+			"t": "before that, but they\nwanted some way--",
+			"v": 1
+		},
+		{
+			"s": 169040,
+			"d": 800,
+			"t": "But it's still stateless.",
+			"v": 2
+		},
+		{
+			"s": 169840,
+			"d": 1150,
+			"t": "--to\nknow [INAUDIBLE] user.",
+			"v": 1
+		},
+		{
+			"s": 170990,
+			"d": 1740,
+			"t": "Except cookies are\nsent every time.",
+			"v": 1
+		},
+		{
+			"s": 172730,
+			"d": 370,
+			"t": "That's stateless.",
+			"v": 1
+		},
+		{
+			"s": 173100,
+			"d": 610,
+			"t": "Still stateless.",
+			"v": 2
+		},
+		{
+			"s": 173710,
+			"d": 1300,
+			"t": "Is that not state?",
+			"v": 1
+		},
+		{
+			"s": 175010,
+			"d": 1375,
+			"t": "The protocol\nis stateless.",
+			"v": 2
+		},
+		{
+			"s": 176385,
+			"d": 1820,
+			"t": "You send state with\nthe stateless protocol",
+			"v": 2
+		},
+		{
+			"s": 178205,
+			"d": 1875,
+			"t": "so that the protocol\ndoesn't have to hold it.",
+			"v": 2
+		},
+		{
+			"s": 180080,
+			"d": 570,
+			"t": "Fine.",
+			"v": 1
+		},
+		{
+			"s": 180650,
+			"d": 540,
+			"t": "Fine.",
+			"v": 1
+		},
+		{
+			"s": 181190,
+			"d": 663,
+			"t": "OK.",
+			"v": 1
+		},
+		{
+			"s": 181853,
+			"d": 1167,
+			"t": "I would count that as state.",
+			"v": 1
+		},
+		{
+			"s": 183020,
+			"d": 640,
+			"t": "Shut up.",
+			"v": 1
+		},
+		{
+			"s": 183660,
+			"d": 1870,
+			"t": "Right, next year, 1995.",
+			"v": 1
+		},
+		{
+			"s": 185530,
+			"d": 1380,
+			"t": "Look what lands.",
+			"v": 1
+		},
+		{
+			"s": 186910,
+			"d": 1840,
+			"t": "Look at all\nthese sub-resources.",
+			"v": 2
+		},
+		{
+			"s": 188750,
+			"d": 1800,
+			"t": "All these\nsub-resources, but importantly,",
+			"v": 1
+		},
+		{
+			"s": 190550,
+			"d": 510,
+			"t": "script.",
+			"v": 1
+		},
+		{
+			"s": 191060,
+			"d": 1412,
+			"t": "So this is Netscape Navigator 2.",
+			"v": 1
+		},
+		{
+			"s": 192472,
+			"d": 2458,
+			"t": "How many people know\nthat this frame and not iframe?",
+			"v": 2
+		},
+		{
+			"s": 194930,
+			"d": 1530,
+			"t": "Yeah,\nthat's a frame, not iframe.",
+			"v": 1
+		},
+		{
+			"s": 196460,
+			"d": 1417,
+			"t": "I've not used a\nframe for so long.",
+			"v": 1
+		},
+		{
+			"s": 197877,
+			"d": 2813,
+			"t": "That was the only\nthing I ever used when",
+			"v": 2
+		},
+		{
+			"s": 200690,
+			"d": 2620,
+			"t": "I was a kid playing with HTML.",
+			"v": 2
+		},
+		{
+			"s": 203310,
+			"d": 500,
+			"t": "Love it.",
+			"v": 2
+		},
+		{
+			"s": 203810,
+			"d": 2487,
+			"t": "Always had the sidebar,\nthe site nav in a frame",
+			"v": 2
+		},
+		{
+			"s": 206297,
+			"d": 1083,
+			"t": "because you could drag it.",
+			"v": 2
+		},
+		{
+			"s": 207380,
+			"d": 300,
+			"t": "Great.",
+			"v": 2
+		},
+		{
+			"s": 207680,
+			"d": 1542,
+			"t": "And\nwould stay there.",
+			"v": 1
+		},
+		{
+			"s": 209222,
+			"d": 918,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 210140,
+			"d": 450,
+			"t": "It was perfect.",
+			"v": 1
+		},
+		{
+			"s": 210590,
+			"d": 1800,
+			"t": "And then your URL at\nthe top never changed,",
+			"v": 1
+		},
+		{
+			"s": 212390,
+			"d": 750,
+			"t": "which was useless.",
+			"v": 1
+		},
+		{
+			"s": 213140,
+			"d": 900,
+			"t": "But never mind.",
+			"v": 1
+		},
+		{
+			"s": 217250,
+			"d": 3042,
+			"t": "Something bad had\nhappened at this point.",
+			"v": 1
+		},
+		{
+			"s": 220292,
+			"d": 708,
+			"t": "One of probably--",
+			"v": 1
+		},
+		{
+			"s": 221000,
+			"d": 1387,
+			"t": "You started saying, \"Yo\"?",
+			"v": 2
+		},
+		{
+			"s": 222387,
+			"d": 2458,
+			"t": "[LAUGHS] It\nwas actually because if I had--",
+			"v": 1
+		},
+		{
+			"s": 224845,
+			"d": 2345,
+			"t": "so you're going to see some\nmore code coming down here,",
+			"v": 1
+		},
+		{
+			"s": 227190,
+			"d": 2000,
+			"t": "and so I needed something\nshort to put in there.",
+			"v": 1
+		},
+		{
+			"s": 229190,
+			"d": 1290,
+			"t": "And that's why that is.",
+			"v": 1
+		},
+		{
+			"s": 230480,
+			"d": 2920,
+			"t": "But the web made a\nhuge mistake here,",
+			"v": 1
+		},
+		{
+			"s": 233400,
+			"d": 1790,
+			"t": "probably one of the\nbiggest mistakes",
+			"v": 1
+		},
+		{
+			"s": 235190,
+			"d": 2700,
+			"t": "in the design of the web we\never made, and it's right here.",
+			"v": 1
+		},
+		{
+			"s": 237890,
+			"d": 3120,
+			"t": "And it's that-- no matter\nwhat site is containing these,",
+			"v": 1
+		},
+		{
+			"s": 241010,
+			"d": 4470,
+			"t": "the cookies for example.com will\nbe sent with these requests.",
+			"v": 1
+		},
+		{
+			"s": 245480,
+			"d": 1048,
+			"t": "Right.",
+			"v": 2
+		},
+		{
+			"s": 246528,
+			"d": 1792,
+			"t": "And\nthat was a big problem.",
+			"v": 1
+		},
+		{
+			"s": 248320,
+			"d": 1542,
+			"t": "And it was a problem\nthat we continue",
+			"v": 1
+		},
+		{
+			"s": 249862,
+			"d": 2628,
+			"t": "to make [INAUDIBLE]\nof elements as well.",
+			"v": 1
+		},
+		{
+			"s": 252490,
+			"d": 750,
+			"t": "I see here.",
+			"v": 2
+		},
+		{
+			"s": 253240,
+			"d": 500,
+			"t": "[INAUDIBLE]",
+			"v": 0
+		},
+		{
+			"s": 253740,
+			"d": 1782,
+			"t": "Yeah, there you go.",
+			"v": 1
+		},
+		{
+			"s": 255522,
+			"d": 1458,
+			"t": "One more letter\nand that overflows.",
+			"v": 1
+		},
+		{
+			"s": 256980,
+			"d": 2090,
+			"t": "Why was it\na mistake, Jake?",
+			"v": 2
+		},
+		{
+			"s": 259070,
+			"d": 1500,
+			"t": "We'll get onto that.",
+			"v": 1
+		},
+		{
+			"s": 260570,
+			"d": 699,
+			"t": "Oh, OK.",
+			"v": 2
+		},
+		{
+			"s": 261269,
+			"d": 1417,
+			"t": "But it wasn't just",
+			"v": 1
+		},
+		{
+			"s": 262686,
+			"d": 1884,
+			"t": "a mistake for\nsub-resources, it was also",
+			"v": 1
+		},
+		{
+			"s": 264570,
+			"d": 1560,
+			"t": "for some kinds of\nnavigation as well.",
+			"v": 1
+		},
+		{
+			"s": 266130,
+			"d": 2167,
+			"t": "Because this would be sent\nwith the cookies as well.",
+			"v": 1
+		},
+		{
+			"s": 268297,
+			"d": 1583,
+			"t": "Now that I\ncan see as a mistake",
+			"v": 2
+		},
+		{
+			"s": 269880,
+			"d": 2100,
+			"t": "because I can send\nsomeone to a random form",
+			"v": 2
+		},
+		{
+			"s": 271980,
+			"d": 3602,
+			"t": "and suddenly delete their\nbank account or some crap.",
+			"v": 2
+		},
+		{
+			"s": 275582,
+			"d": 958,
+			"t": "That doesn't seem good.",
+			"v": 2
+		},
+		{
+			"s": 276540,
+			"d": 1130,
+			"t": "That\nseems bad, doesn't it?",
+			"v": 1
+		},
+		{
+			"s": 277670,
+			"d": 1000,
+			"t": "It does seem bad.",
+			"v": 2
+		},
+		{
+			"s": 278670,
+			"d": 2758,
+			"t": "But this is how\nall of this stuff was built.",
+			"v": 1
+		},
+		{
+			"s": 281428,
+			"d": 542,
+			"t": "Right.",
+			"v": 2
+		},
+		{
+			"s": 281970,
+			"d": 1167,
+			"t": "Big mistake.",
+			"v": 1
+		},
+		{
+			"s": 283137,
+			"d": 2906,
+			"t": "And I'll go through some\nexamples of the horrible things",
+			"v": 1
+		},
+		{
+			"s": 286043,
+			"d": 667,
+			"t": "that can happen.",
+			"v": 1
+		},
+		{
+			"s": 286710,
+			"d": 1377,
+			"t": "Great.",
+			"v": 2
+		},
+		{
+			"s": 288087,
+			"d": 1833,
+			"t": "But I\ndo want to acknowledge",
+			"v": 1
+		},
+		{
+			"s": 289920,
+			"d": 2500,
+			"t": "that things were starting to\ngo right at this point as well.",
+			"v": 1
+		},
+		{
+			"s": 292420,
+			"d": 2000,
+			"t": "So we had these frame\nobjects, and these frames",
+			"v": 1
+		},
+		{
+			"s": 294420,
+			"d": 1890,
+			"t": "will tell you things\nabout the images",
+			"v": 1
+		},
+		{
+			"s": 296310,
+			"d": 3010,
+			"t": "on the page, the forms on the\npage, the links on the page--",
+			"v": 1
+		},
+		{
+			"s": 299320,
+			"d": 2690,
+			"t": "so the basic JavaScript\nwe had back in 1995.",
+			"v": 1
+		},
+		{
+			"s": 302010,
+			"d": 2400,
+			"t": "But they decided\nthat you would only",
+			"v": 1
+		},
+		{
+			"s": 304410,
+			"d": 1740,
+			"t": "be able to access\nthose properties if you",
+			"v": 1
+		},
+		{
+			"s": 306150,
+			"d": 1757,
+			"t": "were on the same--",
+			"v": 1
+		},
+		{
+			"s": 307907,
+			"d": 583,
+			"t": "Origin.",
+			"v": 2
+		},
+		{
+			"s": 308490,
+			"d": 958,
+			"t": "Origin!",
+			"v": 1
+		},
+		{
+			"s": 309448,
+			"d": 692,
+			"t": "Bam!",
+			"v": 2
+		},
+		{
+			"s": 310140,
+			"d": 2100,
+			"t": "As the\nparent site or whatever.",
+			"v": 1
+		},
+		{
+			"s": 312240,
+			"d": 4780,
+			"t": "And the origin was decided to\nbe scheme, host, port number.",
+			"v": 1
+		},
+		{
+			"s": 317020,
+			"d": 1850,
+			"t": "And there we go.",
+			"v": 1
+		},
+		{
+			"s": 318870,
+			"d": 2010,
+			"t": "So things were starting\nto become good.",
+			"v": 1
+		},
+		{
+			"s": 320880,
+			"d": 1500,
+			"t": "They were thinking\nof the objections",
+			"v": 1
+		},
+		{
+			"s": 322380,
+			"d": 3730,
+			"t": "that they should have\nthought of back at the start.",
+			"v": 1
+		},
+		{
+			"s": 326110,
+			"d": 860,
+			"t": "Look at this!",
+			"v": 1
+		},
+		{
+			"s": 326970,
+			"d": 2160,
+			"t": "I have never written\nthese lines, but I--",
+			"v": 2
+		},
+		{
+			"s": 329130,
+			"d": 990,
+			"t": "I have!",
+			"v": 1
+		},
+		{
+			"s": 330120,
+			"d": 3960,
+			"t": "ActiveX, I remember as\nbeing the source of many evils.",
+			"v": 2
+		},
+		{
+			"s": 334080,
+			"d": 2430,
+			"t": "This\nis XMLHttp request.",
+			"v": 1
+		},
+		{
+			"s": 336510,
+			"d": 1753,
+			"t": "This is the first version of it.",
+			"v": 1
+		},
+		{
+			"s": 338263,
+			"d": 1167,
+			"t": "This is what it looked like.",
+			"v": 1
+		},
+		{
+			"s": 339430,
+			"d": 1590,
+			"t": "It started as\nan ActiveX object.",
+			"v": 2
+		},
+		{
+			"s": 341020,
+			"d": 1000,
+			"t": "Oh, yes!",
+			"v": 1
+		},
+		{
+			"s": 342020,
+			"d": 2380,
+			"t": "Yeah, it used to have this\nhorrible tri-cache thing just",
+			"v": 1
+		},
+		{
+			"s": 344400,
+			"d": 2475,
+			"t": "to find the correct string\nof that that you needed.",
+			"v": 1
+		},
+		{
+			"s": 346875,
+			"d": 1875,
+			"t": "Because there were\nmultiple versions of this.",
+			"v": 1
+		},
+		{
+			"s": 348750,
+			"d": 1403,
+			"t": "Anyway, whatever.",
+			"v": 1
+		},
+		{
+			"s": 350153,
+			"d": 667,
+			"t": "It was horrible.",
+			"v": 1
+		},
+		{
+			"s": 350820,
+			"d": 2320,
+			"t": "But yeah, we did eventually\nget standardized.",
+			"v": 1
+		},
+		{
+			"s": 353140,
+			"d": 2180,
+			"t": "And it took a long time.",
+			"v": 1
+		},
+		{
+			"s": 355320,
+			"d": 750,
+			"t": "Nine years!",
+			"v": 2
+		},
+		{
+			"s": 356070,
+			"d": 1417,
+			"t": "Another nine years",
+			"v": 1
+		},
+		{
+			"s": 357487,
+			"d": 6205,
+			"t": "before we started to get\ncross-origin of these.",
+			"v": 1
+		},
+		{
+			"s": 363692,
+			"d": 958,
+			"t": "So this was the change.",
+			"v": 1
+		},
+		{
+			"s": 364650,
+			"d": 2120,
+			"t": "We had XHR in other\nbrowsers long before that,",
+			"v": 1
+		},
+		{
+			"s": 366770,
+			"d": 2177,
+			"t": "but this was the\ncross-origin one.",
+			"v": 1
+		},
+		{
+			"s": 368947,
+			"d": 833,
+			"t": "With cookies?",
+			"v": 2
+		},
+		{
+			"s": 369780,
+			"d": 745,
+			"t": "Without cookies?",
+			"v": 2
+		},
+		{
+			"s": 370525,
+			"d": 875,
+			"t": "Well.",
+			"v": 1
+		},
+		{
+			"s": 371400,
+			"d": 1687,
+			"t": "Well.",
+			"v": 2
+		},
+		{
+			"s": 373087,
+			"d": 2333,
+			"t": "So I'm going\nfast-forward to modern code",
+			"v": 1
+		},
+		{
+			"s": 375420,
+			"d": 933,
+			"t": "because it's all\nworked the same.",
+			"v": 1
+		},
+		{
+			"s": 376353,
+			"d": 457,
+			"t": "Look at it.",
+			"v": 2
+		},
+		{
+			"s": 376810,
+			"d": 570,
+			"t": "This nice.",
+			"v": 2
+		},
+		{
+			"s": 377380,
+			"d": 650,
+			"t": "That's nice!",
+			"v": 2
+		},
+		{
+			"s": 378030,
+			"d": 2800,
+			"t": "And they\ndecided that, for this to work,",
+			"v": 1
+		},
+		{
+			"s": 380830,
+			"d": 1880,
+			"t": "it would have to be\nan opt-in system.",
+			"v": 1
+		},
+		{
+			"s": 384853,
+			"d": 1667,
+			"t": "They don't want you\nto just be able to--",
+			"v": 1
+		},
+		{
+			"s": 386520,
+			"d": 3720,
+			"t": "Opt-in by the site\nproviding the data, not me,",
+			"v": 2
+		},
+		{
+			"s": 390240,
+			"d": 1350,
+			"t": "the person who writes the code.",
+			"v": 2
+		},
+		{
+			"s": 391590,
+			"d": 750,
+			"t": "Yes, because they",
+			"v": 1
+		},
+		{
+			"s": 392340,
+			"d": 2280,
+			"t": "didn't want you to just be able\nto go and grab someone's emails",
+			"v": 1
+		},
+		{
+			"s": 394620,
+			"d": 510,
+			"t": "or whatever.",
+			"v": 1
+		},
+		{
+			"s": 395130,
+			"d": 500,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 395630,
+			"d": 2710,
+			"t": "The same\nproblem with the frame stuff,",
+			"v": 1
+		},
+		{
+			"s": 398340,
+			"d": 1920,
+			"t": "so you needed this to\nbe an opt-in system,",
+			"v": 1
+		},
+		{
+			"s": 400260,
+			"d": 1687,
+			"t": "and that opt-in became CORS.",
+			"v": 1
+		},
+		{
+			"s": 401947,
+			"d": 1583,
+			"t": "And what it involved\nis the other side",
+			"v": 1
+		},
+		{
+			"s": 403530,
+			"d": 2502,
+			"t": "sending this back, that header.",
+			"v": 1
+		},
+		{
+			"s": 406032,
+			"d": 708,
+			"t": "And there you go.",
+			"v": 1
+		},
+		{
+			"s": 406740,
+			"d": 1440,
+			"t": "You can now access the data.",
+			"v": 1
+		},
+		{
+			"s": 408180,
+			"d": 4020,
+			"t": "So basically, everyone is\nallowed to read this resource.",
+			"v": 2
+		},
+		{
+			"s": 412200,
+			"d": 1630,
+			"t": "Yes, exactly.",
+			"v": 1
+		},
+		{
+			"s": 413830,
+			"d": 2480,
+			"t": "But, like you\npicked up on before,",
+			"v": 1
+		},
+		{
+			"s": 416310,
+			"d": 2280,
+			"t": "the request would be\nsent without credentials.",
+			"v": 1
+		},
+		{
+			"s": 418590,
+			"d": 3020,
+			"t": "We call it-- which is cookies,\ncookies and some client cert.",
+			"v": 1
+		},
+		{
+			"s": 421610,
+			"d": 3640,
+			"t": "Can the site to opt-in\nto allow with credentials?",
+			"v": 2
+		},
+		{
+			"s": 425250,
+			"d": 1320,
+			"t": "Yes, it can.",
+			"v": 1
+		},
+		{
+			"s": 426570,
+			"d": 1500,
+			"t": "So you would do\nsomething like this.",
+			"v": 1
+		},
+		{
+			"s": 428070,
+			"d": 2880,
+			"t": "The same existed on XHR.",
+			"v": 1
+		},
+		{
+			"s": 430950,
+			"d": 3540,
+			"t": "But you would need this access\ncontrol credentials true",
+			"v": 1
+		},
+		{
+			"s": 434490,
+			"d": 1783,
+			"t": "and your access\ncontrol allow origin.",
+			"v": 1
+		},
+		{
+			"s": 436273,
+			"d": 917,
+			"t": "You couldn't use star.",
+			"v": 1
+		},
+		{
+			"s": 437190,
+			"d": 1460,
+			"t": "Can't use star for this.",
+			"v": 1
+		},
+		{
+			"s": 438650,
+			"d": 1390,
+			"t": "It has to be the origin.",
+			"v": 1
+		},
+		{
+			"s": 440040,
+			"d": 2040,
+			"t": "But sometimes--\nso this is obviously",
+			"v": 2
+		},
+		{
+			"s": 442080,
+			"d": 1470,
+			"t": "headers in the response.",
+			"v": 2
+		},
+		{
+			"s": 443550,
+			"d": 360,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 443910,
+			"d": 2208,
+			"t": "Which means the\nrequest has already been sent,",
+			"v": 2
+		},
+		{
+			"s": 446118,
+			"d": 2502,
+			"t": "processed, and a response has\nbeen sent, which could already",
+			"v": 2
+		},
+		{
+			"s": 448620,
+			"d": 1900,
+			"t": "have done damage.",
+			"v": 2
+		},
+		{
+			"s": 450520,
+			"d": 2040,
+			"t": "So\nthese are the slides--",
+			"v": 1
+		},
+		{
+			"s": 452560,
+			"d": 2292,
+			"t": "you're now talking about the\nslides I deleted from this",
+			"v": 1
+		},
+		{
+			"s": 454852,
+			"d": 1608,
+			"t": "because I thought\nthey were boring.",
+			"v": 1
+		},
+		{
+			"s": 456460,
+			"d": 690,
+			"t": "No, but you're right.",
+			"v": 1
+		},
+		{
+			"s": 457150,
+			"d": 2167,
+			"t": "So the way it was decided\nwhen this was an invented,",
+			"v": 1
+		},
+		{
+			"s": 459317,
+			"d": 3673,
+			"t": "it is like we don't need\nto worry about the request",
+			"v": 1
+		},
+		{
+			"s": 462990,
+			"d": 1710,
+			"t": "if it's already\na kind of request",
+			"v": 1
+		},
+		{
+			"s": 464700,
+			"d": 1750,
+			"t": "that the browser\ncan already send.",
+			"v": 1
+		},
+		{
+			"s": 466450,
+			"d": 500,
+			"t": "Right",
+			"v": 2
+		},
+		{
+			"s": 466950,
+			"d": 2820,
+			"t": "So\nthis, a request to there",
+			"v": 1
+		},
+		{
+			"s": 469770,
+			"d": 1903,
+			"t": "with credentials,\nit's an image tag.",
+			"v": 1
+		},
+		{
+			"s": 471673,
+			"d": 917,
+			"t": "You can already do it.",
+			"v": 1
+		},
+		{
+			"s": 472590,
+			"d": 480,
+			"t": "That's true.",
+			"v": 2
+		},
+		{
+			"s": 473070,
+			"d": 2640,
+			"t": "A post request,\nyou can do that with a form.",
+			"v": 1
+		},
+		{
+			"s": 475710,
+			"d": 1740,
+			"t": "And there's also\nrules around the kinds",
+			"v": 1
+		},
+		{
+			"s": 477450,
+			"d": 1470,
+			"t": "of headers you can use.",
+			"v": 1
+		},
+		{
+			"s": 478920,
+			"d": 2790,
+			"t": "Like for a content type,\nthe content type can be--",
+			"v": 1
+		},
+		{
+			"s": 481710,
+			"d": 5068,
+			"t": "for the body of the post, it\ncan be URL-encoded, the x URL--",
+			"v": 1
+		},
+		{
+			"s": 486778,
+			"d": 1792,
+			"t": "I can't remember it\noff the top of my head.",
+			"v": 1
+		},
+		{
+			"s": 488570,
+			"d": 1000,
+			"t": "Yeah, thing--\nthe long thing.",
+			"v": 2
+		},
+		{
+			"s": 489570,
+			"d": 1680,
+			"t": "Because\nyou can do that with forms.",
+			"v": 1
+		},
+		{
+			"s": 491250,
+			"d": 365,
+			"t": "Form multipart.",
+			"v": 1
+		},
+		{
+			"s": 491615,
+			"d": 875,
+			"t": "Oh, I just remembered.",
+			"v": 2
+		},
+		{
+			"s": 492490,
+			"d": 747,
+			"t": "Because\nyou can do that with forms.",
+			"v": 1
+		},
+		{
+			"s": 493237,
+			"d": 943,
+			"t": "If you want\nto deviate, you",
+			"v": 2
+		},
+		{
+			"s": 494180,
+			"d": 1750,
+			"t": "go into the whole\npreflight request thing.",
+			"v": 2
+		},
+		{
+			"s": 495930,
+			"d": 1833,
+			"t": "We're not going to talk\nabout, I'm guessing.",
+			"v": 2
+		},
+		{
+			"s": 497763,
+			"d": 1247,
+			"t": "Content-- no.",
+			"v": 1
+		},
+		{
+			"s": 499010,
+			"d": 1815,
+			"t": "So if you deviate,\nit does a preflight",
+			"v": 1
+		},
+		{
+			"s": 500825,
+			"d": 1375,
+			"t": "where it has to\ngo and ask first,",
+			"v": 1
+		},
+		{
+			"s": 502200,
+			"d": 1560,
+			"t": "\"Can I make this request?\"",
+			"v": 1
+		},
+		{
+			"s": 503760,
+			"d": 900,
+			"t": "Absolutely.",
+			"v": 1
+		},
+		{
+			"s": 504660,
+			"d": 1680,
+			"t": "Interestingly, you\ncan do a POST request",
+			"v": 1
+		},
+		{
+			"s": 506340,
+			"d": 2940,
+			"t": "with the content\ntype text plain.",
+			"v": 1
+		},
+		{
+			"s": 509280,
+			"d": 2520,
+			"t": "And that's fine\nbecause you can already",
+			"v": 1
+		},
+		{
+			"s": 511800,
+			"d": 1590,
+			"t": "do that with the form element.",
+			"v": 1
+		},
+		{
+			"s": 513390,
+			"d": 1060,
+			"t": "Oh, they can?",
+			"v": 2
+		},
+		{
+			"s": 514450,
+			"d": 66,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 514516,
+			"d": 917,
+			"t": "I did not know.",
+			"v": 2
+		},
+		{
+			"s": 515433,
+			"d": 1458,
+			"t": "Yes, this is like--",
+			"v": 1
+		},
+		{
+			"s": 516891,
+			"d": 1148,
+			"t": "I always forget about this.",
+			"v": 1
+		},
+		{
+			"s": 518039,
+			"d": 5851,
+			"t": "The encoding for form\ndata text plain is--",
+			"v": 1
+		},
+		{
+			"s": 523890,
+			"d": 2100,
+			"t": "That's how I used\nto send emails to myself!",
+			"v": 2
+		},
+		{
+			"s": 525990,
+			"d": 1520,
+			"t": "It's just like value equals--",
+			"v": 2
+		},
+		{
+			"s": 527510,
+			"d": 950,
+			"t": "or key equals--",
+			"v": 2
+		},
+		{
+			"s": 528460,
+			"d": 2000,
+			"t": "Which is\nalmost entirely useless",
+			"v": 1
+		},
+		{
+			"s": 530460,
+			"d": 1370,
+			"t": "because if you have--",
+			"v": 1
+		},
+		{
+			"s": 531830,
+			"d": 2250,
+			"t": "because the line break\nseparated, but your form values",
+			"v": 1
+		},
+		{
+			"s": 534080,
+			"d": 1040,
+			"t": "can have line breaks.",
+			"v": 1
+		},
+		{
+			"s": 535120,
+			"d": 1730,
+			"t": "So it's impossible to parse.",
+			"v": 1
+		},
+		{
+			"s": 536850,
+			"d": 910,
+			"t": "True.",
+			"v": 2
+		},
+		{
+			"s": 537760,
+			"d": 1250,
+			"t": "But it exists.",
+			"v": 1
+		},
+		{
+			"s": 539010,
+			"d": 1860,
+			"t": "I made pages\nback in the day,",
+			"v": 2
+		},
+		{
+			"s": 540870,
+			"d": 2815,
+			"t": "I would have a contact me form,\nwhere you send emails to me,",
+			"v": 2
+		},
+		{
+			"s": 543685,
+			"d": 875,
+			"t": "and I would use that.",
+			"v": 2
+		},
+		{
+			"s": 544560,
+			"d": 1958,
+			"t": "Yeah,\nthen CGI script to do it.",
+			"v": 1
+		},
+		{
+			"s": 546518,
+			"d": 749,
+			"t": "Yes, absolutely.",
+			"v": 1
+		},
+		{
+			"s": 547267,
+			"d": 1833,
+			"t": "But the point I want\nto make about this is--",
+			"v": 1
+		},
+		{
+			"s": 549100,
+			"d": 900,
+			"t": "yeah, you have to--",
+			"v": 1
+		},
+		{
+			"s": 550000,
+			"d": 2290,
+			"t": "CGI script mail, too.",
+			"v": 2
+		},
+		{
+			"s": 552290,
+			"d": 1500,
+			"t": "Oh, with the body.",
+			"v": 1
+		},
+		{
+			"s": 553790,
+			"d": 1380,
+			"t": "Yes, fine.",
+			"v": 1
+		},
+		{
+			"s": 555170,
+			"d": 2430,
+			"t": "You have to send\nthe origin back.",
+			"v": 1
+		},
+		{
+			"s": 557600,
+			"d": 1417,
+			"t": "The exact\norigin, not star.",
+			"v": 2
+		},
+		{
+			"s": 559017,
+			"d": 1375,
+			"t": "You can't do star",
+			"v": 1
+		},
+		{
+			"s": 560392,
+			"d": 1486,
+			"t": "if you're doing credentials.",
+			"v": 1
+		},
+		{
+			"s": 561878,
+			"d": 792,
+			"t": "Interesting.",
+			"v": 2
+		},
+		{
+			"s": 562670,
+			"d": 2030,
+			"t": "So how\nwould you get this?",
+			"v": 1
+		},
+		{
+			"s": 564700,
+			"d": 630,
+			"t": "Because how do you get--",
+			"v": 1
+		},
+		{
+			"s": 565330,
+			"d": 1060,
+			"t": "From the request, right?",
+			"v": 2
+		},
+		{
+			"s": 566390,
+			"d": 1375,
+			"t": "From the request.",
+			"v": 1
+		},
+		{
+			"s": 567765,
+			"d": 2197,
+			"t": "Now, at the time we had\nthe referrer header.",
+			"v": 1
+		},
+		{
+			"s": 569962,
+			"d": 2168,
+			"t": "The infamously\nmisspelled referrer header.",
+			"v": 2
+		},
+		{
+			"s": 572130,
+			"d": 1958,
+			"t": "The\nmisspelled referrer header.",
+			"v": 1
+		},
+		{
+			"s": 574088,
+			"d": 1792,
+			"t": "But also, the often\nabsent referrer header.",
+			"v": 1
+		},
+		{
+			"s": 575880,
+			"d": 500,
+			"t": "True.",
+			"v": 2
+		},
+		{
+			"s": 576380,
+			"d": 2100,
+			"t": "Because\ninternet safety software--",
+			"v": 1
+		},
+		{
+			"s": 578480,
+			"d": 1170,
+			"t": "actually, I'm not\neven going to do that,",
+			"v": 1
+		},
+		{
+			"s": 579650,
+			"d": 2000,
+			"t": "because this is actually\na good piece of safety.",
+			"v": 1
+		},
+		{
+			"s": 581650,
+			"d": 2380,
+			"t": "Leaking the path of where\nyou were on the previous site",
+			"v": 1
+		},
+		{
+			"s": 584030,
+			"d": 2042,
+			"t": "is actually quite\nprivacy invasive.",
+			"v": 1
+		},
+		{
+			"s": 586072,
+			"d": 958,
+			"t": "Or could-- yeah.",
+			"v": 2
+		},
+		{
+			"s": 587030,
+			"d": 2220,
+			"t": "Because it could\nhave your user names, account,",
+			"v": 1
+		},
+		{
+			"s": 589250,
+			"d": 1530,
+			"t": "user numbers, all of\nthat sort of stuff.",
+			"v": 1
+		},
+		{
+			"s": 590780,
+			"d": 480,
+			"t": "True.",
+			"v": 2
+		},
+		{
+			"s": 591260,
+			"d": 1708,
+			"t": "So a\nlot of this software",
+			"v": 1
+		},
+		{
+			"s": 592968,
+			"d": 1322,
+			"t": "would just remove the referrer.",
+			"v": 1
+		},
+		{
+			"s": 594290,
+			"d": 870,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 595160,
+			"d": 1920,
+			"t": "But then that\nmeans it's useless for this.",
+			"v": 1
+		},
+		{
+			"s": 597080,
+			"d": 500,
+			"t": "True.",
+			"v": 2
+		},
+		{
+			"s": 597580,
+			"d": 3040,
+			"t": "So we invented\na new header, origin, and that's",
+			"v": 1
+		},
+		{
+			"s": 600620,
+			"d": 2290,
+			"t": "sent with the request.",
+			"v": 1
+		},
+		{
+			"s": 602910,
+			"d": 2930,
+			"t": "So it doesn't have all of the\npath data that would be leaky,",
+			"v": 1
+		},
+		{
+			"s": 605840,
+			"d": 900,
+			"t": "it just says the\norigin it came from.",
+			"v": 1
+		},
+		{
+			"s": 606740,
+			"d": 2530,
+			"t": "Was this header invented\nas a response to this problem?",
+			"v": 2
+		},
+		{
+			"s": 609270,
+			"d": 440,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 609710,
+			"d": 760,
+			"t": "That's interesting.",
+			"v": 2
+		},
+		{
+			"s": 610470,
+			"d": 1708,
+			"t": "Yeah,\nit is exactly that.",
+			"v": 1
+		},
+		{
+			"s": 612178,
+			"d": 3292,
+			"t": "So that exists on CORS requests,\nand that's how that works.",
+			"v": 1
+		},
+		{
+			"s": 615470,
+			"d": 2200,
+			"t": "I think it comes\npretty much any request now.",
+			"v": 2
+		},
+		{
+			"s": 617670,
+			"d": 2940,
+			"t": "We'll get on to that.",
+			"v": 1
+		},
+		{
+			"s": 620610,
+			"d": 2750,
+			"t": "So, the point I want\nto make about this,",
+			"v": 1
+		},
+		{
+			"s": 623360,
+			"d": 3350,
+			"t": "and I wanted to get here a\nlot quicker than we have,",
+			"v": 1
+		},
+		{
+			"s": 626710,
+			"d": 1240,
+			"t": "but here we are.",
+			"v": 1
+		},
+		{
+			"s": 627950,
+			"d": 4830,
+			"t": "Is that adding this is almost\nalways safe, almost always.",
+			"v": 1
+		},
+		{
+			"s": 632780,
+			"d": 2970,
+			"t": "And yet,\nalmost nobody does it.",
+			"v": 2
+		},
+		{
+			"s": 635750,
+			"d": 2670,
+			"t": "Yes, more the pity.",
+			"v": 1
+		},
+		{
+			"s": 638420,
+			"d": 3180,
+			"t": "So when these requests are\nsent without cookies and stuff,",
+			"v": 1
+		},
+		{
+			"s": 641600,
+			"d": 3017,
+			"t": "the question we\nget a lot is, why",
+			"v": 1
+		},
+		{
+			"s": 644617,
+			"d": 2083,
+			"t": "do we need an opt in if\nit's sent without cookies?",
+			"v": 1
+		},
+		{
+			"s": 646700,
+			"d": 860,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 647560,
+			"d": 2078,
+			"t": "And the\nproblem is intranets,",
+			"v": 1
+		},
+		{
+			"s": 649638,
+			"d": 1792,
+			"t": "because they're not\nprotected with cookies.",
+			"v": 1
+		},
+		{
+			"s": 651430,
+			"d": 1090,
+			"t": "True.",
+			"v": 2
+		},
+		{
+			"s": 652520,
+			"d": 3820,
+			"t": "IoT devices\nall around your house.",
+			"v": 1
+		},
+		{
+			"s": 656340,
+			"d": 2990,
+			"t": "A lot people will run dev\nservers that have seat--",
+			"v": 1
+		},
+		{
+			"s": 659330,
+			"d": 570,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 659900,
+			"d": 300,
+			"t": "Right.",
+			"v": 1
+		},
+		{
+			"s": 660200,
+			"d": 2125,
+			"t": "And so, you don't want--\nif you're visiting a site,",
+			"v": 1
+		},
+		{
+			"s": 662325,
+			"d": 2315,
+			"t": "for me to just be able\nto go to 1270011--",
+			"v": 1
+		},
+		{
+			"s": 664640,
+			"d": 3040,
+			"t": "Yeah, go to my router\nweb interface and do shenanigans",
+			"v": 2
+		},
+		{
+			"s": 667680,
+			"d": 500,
+			"t": "with it.",
+			"v": 2
+		},
+		{
+			"s": 668180,
+			"d": 810,
+			"t": "Exactly, yeah.",
+			"v": 1
+		},
+		{
+			"s": 668990,
+			"d": 510,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 669500,
+			"d": 2790,
+			"t": "So this\nis almost always safe.",
+			"v": 1
+		},
+		{
+			"s": 672290,
+			"d": 1217,
+			"t": "Except when it isn't.",
+			"v": 2
+		},
+		{
+			"s": 673507,
+			"d": 1333,
+			"t": "So the rule is--",
+			"v": 1
+		},
+		{
+			"s": 674840,
+			"d": 5740,
+			"t": "I would say the rule is, go\nto the URL in a incognito tab",
+			"v": 1
+		},
+		{
+			"s": 680580,
+			"d": 2178,
+			"t": "so there's no cookies\nthere and look at it.",
+			"v": 1
+		},
+		{
+			"s": 682758,
+			"d": 2042,
+			"t": "And if you are happy with\nthe world seeing that--",
+			"v": 1
+		},
+		{
+			"s": 684800,
+			"d": 2207,
+			"t": "From your phone,\non mobile internet.",
+			"v": 2
+		},
+		{
+			"s": 687007,
+			"d": 2083,
+			"t": "Well, no,\nfrom whatever connection",
+			"v": 1
+		},
+		{
+			"s": 689090,
+			"d": 2110,
+			"t": "that you can access it from.",
+			"v": 1
+		},
+		{
+			"s": 691200,
+			"d": 2690,
+			"t": "So if you access your\nrouter and it says your name",
+			"v": 1
+		},
+		{
+			"s": 693890,
+			"d": 2257,
+			"t": "on it in an incognito\ntab, then you're like,",
+			"v": 1
+		},
+		{
+			"s": 696147,
+			"d": 2333,
+			"t": "I'm unhappy with that, so it\nshouldn't have this header.",
+			"v": 1
+		},
+		{
+			"s": 698480,
+			"d": 2280,
+			"t": "But if you're happy with\nthe content and the source,",
+			"v": 1
+		},
+		{
+			"s": 700760,
+			"d": 1300,
+			"t": "you can put that header on it.",
+			"v": 1
+		},
+		{
+			"s": 702060,
+			"d": 1690,
+			"t": "That is the vast majority\nof stuff on the web.",
+			"v": 1
+		},
+		{
+			"s": 703750,
+			"d": 1660,
+			"t": "But nobody's following\nthat guidance, Jake.",
+			"v": 2
+		},
+		{
+			"s": 705410,
+			"d": 590,
+			"t": "Because we've tried--",
+			"v": 2
+		},
+		{
+			"s": 706000,
+			"d": 1630,
+			"t": "That's why\nI'm saying it right now.",
+			"v": 1
+		},
+		{
+			"s": 707630,
+			"d": 1020,
+			"t": "I'm hoping that\neveryone's going to go,",
+			"v": 1
+		},
+		{
+			"s": 708650,
+			"d": 1600,
+			"t": "oh, I'll go and add\nit to all my stuff.",
+			"v": 1
+		},
+		{
+			"s": 710250,
+			"d": 200,
+			"t": "You know?",
+			"v": 1
+		},
+		{
+			"s": 710450,
+			"d": 1200,
+			"t": "Nobody is, let's be real.",
+			"v": 2
+		},
+		{
+			"s": 711650,
+			"d": 917,
+			"t": "Right.",
+			"v": 1
+		},
+		{
+			"s": 712567,
+			"d": 1573,
+			"t": "Let's get back to these.",
+			"v": 1
+		},
+		{
+			"s": 714140,
+			"d": 2670,
+			"t": "So I was saying that this is\na huge mistake for the web.",
+			"v": 1
+		},
+		{
+			"s": 716810,
+			"d": 930,
+			"t": "Yo.",
+			"v": 2
+		},
+		{
+			"s": 717740,
+			"d": 840,
+			"t": "Yo.",
+			"v": 1
+		},
+		{
+			"s": 718580,
+			"d": 1110,
+			"t": "Yo, what up?",
+			"v": 1
+		},
+		{
+			"s": 719690,
+			"d": 933,
+			"t": "This up.",
+			"v": 1
+		},
+		{
+			"s": 720623,
+			"d": 3177,
+			"t": "[LAUGHTER]",
+			"v": 0
+		},
+		{
+			"s": 723800,
+			"d": 780,
+			"t": "Am I cool?",
+			"v": 1
+		},
+		{
+			"s": 724580,
+			"d": 2250,
+			"t": "Am I cool now?",
+			"v": 1
+		},
+		{
+			"s": 726830,
+			"d": 2450,
+			"t": "If you weren't\nalready white,",
+			"v": 2
+		},
+		{
+			"s": 729280,
+			"d": 2005,
+			"t": "you would be so much\nwhiter right now.",
+			"v": 2
+		},
+		{
+			"s": 731285,
+			"d": 1125,
+			"t": "Impossible.",
+			"v": 1
+		},
+		{
+			"s": 732410,
+			"d": 1792,
+			"t": "I feel like I'm going\nred, I'm embarrassed.",
+			"v": 1
+		},
+		{
+			"s": 734202,
+			"d": 1688,
+			"t": "Right.",
+			"v": 1
+		},
+		{
+			"s": 735890,
+			"d": 2100,
+			"t": "So we got this problem\nhere that, you know,",
+			"v": 1
+		},
+		{
+			"s": 737990,
+			"d": 2980,
+			"t": "you've got a URL that gets\nthe current user's avatar.",
+			"v": 1
+		},
+		{
+			"s": 740970,
+			"d": 3800,
+			"t": "Now, I can do a load event\nto tell if this loads.",
+			"v": 1
+		},
+		{
+			"s": 744770,
+			"d": 3034,
+			"t": "And by that, I can determine\nyou are locked into example.com.",
+			"v": 1
+		},
+		{
+			"s": 747804,
+			"d": 999,
+			"t": "Bad.",
+			"v": 1
+		},
+		{
+			"s": 748803,
+			"d": 667,
+			"t": "Oh, yeah.",
+			"v": 2
+		},
+		{
+			"s": 749470,
+			"d": 300,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 749770,
+			"d": 370,
+			"t": "Right?",
+			"v": 1
+		},
+		{
+			"s": 750140,
+			"d": 810,
+			"t": "I see where you're going.",
+			"v": 2
+		},
+		{
+			"s": 750950,
+			"d": 2700,
+			"t": "So this -0,\nthis is a sort of convention.",
+			"v": 1
+		},
+		{
+			"s": 753650,
+			"d": 900,
+			"t": "- SPEAKER 2: Dash-0.",
+			"v": 1
+		},
+		{
+			"s": 754550,
+			"d": 2040,
+			"t": "Dash-0, hello.",
+			"v": 1
+		},
+		{
+			"s": 756590,
+			"d": 2114,
+			"t": "Dash-0, that's my rap name.",
+			"v": 1
+		},
+		{
+			"s": 758704,
+			"d": 3144,
+			"t": "[LAUGHS]",
+			"v": 2
+		},
+		{
+			"s": 761848,
+			"d": 1042,
+			"t": "So, yeah.",
+			"v": 1
+		},
+		{
+			"s": 762890,
+			"d": 3030,
+			"t": "We've got that -0, it's\nthe original avatar",
+			"v": 1
+		},
+		{
+			"s": 765920,
+			"d": 935,
+			"t": "the user uploaded.",
+			"v": 1
+		},
+		{
+			"s": 766855,
+			"d": 2125,
+			"t": "But then from that, I can\nget the width and height,",
+			"v": 1
+		},
+		{
+			"s": 768980,
+			"d": 2238,
+			"t": "and now that's user\nidentifiable data.",
+			"v": 1
+		},
+		{
+			"s": 771218,
+			"d": 792,
+			"t": "Potentially.",
+			"v": 2
+		},
+		{
+			"s": 772010,
+			"d": 810,
+			"t": "Because that's more",
+			"v": 1
+		},
+		{
+			"s": 772820,
+			"d": 1780,
+			"t": "likely to be unique\nthan that other stuff",
+			"v": 1
+		},
+		{
+			"s": 774600,
+			"d": 2095,
+			"t": "if it's the original\nversion they uploaded.",
+			"v": 1
+		},
+		{
+			"s": 776695,
+			"d": 2375,
+			"t": "This is all leaking of data\nthat shouldn't really happen.",
+			"v": 1
+		},
+		{
+			"s": 779070,
+			"d": 2750,
+			"t": "It does, thanks to these\nbad mistakes that were made.",
+			"v": 1
+		},
+		{
+			"s": 781820,
+			"d": 2343,
+			"t": "And we're only recently\nstarted to fix some of these.",
+			"v": 1
+		},
+		{
+			"s": 784163,
+			"d": 1417,
+			"t": "I mean,\nit's a hard problem",
+			"v": 2
+		},
+		{
+			"s": 785580,
+			"d": 1640,
+			"t": "because backwards\ncompatibility is",
+			"v": 2
+		},
+		{
+			"s": 787220,
+			"d": 2160,
+			"t": "one of the uppermost\ngoals on the web.",
+			"v": 2
+		},
+		{
+			"s": 789380,
+			"d": 1125,
+			"t": "Absolutely.",
+			"v": 1
+		},
+		{
+			"s": 790505,
+			"d": 2185,
+			"t": "Just breaking that\nwill probably break--",
+			"v": 2
+		},
+		{
+			"s": 792690,
+			"d": 2805,
+			"t": "or changing that will break a\ngood amount of existing sites.",
+			"v": 2
+		},
+		{
+			"s": 795495,
+			"d": 1125,
+			"t": "Or will it?",
+			"v": 1
+		},
+		{
+			"s": 796620,
+			"d": 990,
+			"t": "Or will it?",
+			"v": 1
+		},
+		{
+			"s": 797610,
+			"d": 2660,
+			"t": "So this is one of the fixes,\nyou put in your cookie.",
+			"v": 1
+		},
+		{
+			"s": 800270,
+			"d": 2945,
+			"t": "So this is how the site would\ndeal your log in cookies,",
+			"v": 1
+		},
+		{
+			"s": 803215,
+			"d": 1625,
+			"t": "you've got your\nsession ID or whatever.",
+			"v": 1
+		},
+		{
+			"s": 804840,
+			"d": 1760,
+			"t": "But look at this.",
+			"v": 1
+		},
+		{
+			"s": 806600,
+			"d": 700,
+			"t": "Lax.",
+			"v": 2
+		},
+		{
+			"s": 807300,
+			"d": 1250,
+			"t": "Same site lax.",
+			"v": 1
+		},
+		{
+			"s": 808550,
+			"d": 3270,
+			"t": "And what this means is,\nonly send this cookie",
+			"v": 1
+		},
+		{
+			"s": 811820,
+			"d": 2500,
+			"t": "if the request\ncame from my site.",
+			"v": 1
+		},
+		{
+			"s": 814320,
+			"d": 500,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 814820,
+			"d": 2542,
+			"t": "So that means\nit would not be sent with this.",
+			"v": 1
+		},
+		{
+			"s": 817362,
+			"d": 1718,
+			"t": "If this is on\nevil.com, or whatever,",
+			"v": 1
+		},
+		{
+			"s": 819080,
+			"d": 2170,
+			"t": "the session cookie would\nnot go along with this,",
+			"v": 1
+		},
+		{
+			"s": 821250,
+			"d": 1280,
+			"t": "so that this would\nalways fail to load.",
+			"v": 1
+		},
+		{
+			"s": 822530,
+			"d": 360,
+			"t": "Or then you would get--",
+			"v": 1
+		},
+		{
+			"s": 822890,
+			"d": 260,
+			"t": "Right.",
+			"v": 2
+		},
+		{
+			"s": 823150,
+			"d": 1890,
+			"t": "But now that site has\nbeen broken, which--",
+			"v": 2
+		},
+		{
+			"s": 825040,
+			"d": 420,
+			"t": "Well, not really.",
+			"v": 1
+		},
+		{
+			"s": 825460,
+			"d": 2140,
+			"t": "Well, only if it expected\nto be able to display",
+			"v": 1
+		},
+		{
+			"s": 827600,
+			"d": 990,
+			"t": "avatars on oversight.",
+			"v": 1
+		},
+		{
+			"s": 828590,
+			"d": 1890,
+			"t": "Which was reasonable\nto expect, right?",
+			"v": 2
+		},
+		{
+			"s": 830480,
+			"d": 1560,
+			"t": "Some-- maybe.",
+			"v": 1
+		},
+		{
+			"s": 832040,
+			"d": 3300,
+			"t": "But then, well-- if you--",
+			"v": 1
+		},
+		{
+			"s": 835340,
+			"d": 1200,
+			"t": "I would say not, right?",
+			"v": 1
+		},
+		{
+			"s": 836540,
+			"d": 3458,
+			"t": "You don't want a single\nURL to deal out your avatar",
+			"v": 1
+		},
+		{
+			"s": 839998,
+			"d": 1042,
+			"t": "because you're logged in.",
+			"v": 1
+		},
+		{
+			"s": 841040,
+			"d": 60,
+			"t": "Probably.",
+			"v": 2
+		},
+		{
+			"s": 841100,
+			"d": 120,
+			"t": "I mean--",
+			"v": 2
+		},
+		{
+			"s": 841220,
+			"d": 1670,
+			"t": "Because\nit's an information leak.",
+			"v": 1
+		},
+		{
+			"s": 842890,
+			"d": 1830,
+			"t": "There are cases where you\nwant that, in which case",
+			"v": 1
+		},
+		{
+			"s": 844720,
+			"d": 1250,
+			"t": "you need to do something else.",
+			"v": 1
+		},
+		{
+			"s": 845970,
+			"d": 3950,
+			"t": "And you probably need to\nchange your code right now,",
+			"v": 1
+		},
+		{
+			"s": 849920,
+			"d": 2960,
+			"t": "because Chrome 80 made a change.",
+			"v": 1
+		},
+		{
+			"s": 852880,
+			"d": 1098,
+			"t": "Oh, yeah.",
+			"v": 2
+		},
+		{
+			"s": 853978,
+			"d": 2292,
+			"t": "We've decided\nthat if this says nothing",
+			"v": 1
+		},
+		{
+			"s": 856270,
+			"d": 4560,
+			"t": "about same site cookies, we are\ngoing to assume same site lax.",
+			"v": 1
+		},
+		{
+			"s": 860830,
+			"d": 2030,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 862860,
+			"d": 2260,
+			"t": "Actually, no.",
+			"v": 1
+		},
+		{
+			"s": 865120,
+			"d": 2250,
+			"t": "We filmed this\nepisode a month ago,",
+			"v": 1
+		},
+		{
+			"s": 867370,
+			"d": 2078,
+			"t": "and a lot has changed\nin the world since then.",
+			"v": 1
+		},
+		{
+			"s": 869448,
+			"d": 1792,
+			"t": "This cookie change that\nwe're talking about",
+			"v": 1
+		},
+		{
+			"s": 871240,
+			"d": 2202,
+			"t": "actually broke a\nfew important sites",
+			"v": 1
+		},
+		{
+			"s": 873442,
+			"d": 1708,
+			"t": "like government sites\nand shopping sites,",
+			"v": 1
+		},
+		{
+			"s": 875150,
+			"d": 3152,
+			"t": "and we felt like now especially\nis a bad time to be doing that.",
+			"v": 1
+		},
+		{
+			"s": 878302,
+			"d": 1708,
+			"t": "So we've actually\nrolled the change back.",
+			"v": 1
+		},
+		{
+			"s": 880010,
+			"d": 1833,
+			"t": "We're still going to\nbe doing it eventually,",
+			"v": 1
+		},
+		{
+			"s": 881843,
+			"d": 1745,
+			"t": "but we've rolled\nit back for now.",
+			"v": 1
+		},
+		{
+			"s": 883588,
+			"d": 1542,
+			"t": "Check out the link\nin the description",
+			"v": 1
+		},
+		{
+			"s": 885130,
+			"d": 1540,
+			"t": "for more details on that.",
+			"v": 1
+		},
+		{
+			"s": 886670,
+			"d": 3220,
+			"t": "And in the meantime,\nback to the episode.",
+			"v": 1
+		},
+		{
+			"s": 889890,
+			"d": 2500,
+			"t": "So that means, yeah, if you\nhave one of those services where",
+			"v": 1
+		},
+		{
+			"s": 892390,
+			"d": 1458,
+			"t": "you want people to\nbe able to log--",
+			"v": 1
+		},
+		{
+			"s": 893848,
+			"d": 3360,
+			"t": "it's not going to work unless\nyou go in and say, same site.",
+			"v": 1
+		},
+		{
+			"s": 897208,
+			"d": 1542,
+			"t": "Doesn't lax\nstand for relaxed?",
+			"v": 2
+		},
+		{
+			"s": 898750,
+			"d": 750,
+			"t": "Like the--",
+			"v": 2
+		},
+		{
+			"s": 899500,
+			"d": 780,
+			"t": "Yes, it does.",
+			"v": 1
+		},
+		{
+			"s": 900280,
+			"d": 1990,
+			"t": "So there is also\nan even stricter version.",
+			"v": 2
+		},
+		{
+			"s": 902270,
+			"d": 950,
+			"t": "There\nis a stricter version.",
+			"v": 1
+		},
+		{
+			"s": 903220,
+			"d": 625,
+			"t": "Oh, wow.",
+			"v": 2
+		},
+		{
+			"s": 903845,
+			"d": 1625,
+			"t": "The\nstricter version",
+			"v": 1
+		},
+		{
+			"s": 905470,
+			"d": 3633,
+			"t": "works for navigations as well.",
+			"v": 1
+		},
+		{
+			"s": 909103,
+			"d": 1917,
+			"t": "So even if you navigate\nfrom site A to site B,",
+			"v": 1
+		},
+		{
+			"s": 911020,
+			"d": 1560,
+			"t": "it will not send\nsite these cookies.",
+			"v": 1
+		},
+		{
+			"s": 912580,
+			"d": 660,
+			"t": "Interesting.",
+			"v": 2
+		},
+		{
+			"s": 913240,
+			"d": 1080,
+			"t": "That is strict.",
+			"v": 1
+		},
+		{
+			"s": 914320,
+			"d": 708,
+			"t": "Which is really--",
+			"v": 1
+		},
+		{
+			"s": 915028,
+			"d": 1842,
+			"t": "So if have a\nlink, here, go to GitHub",
+			"v": 2
+		},
+		{
+			"s": 916870,
+			"d": 1310,
+			"t": "and you press the link--",
+			"v": 2
+		},
+		{
+			"s": 918180,
+			"d": 1625,
+			"t": "You\nwould be logged out",
+			"v": 1
+		},
+		{
+			"s": 919805,
+			"d": 1565,
+			"t": "if they used same site strict.",
+			"v": 1
+		},
+		{
+			"s": 921370,
+			"d": 1668,
+			"t": "Interesting.",
+			"v": 2
+		},
+		{
+			"s": 923038,
+			"d": 2292,
+			"t": "Which is why\nlax is really the simplest",
+			"v": 1
+		},
+		{
+			"s": 925330,
+			"d": 1590,
+			"t": "one to use, unless\nyou want to go",
+			"v": 1
+		},
+		{
+			"s": 926920,
+			"d": 3090,
+			"t": "above and beyond for some\ncertain bits and pieces.",
+			"v": 1
+		},
+		{
+			"s": 930010,
+			"d": 1500,
+			"t": "So yeah, Chrome 80\nmade this change.",
+			"v": 1
+		},
+		{
+			"s": 931510,
+			"d": 1050,
+			"t": "Firefox is going to as well.",
+			"v": 1
+		},
+		{
+			"s": 932560,
+			"d": 1610,
+			"t": "But same site cookies\nin general, well",
+			"v": 1
+		},
+		{
+			"s": 934170,
+			"d": 1830,
+			"t": "supported across\nall of the browsers.",
+			"v": 1
+		},
+		{
+			"s": 936000,
+			"d": 1823,
+			"t": "Yup.",
+			"v": 2
+		},
+		{
+			"s": 937823,
+			"d": 2417,
+			"t": "And it also\nsolves this problem, which you",
+			"v": 1
+		},
+		{
+			"s": 940240,
+			"d": 1170,
+			"t": "mentioned earlier on as well.",
+			"v": 1
+		},
+		{
+			"s": 941410,
+			"d": 330,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 941740,
+			"d": 2150,
+			"t": "Where I can\nhave a form and I can submit it,",
+			"v": 1
+		},
+		{
+			"s": 943890,
+			"d": 1840,
+			"t": "but even though this\nis a full navigation,",
+			"v": 1
+		},
+		{
+			"s": 945730,
+			"d": 2410,
+			"t": "it won't send those cookies\neven if there's lax.",
+			"v": 1
+		},
+		{
+			"s": 948140,
+			"d": 500,
+			"t": "Right?",
+			"v": 1
+		},
+		{
+			"s": 948640,
+			"d": 270,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 948910,
+			"d": 1210,
+			"t": "It's fine.",
+			"v": 1
+		},
+		{
+			"s": 950120,
+			"d": 2690,
+			"t": "But what if you can't\ndo that for some reason?",
+			"v": 1
+		},
+		{
+			"s": 952810,
+			"d": 2280,
+			"t": "What if you can't change\nyour cookies or whatever,",
+			"v": 1
+		},
+		{
+			"s": 955090,
+			"d": 1625,
+			"t": "how can you protect\nyourself from this?",
+			"v": 1
+		},
+		{
+			"s": 956715,
+			"d": 1645,
+			"t": "This is SRF, this is, yeah.",
+			"v": 1
+		},
+		{
+			"s": 958360,
+			"d": 1965,
+			"t": "Yes, with CSRF,\ntokens and stuff.",
+			"v": 2
+		},
+		{
+			"s": 960325,
+			"d": 2375,
+			"t": "You can use\nthe tokens, they're a horror.",
+			"v": 1
+		},
+		{
+			"s": 962700,
+			"d": 870,
+			"t": "It's hard.",
+			"v": 2
+		},
+		{
+			"s": 963570,
+			"d": 760,
+			"t": "It's annoying.",
+			"v": 2
+		},
+		{
+			"s": 964330,
+			"d": 1230,
+			"t": "There is\na way you can do it in--",
+			"v": 1
+		},
+		{
+			"s": 965560,
+			"d": 1320,
+			"t": "I wouldn't say modern browsers.",
+			"v": 1
+		},
+		{
+			"s": 966880,
+			"d": 2890,
+			"t": "I mean, for quite a while\nnow, there's much easier ways.",
+			"v": 1
+		},
+		{
+			"s": 969770,
+			"d": 3740,
+			"t": "Another thing you sort of\nalluded to, this header.",
+			"v": 1
+		},
+		{
+			"s": 973510,
+			"d": 2970,
+			"t": "This header was originally\ndesigned for CORS",
+			"v": 1
+		},
+		{
+			"s": 976480,
+			"d": 1570,
+			"t": "but we've started\nadding it-- well,",
+			"v": 1
+		},
+		{
+			"s": 978050,
+			"d": 2120,
+			"t": "we've since added it to\nlots of other requests.",
+			"v": 1
+		},
+		{
+			"s": 980170,
+			"d": 690,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 980860,
+			"d": 2460,
+			"t": "I don't think I've ever seen\none without it, to be honest.",
+			"v": 2
+		},
+		{
+			"s": 983320,
+			"d": 1433,
+			"t": "A GET request.",
+			"v": 1
+		},
+		{
+			"s": 984753,
+			"d": 1417,
+			"t": "The first\nnavigation, yeah.",
+			"v": 2
+		},
+		{
+			"s": 986170,
+			"d": 500,
+			"t": "Because--",
+			"v": 2
+		},
+		{
+			"s": 986670,
+			"d": 2350,
+			"t": "And\nall GET requests.",
+			"v": 1
+		},
+		{
+			"s": 989020,
+			"d": 2668,
+			"t": "A CORS GET request will have it,\nall other GET requests won't.",
+			"v": 1
+		},
+		{
+			"s": 991688,
+			"d": 792,
+			"t": "Interesting.",
+			"v": 2
+		},
+		{
+			"s": 992480,
+			"d": 2480,
+			"t": "The reason\nis backwards compatibility.",
+			"v": 1
+		},
+		{
+			"s": 994960,
+			"d": 2400,
+			"t": "There was enough\nservers out there",
+			"v": 1
+		},
+		{
+			"s": 997360,
+			"d": 2730,
+			"t": "that were using the\npresence of this",
+			"v": 1
+		},
+		{
+			"s": 1000090,
+			"d": 1677,
+			"t": "to decide it was a CORS request.",
+			"v": 1
+		},
+		{
+			"s": 1001767,
+			"d": 1083,
+			"t": "Of course they did.",
+			"v": 2
+		},
+		{
+			"s": 1002850,
+			"d": 500,
+			"t": "OK, sure.",
+			"v": 2
+		},
+		{
+			"s": 1003350,
+			"d": 875,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 1004225,
+			"d": 575,
+			"t": "Sure.",
+			"v": 2
+		},
+		{
+			"s": 1004800,
+			"d": 1000,
+			"t": "Exactly.",
+			"v": 1
+		},
+		{
+			"s": 1005800,
+			"d": 2300,
+			"t": "So it's added to post\nrequests and all of that.",
+			"v": 1
+		},
+		{
+			"s": 1008100,
+			"d": 3638,
+			"t": "It's just non CORS GET requests\ndon't have this header.",
+			"v": 1
+		},
+		{
+			"s": 1011738,
+			"d": 542,
+			"t": "Right.",
+			"v": 2
+		},
+		{
+			"s": 1012280,
+			"d": 760,
+			"t": "But it doesn't\nmatter, because it was a post,",
+			"v": 1
+		},
+		{
+			"s": 1013040,
+			"d": 640,
+			"t": "so you're fine.",
+			"v": 1
+		},
+		{
+			"s": 1013680,
+			"d": 1470,
+			"t": "So you can just check\nto see that this",
+			"v": 1
+		},
+		{
+			"s": 1015150,
+			"d": 640,
+			"t": "is the origin you're expecting.",
+			"v": 1
+		},
+		{
+			"s": 1015790,
+			"d": 1140,
+			"t": "On the code\nfor your post handler,",
+			"v": 2
+		},
+		{
+			"s": 1016930,
+			"d": 2510,
+			"t": "you say, must have the\norigin header, and if so,",
+			"v": 2
+		},
+		{
+			"s": 1019440,
+			"d": 690,
+			"t": "not doing it.",
+			"v": 2
+		},
+		{
+			"s": 1020130,
+			"d": 620,
+			"t": "Exactly.",
+			"v": 1
+		},
+		{
+			"s": 1020750,
+			"d": 1000,
+			"t": "Yeah, makes sense.",
+			"v": 2
+		},
+		{
+			"s": 1021750,
+			"d": 210,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 1021960,
+			"d": 930,
+			"t": "And that's a nice\neasy way, you don't",
+			"v": 1
+		},
+		{
+			"s": 1022890,
+			"d": 2000,
+			"t": "need all of the the SRF\ntokens and all that kind",
+			"v": 1
+		},
+		{
+			"s": 1024890,
+			"d": 2209,
+			"t": "of stuff, nice easy way.",
+			"v": 1
+		},
+		{
+			"s": 1027099,
+			"d": 2331,
+			"t": "Another example.",
+			"v": 1
+		},
+		{
+			"s": 1029430,
+			"d": 3990,
+			"t": "So again, I can\nuse the load event",
+			"v": 1
+		},
+		{
+			"s": 1033420,
+			"d": 2574,
+			"t": "to know that you\nwork at example.com.",
+			"v": 1
+		},
+		{
+			"s": 1035994,
+			"d": 2166,
+			"t": "Or you are in a position\nwhere you have access",
+			"v": 1
+		},
+		{
+			"s": 1038160,
+			"d": 2747,
+			"t": "to their intranet, because\nthe logo loaded, didn't it?",
+			"v": 1
+		},
+		{
+			"s": 1040907,
+			"d": 583,
+			"t": "It did.",
+			"v": 2
+		},
+		{
+			"s": 1041490,
+			"d": 2550,
+			"t": "And this is\nnot something that is typically",
+			"v": 1
+		},
+		{
+			"s": 1044040,
+			"d": 2077,
+			"t": "solved with cookies.",
+			"v": 1
+		},
+		{
+			"s": 1046117,
+			"d": 1583,
+			"t": "A lot of intranets\nassume they're safe",
+			"v": 1
+		},
+		{
+			"s": 1047700,
+			"d": 1380,
+			"t": "just because they're\non an internal network.",
+			"v": 1
+		},
+		{
+			"s": 1049080,
+			"d": 1240,
+			"t": "They're not, but they do.",
+			"v": 1
+		},
+		{
+			"s": 1050320,
+			"d": 150,
+			"t": "Right?",
+			"v": 1
+		},
+		{
+			"s": 1050470,
+			"d": 500,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 1050970,
+			"d": 2810,
+			"t": "So here I'm\ndetecting quite a lot about you",
+			"v": 1
+		},
+		{
+			"s": 1053780,
+			"d": 1630,
+			"t": "as a user.",
+			"v": 1
+		},
+		{
+			"s": 1055410,
+			"d": 3060,
+			"t": "How do we solve this?",
+			"v": 1
+		},
+		{
+			"s": 1058470,
+			"d": 3630,
+			"t": "This is CORP. So this\nis a header that you",
+			"v": 1
+		},
+		{
+			"s": 1062100,
+			"d": 3180,
+			"t": "add onto the image\nthing that says,",
+			"v": 1
+		},
+		{
+			"s": 1065280,
+			"d": 1578,
+			"t": "this can only be\nembedded same-site.",
+			"v": 1
+		},
+		{
+			"s": 1066858,
+			"d": 1632,
+			"t": "Ah.",
+			"v": 2
+		},
+		{
+			"s": 1068490,
+			"d": 3390,
+			"t": "OK, so if you use this resource\non anything but the same site,",
+			"v": 2
+		},
+		{
+			"s": 1071880,
+			"d": 720,
+			"t": "it will just--",
+			"v": 2
+		},
+		{
+			"s": 1072600,
+			"d": 1310,
+			"t": "Fail to load.",
+			"v": 1
+		},
+		{
+			"s": 1073910,
+			"d": 500,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 1074410,
+			"d": 140,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 1074550,
+			"d": 1800,
+			"t": "So you would look\nlike you were not",
+			"v": 1
+		},
+		{
+			"s": 1076350,
+			"d": 1818,
+			"t": "within the CORP,\nthe example.com.",
+			"v": 1
+		},
+		{
+			"s": 1078168,
+			"d": 2292,
+			"t": "It would just look like you\ndidn't have access to that.",
+			"v": 1
+		},
+		{
+			"s": 1080460,
+			"d": 1000,
+			"t": "That makes sense.",
+			"v": 2
+		},
+		{
+			"s": 1081460,
+			"d": 1460,
+			"t": "So there you go.",
+			"v": 1
+		},
+		{
+			"s": 1082920,
+			"d": 2190,
+			"t": "Next problem.",
+			"v": 1
+		},
+		{
+			"s": 1085110,
+			"d": 2330,
+			"t": "Now, this is a case where--",
+			"v": 1
+		},
+		{
+			"s": 1087440,
+			"d": 2203,
+			"t": "this wouldn't be solved\nby same-site cookies.",
+			"v": 1
+		},
+		{
+			"s": 1089643,
+			"d": 2167,
+			"t": "Because you would\nnever put a resource policy",
+			"v": 2
+		},
+		{
+			"s": 1091810,
+			"d": 1220,
+			"t": "header on an HTML file?",
+			"v": 2
+		},
+		{
+			"s": 1093030,
+			"d": 3420,
+			"t": "Well, so you\ncould, but you might not,",
+			"v": 1
+		},
+		{
+			"s": 1096450,
+			"d": 1950,
+			"t": "or you might have\nforgotten or something.",
+			"v": 1
+		},
+		{
+			"s": 1098400,
+			"d": 360,
+			"t": "A lot of servers--",
+			"v": 1
+		},
+		{
+			"s": 1098760,
+			"d": 2110,
+			"t": "I mean, many servers out\nthere have not done this.",
+			"v": 1
+		},
+		{
+			"s": 1100870,
+			"d": 683,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 1101553,
+			"d": 2167,
+			"t": "Obviously\nthis is not going to load.",
+			"v": 1
+		},
+		{
+			"s": 1103720,
+			"d": 560,
+			"t": "No.",
+			"v": 2
+		},
+		{
+			"s": 1104280,
+			"d": 2100,
+			"t": "But it is\ngoing to bring this HTML",
+			"v": 1
+		},
+		{
+			"s": 1106380,
+			"d": 1145,
+			"t": "file into the process.",
+			"v": 1
+		},
+		{
+			"s": 1107525,
+			"d": 1125,
+			"t": "Ah, and then we're--",
+			"v": 2
+		},
+		{
+			"s": 1108650,
+			"d": 1600,
+			"t": "It means the\ncoding is done in process.",
+			"v": 1
+		},
+		{
+			"s": 1110250,
+			"d": 170,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 1110420,
+			"d": 1580,
+			"t": "And then we're back\nin Spectre land.",
+			"v": 2
+		},
+		{
+			"s": 1112000,
+			"d": 1440,
+			"t": "Spectre, Meltdown,",
+			"v": 1
+		},
+		{
+			"s": 1113440,
+			"d": 3560,
+			"t": "those CPU bugs that will let you\nhammer away at certain things",
+			"v": 1
+		},
+		{
+			"s": 1117000,
+			"d": 2600,
+			"t": "and start maybe trying\nto read some of the data.",
+			"v": 1
+		},
+		{
+			"s": 1119600,
+			"d": 3310,
+			"t": "So this is a problem,\nthat is fixed by CORB.",
+			"v": 1
+		},
+		{
+			"s": 1122910,
+			"d": 2310,
+			"t": "There it is, look at it.",
+			"v": 1
+		},
+		{
+			"s": 1125220,
+			"d": 700,
+			"t": "It's beautiful.",
+			"v": 1
+		},
+		{
+			"s": 1125920,
+			"d": 2897,
+			"t": "This is Cross Origin\nRead Blocking.",
+			"v": 1
+		},
+		{
+			"s": 1128817,
+			"d": 1583,
+			"t": "I had to memorize\nthat, because I knew",
+			"v": 1
+		},
+		{
+			"s": 1130400,
+			"d": 1140,
+			"t": "I was going to get that wrong.",
+			"v": 1
+		},
+		{
+			"s": 1131540,
+			"d": 970,
+			"t": "So it's not resource\nblocking, no, no, it's",
+			"v": 2
+		},
+		{
+			"s": 1132510,
+			"d": 583,
+			"t": "read blocking.",
+			"v": 2
+		},
+		{
+			"s": 1133093,
+			"d": 2447,
+			"t": "Read blocking,\ndefinitely read blocking.",
+			"v": 1
+		},
+		{
+			"s": 1135540,
+			"d": 2440,
+			"t": "And how this works\nis, as part of fetch,",
+			"v": 1
+		},
+		{
+			"s": 1137980,
+			"d": 2660,
+			"t": "before things entered\nthe process, what it does",
+			"v": 1
+		},
+		{
+			"s": 1140640,
+			"d": 3360,
+			"t": "is it looks at\nparticular mine types,",
+			"v": 1
+		},
+		{
+			"s": 1144000,
+			"d": 3282,
+			"t": "it looks to see if it has\nthe no-sniff header on,",
+			"v": 1
+		},
+		{
+			"s": 1147282,
+			"d": 1458,
+			"t": "and it can get\nstraight to it then.",
+			"v": 1
+		},
+		{
+			"s": 1148740,
+			"d": 4300,
+			"t": "But Chrome will also do things\nlike, if this looks like HTML",
+			"v": 1
+		},
+		{
+			"s": 1153040,
+			"d": 4195,
+			"t": "and it's not a CORS request,\nnot letting it through.",
+			"v": 1
+		},
+		{
+			"s": 1157235,
+			"d": 1885,
+			"t": "Oh, so it\nprevents it from ever",
+			"v": 2
+		},
+		{
+			"s": 1159120,
+			"d": 1235,
+			"t": "getting to the process.",
+			"v": 2
+		},
+		{
+			"s": 1160355,
+			"d": 875,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 1161230,
+			"d": 2330,
+			"t": "But it has to be\na header on the response?",
+			"v": 2
+		},
+		{
+			"s": 1163560,
+			"d": 1000,
+			"t": "No, so--",
+			"v": 1
+		},
+		{
+			"s": 1164560,
+			"d": 3380,
+			"t": "Oh, so CORB\nis just a technology.",
+			"v": 2
+		},
+		{
+			"s": 1167940,
+			"d": 1050,
+			"t": "CORB.",
+			"v": 1
+		},
+		{
+			"s": 1168990,
+			"d": 533,
+			"t": "CORB.",
+			"v": 2
+		},
+		{
+			"s": 1169523,
+			"d": 1917,
+			"t": "Oh, I\nfeel like I'm going mad.",
+			"v": 1
+		},
+		{
+			"s": 1171440,
+			"d": 1555,
+			"t": "CORB is just like a--",
+			"v": 1
+		},
+		{
+			"s": 1172995,
+			"d": 1125,
+			"t": "A feature in Chrome.",
+			"v": 2
+		},
+		{
+			"s": 1174120,
+			"d": 450,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 1174570,
+			"d": 530,
+			"t": "Well, yeah.",
+			"v": 1
+		},
+		{
+			"s": 1175100,
+			"d": 1890,
+			"t": "It's not like CORB\nis in the header, or--",
+			"v": 2
+		},
+		{
+			"s": 1176990,
+			"d": 1330,
+			"t": "No,\nit's not a header.",
+			"v": 1
+		},
+		{
+			"s": 1178320,
+			"d": 1110,
+			"t": "It's in the fetch spec.",
+			"v": 1
+		},
+		{
+			"s": 1179430,
+			"d": 2580,
+			"t": "And in the fetch spec\nversion, you have to do some--",
+			"v": 1
+		},
+		{
+			"s": 1182010,
+			"d": 2910,
+			"t": "you have to have no-sniff\non the response to say,",
+			"v": 1
+		},
+		{
+			"s": 1184920,
+			"d": 2990,
+			"t": "don't look at this to see\nif it's an image or not.",
+			"v": 1
+		},
+		{
+			"s": 1187910,
+			"d": 1990,
+			"t": "But you see, when it's\ngot no-sniff and--",
+			"v": 1
+		},
+		{
+			"s": 1189900,
+			"d": 1020,
+			"t": "So it knows\nif you're saying,",
+			"v": 2
+		},
+		{
+			"s": 1190920,
+			"d": 1970,
+			"t": "I guarantee that I set\nthe correct mine type",
+			"v": 2
+		},
+		{
+			"s": 1192890,
+			"d": 1150,
+			"t": "on the content type header.",
+			"v": 2
+		},
+		{
+			"s": 1194040,
+			"d": 1208,
+			"t": "Yes, exactly.",
+			"v": 1
+		},
+		{
+			"s": 1195248,
+			"d": 2462,
+			"t": "And then it just goes, HTML\ncannot be a sub resource.",
+			"v": 1
+		},
+		{
+			"s": 1197710,
+			"d": 500,
+			"t": "Gone.",
+			"v": 1
+		},
+		{
+			"s": 1198210,
+			"d": 490,
+			"t": "Gotcha.",
+			"v": 2
+		},
+		{
+			"s": 1198700,
+			"d": 1400,
+			"t": "I mean, if\nit's a CORS request, it can.",
+			"v": 1
+		},
+		{
+			"s": 1200100,
+			"d": 2560,
+			"t": "But you know, this code\nisn't run for CORS requests.",
+			"v": 1
+		},
+		{
+			"s": 1202660,
+			"d": 560,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 1203220,
+			"d": 1042,
+			"t": "So, yeah.",
+			"v": 1
+		},
+		{
+			"s": 1204262,
+			"d": 2001,
+			"t": "What will happen is it\nwill look at and go,",
+			"v": 1
+		},
+		{
+			"s": 1206263,
+			"d": 2417,
+			"t": "this-- and Chrome will do extra\nsort of sniffing around it",
+			"v": 1
+		},
+		{
+			"s": 1208680,
+			"d": 2000,
+			"t": "as well, and go, oh, this\nlooks a bit like HTML.",
+			"v": 1
+		},
+		{
+			"s": 1210680,
+			"d": 1665,
+			"t": "I'm just not going\nto let this through.",
+			"v": 1
+		},
+		{
+			"s": 1212345,
+			"d": 2125,
+			"t": "It does the same with JSON,\ndoes the same with XML.",
+			"v": 1
+		},
+		{
+			"s": 1214470,
+			"d": 1310,
+			"t": "I wouldn't\nlet JSON through.",
+			"v": 2
+		},
+		{
+			"s": 1215780,
+			"d": 1250,
+			"t": "Yeah, exactly.",
+			"v": 1
+		},
+		{
+			"s": 1217030,
+			"d": 1880,
+			"t": "There you go.",
+			"v": 1
+		},
+		{
+			"s": 1218910,
+			"d": 1990,
+			"t": "Final one, here you go.",
+			"v": 1
+		},
+		{
+			"s": 1220900,
+			"d": 560,
+			"t": "COEP.",
+			"v": 2
+		},
+		{
+			"s": 1221460,
+			"d": 1208,
+			"t": "This is COEP.",
+			"v": 1
+		},
+		{
+			"s": 1222668,
+			"d": 1382,
+			"t": "CO-EP, I've heard it pronounced.",
+			"v": 1
+		},
+		{
+			"s": 1224050,
+			"d": 985,
+			"t": "Yeah.",
+			"v": 1
+		},
+		{
+			"s": 1225035,
+			"d": 1375,
+			"t": "And so this is\nsomething that you",
+			"v": 1
+		},
+		{
+			"s": 1226410,
+			"d": 3190,
+			"t": "would use on your HTML page.",
+			"v": 1
+		},
+		{
+			"s": 1229600,
+			"d": 1250,
+			"t": "And COEP requires CORB.",
+			"v": 2
+		},
+		{
+			"s": 1230850,
+			"d": 1400,
+			"t": "Yes, it does.",
+			"v": 1
+		},
+		{
+			"s": 1232250,
+			"d": 1110,
+			"t": "Are you following along?",
+			"v": 1
+		},
+		{
+			"s": 1233360,
+			"d": 2180,
+			"t": "There's going to be\na test after this.",
+			"v": 1
+		},
+		{
+			"s": 1235540,
+			"d": 1220,
+			"t": "Hope you're concentrating.",
+			"v": 1
+		},
+		{
+			"s": 1236760,
+			"d": 3570,
+			"t": "And what you're saying here,\nis you're making a declaration",
+			"v": 1
+		},
+		{
+			"s": 1240330,
+			"d": 3255,
+			"t": "that everything on\nyour page is either",
+			"v": 1
+		},
+		{
+			"s": 1243585,
+			"d": 3915,
+			"t": "going to be CORS or authorized\nby some other means.",
+			"v": 1
+		},
+		{
+			"s": 1247500,
+			"d": 2620,
+			"t": "That site is going to\nopt into including it,",
+			"v": 1
+		},
+		{
+			"s": 1250120,
+			"d": 2810,
+			"t": "and the opt in would\nbe using the CORP,",
+			"v": 1
+		},
+		{
+			"s": 1252930,
+			"d": 1500,
+			"t": "but a specific\nopt-in to saying this",
+			"v": 1
+		},
+		{
+			"s": 1254430,
+			"d": 2110,
+			"t": "can be embedded cross-origin.",
+			"v": 1
+		},
+		{
+			"s": 1256540,
+			"d": 500,
+			"t": "OK.",
+			"v": 2
+		},
+		{
+			"s": 1257040,
+			"d": 4260,
+			"t": "So this would-- then if--",
+			"v": 2
+		},
+		{
+			"s": 1261300,
+			"d": 832,
+			"t": "wait, but hold on.",
+			"v": 2
+		},
+		{
+			"s": 1262132,
+			"d": 2458,
+			"t": "Images still work if they had\nno-sniff and the correct mine",
+			"v": 2
+		},
+		{
+			"s": 1264590,
+			"d": 897,
+			"t": "type.",
+			"v": 2
+		},
+		{
+			"s": 1265487,
+			"d": 1583,
+			"t": "Yes,\nbut now if you've",
+			"v": 1
+		},
+		{
+			"s": 1267070,
+			"d": 2400,
+			"t": "got this header on your page,\nthey will start failing.",
+			"v": 1
+		},
+		{
+			"s": 1269470,
+			"d": 300,
+			"t": "Oh, accept--",
+			"v": 2
+		},
+		{
+			"s": 1269770,
+			"d": 1583,
+			"t": "Because you're saying,",
+			"v": 1
+		},
+		{
+			"s": 1271353,
+			"d": 2797,
+			"t": "I am saying I am opting\ninto this stricter model.",
+			"v": 1
+		},
+		{
+			"s": 1274150,
+			"d": 2137,
+			"t": "On a per\nsub resource basis.",
+			"v": 2
+		},
+		{
+			"s": 1276287,
+			"d": 1833,
+			"t": "On a\nper sub resource basis.",
+			"v": 1
+		},
+		{
+			"s": 1278120,
+			"d": 3910,
+			"t": "And the reason for that is\nto opt into more powerful",
+			"v": 1
+		},
+		{
+			"s": 1282030,
+			"d": 1890,
+			"t": "features, because we now know--",
+			"v": 1
+		},
+		{
+			"s": 1283920,
+			"d": 580,
+			"t": "Right.",
+			"v": 2
+		},
+		{
+			"s": 1284500,
+			"d": 600,
+			"t": "Once\nyou've done this,",
+			"v": 1
+		},
+		{
+			"s": 1285100,
+			"d": 2390,
+			"t": "you're in a position where\nyou don't really have anything",
+			"v": 1
+		},
+		{
+			"s": 1287490,
+			"d": 880,
+			"t": "to Spectre Meltdown.",
+			"v": 1
+		},
+		{
+			"s": 1288370,
+			"d": 620,
+			"t": "Yeah.",
+			"v": 2
+		},
+		{
+			"s": 1288990,
+			"d": 917,
+			"t": "Right?",
+			"v": 1
+		},
+		{
+			"s": 1289907,
+			"d": 1513,
+			"t": "So that's the point\nwhere we can go,",
+			"v": 1
+		},
+		{
+			"s": 1291420,
+			"d": 2460,
+			"t": "oh, we can give you\nhigh resolution timers.",
+			"v": 1
+		},
+		{
+			"s": 1293880,
+			"d": 900,
+			"t": "Oh, we can give you--",
+			"v": 1
+		},
+		{
+			"s": 1294780,
+			"d": 780,
+			"t": "But only if--",
+			"v": 2
+		},
+		{
+			"s": 1295560,
+			"d": 1020,
+			"t": "--a shared array\nbuffer, that sort of stuff.",
+			"v": 1
+		},
+		{
+			"s": 1296580,
+			"d": 900,
+			"t": "If we can\nguarantee that there's",
+			"v": 2
+		},
+		{
+			"s": 1297480,
+			"d": 1620,
+			"t": "no sensitive data\nin your process.",
+			"v": 2
+		},
+		{
+			"s": 1299100,
+			"d": 2042,
+			"t": "And this\nenforces that guarantee.",
+			"v": 1
+		},
+		{
+			"s": 1301142,
+			"d": 1538,
+			"t": "So if I\nremember correctly--",
+			"v": 2
+		},
+		{
+			"s": 1302680,
+			"d": 2600,
+			"t": "and I'm excited about\nthis not because it's",
+			"v": 2
+		},
+		{
+			"s": 1305280,
+			"d": 3000,
+			"t": "so easy to understand,\nbut because I",
+			"v": 2
+		},
+		{
+			"s": 1308280,
+			"d": 3378,
+			"t": "think this is the headers that\nwould allow us to bring shared",
+			"v": 2
+		},
+		{
+			"s": 1311658,
+			"d": 792,
+			"t": "array buffers back.",
+			"v": 2
+		},
+		{
+			"s": 1312450,
+			"d": 330,
+			"t": "That is it.",
+			"v": 1
+		},
+		{
+			"s": 1312780,
+			"d": 390,
+			"t": "For everyone.",
+			"v": 2
+		},
+		{
+			"s": 1313170,
+			"d": 930,
+			"t": "It\nis exactly that.",
+			"v": 1
+		},
+		{
+			"s": 1314100,
+			"d": 500,
+			"t": "Yes.",
+			"v": 2
+		},
+		{
+			"s": 1314600,
+			"d": 420,
+			"t": "Yes.",
+			"v": 1
+		},
+		{
+			"s": 1315020,
+			"d": 2375,
+			"t": "Because that high resolution\ntime, it's all of that stuff",
+			"v": 1
+		},
+		{
+			"s": 1317395,
+			"d": 2435,
+			"t": "that we've had to take out\nbecause of Meltdown, Spectre,",
+			"v": 1
+		},
+		{
+			"s": 1319830,
+			"d": 720,
+			"t": "it can come back.",
+			"v": 1
+		},
+		{
+			"s": 1320550,
+			"d": 2550,
+			"t": "Because if\nand when we get this,",
+			"v": 2
+		},
+		{
+			"s": 1323100,
+			"d": 2250,
+			"t": "we'll also get threats for\nwireless and all this stuff",
+			"v": 2
+		},
+		{
+			"s": 1325350,
+			"d": 1807,
+			"t": "on mobile, on the\nother browsers.",
+			"v": 2
+		},
+		{
+			"s": 1327157,
+			"d": 833,
+			"t": "Yep.",
+			"v": 1
+		},
+		{
+			"s": 1327990,
+			"d": 2218,
+			"t": "So in that sense, yay.",
+			"v": 2
+		},
+		{
+			"s": 1330208,
+			"d": 1292,
+			"t": "Yay, excellent.",
+			"v": 1
+		},
+		{
+			"s": 1331500,
+			"d": 2807,
+			"t": "In terms of\nunderstanding it, whew.",
+			"v": 2
+		},
+		{
+			"s": 1334307,
+			"d": 2083,
+			"t": "And that\nis pretty much everything",
+			"v": 1
+		},
+		{
+			"s": 1336390,
+			"d": 1200,
+			"t": "I wanted to talk about.",
+			"v": 1
+		},
+		{
+			"s": 1337590,
+			"d": 2870,
+			"t": "Because we can't--\nwe've got quite a lot.",
+			"v": 1
+		},
+		{
+			"s": 1340460,
+			"d": 1895,
+			"t": "But I want to\nacknowledge that there's",
+			"v": 1
+		},
+		{
+			"s": 1342355,
+			"d": 2455,
+			"t": "a-- we looked at a certain\nclass of problems here.",
+			"v": 1
+		},
+		{
+			"s": 1344810,
+			"d": 3100,
+			"t": "And this is where one\nsite is stealing stuff",
+			"v": 1
+		},
+		{
+			"s": 1347910,
+			"d": 2100,
+			"t": "from another site, or\nmaking the other site",
+			"v": 1
+		},
+		{
+			"s": 1350010,
+			"d": 1450,
+			"t": "do things it didn't want to do.",
+			"v": 1
+		},
+		{
+			"s": 1351460,
+			"d": 3380,
+			"t": "And that makes the user\nsad, because they lose data,",
+			"v": 1
+		},
+		{
+			"s": 1354840,
+			"d": 2100,
+			"t": "or they have their\nprivacy invaded.",
+			"v": 1
+		},
+		{
+			"s": 1356940,
+			"d": 2700,
+			"t": "There is a whole other\nclass of problems",
+			"v": 1
+		},
+		{
+			"s": 1359640,
+			"d": 5640,
+			"t": "where site A and site B,\ntotally fine with sharing data,",
+			"v": 1
+		},
+		{
+			"s": 1365280,
+			"d": 1995,
+			"t": "but the user is sad about it.",
+			"v": 1
+		},
+		{
+			"s": 1367275,
+			"d": 1625,
+			"t": "Oh, that's\nthe tracking problem.",
+			"v": 2
+		},
+		{
+			"s": 1368900,
+			"d": 2160,
+			"t": "This is\ncross-site tracking, and--",
+			"v": 1
+		},
+		{
+			"s": 1371060,
+			"d": 2080,
+			"t": "This is not that,\nthat is a separate problem.",
+			"v": 2
+		},
+		{
+			"s": 1373140,
+			"d": 1620,
+			"t": "And I want to\nspend a whole episode on that",
+			"v": 1
+		},
+		{
+			"s": 1374760,
+			"d": 1950,
+			"t": "at some point, because there's\na lot of interesting things",
+			"v": 1
+		},
+		{
+			"s": 1376710,
+			"d": 970,
+			"t": "happening in that space.",
+			"v": 1
+		},
+		{
+			"s": 1377680,
+			"d": 1833,
+			"t": "So that's a shout forward\nto another episode",
+			"v": 1
+		},
+		{
+			"s": 1379513,
+			"d": 960,
+			"t": "some other time.",
+			"v": 1
+		},
+		{
+			"s": 1380473,
+			"d": 1417,
+			"t": "Oh, stay\ntuned on that one.",
+			"v": 2
+		},
+		{
+			"s": 1381890,
+			"d": 1750,
+			"t": "But\nthat's enough for now.",
+			"v": 1
+		}
+	]
+}

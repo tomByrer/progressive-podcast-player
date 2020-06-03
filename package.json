@@ -1,0 +1,18 @@
+{
+  "name": "progressive-podcast-player",
+  "version": "0.4.2",
+  "description": "build Audio AutoTalk Transscript HTML MVP",
+  "main": "index.js",
+  "type": "module",
+  "author": "tom byrer",
+  "license": "AGPLv3",
+  "private": false,
+  "scripts": {
+    "build": "node src/build",
+    "dev": "npm run build & onchange \"src\" -- npm run build"
+  },
+  "dependencies": {},
+  "globalDependacies": {
+    "onchange": "7.0.2"
+  }
+}

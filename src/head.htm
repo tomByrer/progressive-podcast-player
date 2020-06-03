@@ -1,0 +1,35 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<title>Progressive Podcast Player</title>
+<link rel="stylesheet" href="style.css">
+</head><body>
+
+<h1>Progressive Podcast Player</h1>
+<p>Enter some text in the input below and press return  or the "play" button to hear it. change voices using the dropdown menu.</p>
+
+
+<div class="controls">
+	<button id="startDemo" onclick="playSpeachDemo()">Play Demo</button>
+	<button id="randomStart" onclick="playSpeachDemo('random')">Play Random</button>
+	<br>
+	<button id="pauseAll" class="hide" onclick="pauseAll()">Pause</button>
+	<br>
+	<span id="toggleMode" class="toggle toggle-off ">
+		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbMode" class="toggle" onclick="toggleTag(this.parentNode)" role="switch"><label for="cbMode" class="toggle">Toggle</label>
+		<span class="band band-on" onclick="clickBandTag(this.parentNode,true)">MP3</span>
+	</span>
+	<br>
+
+</div>
+
+<div id=mediaWrapper class="cover">
+	<audio
+		id="mediaPlayer"
+		class="hide"
+		controls
+		src="http 203~cross-origin fetches.192.mp3">
+			Sorry, your browser does not support the <code>audio</code> slement.
+	</audio>
+</div>
