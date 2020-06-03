@@ -6,12 +6,11 @@
 [ ] test on OSX & Windows
 [ ] refactor `line`->`cue`? & 1 highlightLine()
 [ ] ! synth voice presets selection on different browsers / OS
-[ ] playing synth moves player head?
 
 ## Done
 
 [ ] playing synth moves media timeline marker (staying unplayed)
-[-] switching modes audio not jumping 3 issues
+[-] choose voices
 [x] remake switch to show load status of MP3
 [x] timer 'load' simulation now for media player & $pauseAll
 [x] fix click on media seek for switch to media or stay on synth?
@@ -40,6 +39,7 @@
 [x] refactor build for synth controlls
 [x] improve button GUI
 
-## Backlog
+## Won't Fix
 
-[-] choose voices
+[ ] playing synth moves player head?
+		- moving player head auto-starts

@@ -199,14 +199,14 @@ div.active { where talk
 :root {
   --sw-size: 1.618em;
   --sw-knob-gap: 0.1618;
-	--sw-knob-size: 0.6764;
-	/* --sw-knob-size: calc(1- (var(--sw-knob-gap) * 2)); */
-  
+	--sw-knob-adj: calc( var(--sw-knob-gap) * var(--sw-size) );
+	--sw-knob-size: calc( (1 - (var(--sw-knob-gap) * 2)) * var(--sw-size) );
+  /* HSL */
   --sw-off-color: 210, 70%, 45%;
   --sw-on-color: 30, 70%, 45%;
+  --sw-knob-color: 0, 0%, 100%;
   --sw-transparent: 0.1618;
-	--sw-knob-color: #fff;
-	--sw-knob-color-hover: #fdfdfdc6;
+	/* --sw-transparent-semi: 0.618; */
 }
 
 input.toggle {
@@ -232,45 +232,47 @@ label.toggle {
   background: hsl(var(--sw-off-color));
   border-radius: var(--sw-size);
   cursor: auto;
+  transition: 0.618s;
+  transition-timing-function: ease-out;
 }
 label.toggle + span {
   position: relative;
 	left: -0.25em;
+}
+input.toggle:checked + label.toggle {
+  background: hsl(var(--sw-on-color));
 }
 
 label.toggle:after {
   content: '';
   position: absolute;
   z-index: 6;
-  top: calc(var(--sw-knob-gap) * var(--sw-size));
-  left: calc(var(--sw-knob-gap) * var(--sw-size));
-  width: calc(var(--sw-knob-size) * var(--sw-size));
-  height: calc(var(--sw-knob-size) * var(--sw-size));
-  background: var(--sw-knob-color);
-  border-radius: calc(var(--sw-knob-size) * var(--sw-size));
-  transition: 0.3s;
-}
-input.toggle:checked + label.toggle{
-  background: hsl(var(--sw-on-color));
+  top: var(--sw-knob-adj);
+  left: var(--sw-knob-adj);
+  width: var(--sw-knob-size);
+  height: var(--sw-knob-size);
+  border-radius: var(--sw-knob-size);
+  background: hsl(var(--sw-knob-color));
+  transition: 0.31s;
+  transition-timing-function: ease-out;
 }
 input.toggle:checked + label.toggle:after {
   left: calc(99% - (var(--sw-knob-gap) * var(--sw-size)));
   transform: translateX(-100%);
 }
-input.toggle:focus + label.toggle:after {
-  background: var(--sw-knob-color-hover);
-  box-shadow: 0 0 6px 6px #000a;
+
+input.toggle:focus + label.toggle:after,
+label.toggle:hover:after {
+  background: hsl(var(--sw-knob-color),var(--sw-transparent));
+  box-shadow: 0 0 3px 3px hsl(var(--sw-knob-color));
 }
 label.toggle:hover:after {
-  background: var(--sw-knob-color-hover);
-}
-label.toggle:active:after {
-  width: calc(00.5 * var(--sw-size));
+  transition-delay: 0.1618s;  /* prevent random mouse movements always triggering */
 }
 
 span.band {
   cursor: default;
-		padding: 0.5em 0.618em;
+	padding: 0.5em 0.618em;
 }
 
 .toggle-on .band-off:hover {
@@ -287,7 +289,7 @@ span.band {
 }
 .toggle-on .band-off:active,
 .toggle-off .band-on:active {
-  text-decoration-color: var(--sw-knob-color);
+  text-decoration-color: hsl(var(--sw-knob-color));
 }
 
 
