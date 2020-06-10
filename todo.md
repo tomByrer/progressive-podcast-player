@@ -1,6 +1,7 @@
 [ ] better CSS grid
 [ ] remove mp3
 [ ] refactor to use DOM as data (remove actions?)
+[ ] refactor Synth VoicePack
 [ ] each vox gets GUI
 [ ] testing for bugs
 [ ] test on OSX & Windows

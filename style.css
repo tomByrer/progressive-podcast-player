@@ -293,10 +293,9 @@ span.band {
 }
 
 
-/* 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-} */
+/* Synth Voice Pack */
+
+.lbl-synth {
+  display: inline-block;
+  width: 8ch;
+}

@@ -7,7 +7,7 @@ const $toggleMode = document.getElementById("toggleMode")
 const $cueList = document.getElementById("timedtext")
 let $curCue = $cueList.firstChild
 let $curCapton = $cueList.firstChild
-const $log = document.getElementById('log');
+const $log = document.getElementById('log')
 
 let isFirstPlay = true
 $cbModeMedia.checked = false  // false = use synth

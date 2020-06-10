@@ -1,12 +1,13 @@
 /* synth.js */
 const $synthWrapper = document.getElementById("synthWrapper")
-const $inputForm = document.querySelector('form');
-const $inputTxt = document.querySelector('.txt');
-const $voiceSelect = document.querySelector('select');
-const $pitch = document.getElementById('pitch');
-const $pitchValue = document.querySelector('.pitch-value');
-const $rate = document.getElementById('rate')
-const $rateValue = document.querySelector('.rate-value')
+const $inputForm = document.querySelector('form')
+const $inputTxt = document.querySelector('.txt')
+const $Aselect = document.getElementById('Aselect');
+const $Apitch = document.getElementById('Apitch');
+const $ApitchValue = document.getElementById('ApitchValue')
+const $Arate = document.getElementById('Arate');
+const $ArateValue = document.getElementById('ArateValue')
+const $Aplay = document.getElementById('Aplay')
 let arrTemp = []
 
 /*
@@ -21,8 +22,8 @@ function populateVoiceList(){
       else if ( aname == bname ) return 0;
       else return +1;
   });
-  var selectedIndex = $voiceSelect.selectedIndex < 0 ? 0 : $voiceSelect.selectedIndex
-  $voiceSelect.innerHTML = ''
+  var selectedIndex = $Aselect.selectedIndex < 0 ? 0 : $Aselect.selectedIndex
+  $Aselect.innerHTML = ''
   for(i = 0; i < osVoices.length ; i++) {
 		// populate array for later use
     let tempVoice = {}
@@ -34,7 +35,7 @@ function populateVoiceList(){
     allVoices[i] = tempVoice
 
     let option = document.createElement('option')
-    option.textContent = tempVoice.name + ' (' + tempVoice.lang + ')';
+    option.textContent = tempVoice.name + '/r' + tempVoice.lang;
     
     if(tempVoice.default) {
       option.textContent += ' -- DEFAULT'
@@ -42,9 +43,9 @@ function populateVoiceList(){
 
     option.setAttribute('data-lang', tempVoice.lang)
     option.setAttribute('data-name', tempVoice.name)
-    $voiceSelect.appendChild(option);
+    $Aselect.appendChild(option);
   }
-	$voiceSelect.selectedIndex = selectedIndex
+	$Aselect.selectedIndex = selectedIndex
 }
 populateVoiceList();
 if (synth.onvoiceschanged !== undefined) {
@@ -52,16 +53,21 @@ if (synth.onvoiceschanged !== undefined) {
 }
 logit(`allVoices = 
 `+ allVoices)
-$inputForm.onsubmit = function(event){
+
+$Aplay.onclick = function(){ speakTest( "A" ) }
+
+function speakTest( speaker ){
 	event.preventDefault()
-	if ($inputTxt.value !== '') {
-		speakLine({ text:$inputTxt.value })
-	}
+	if ($inputTxt.value === '') { $inputTxt.value = 'test synthesiser' }
+	speakLine({
+		text:$inputTxt.value,
+		vox:1
+	})
   $inputTxt.blur()
 }
-$pitch.onchange = function(){ $pitchValue.textContent = $pitch.value }
-$rate.onchange = function(){ $rateValue.textContent = $rate.value }
-$voiceSelect.onchange = function(){ speakLine() }
+$Apitch.onchange = function(){ $ApitchValue.textContent = $Apitch.value }
+$Arate.onchange = function(){ $ArateValue.textContent = $Arate.value }
+$Aselect.onchange = function(){ speakTest() }
 
 function modeSynth(){
 	$mediaWrapper.classList.remove('active')
@@ -96,7 +102,7 @@ async function queueArray( arr ){
 		$curCue = document.getElementById( curCue )
 		arr[i].text = $curCue.textContent
 		arr[i].vox = $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
-		logit( `prep:`+ curCue +` actID:`+ arr[i].actID +` # `+ i +` voice:`+ arr[i].voice +`
+		logit( `prep:`+ curCue +` actID:`+ arr[i].actID +` # `+ i +` voice:`+ arr[i].vox +`
 		`+ arr[i].text )  
 		// highlight
 		$curCue.classList.add('spoke', 'speaking')
@@ -154,10 +160,17 @@ async function speakLine({
 	text = '',
 	vox = 0,
 }={}){
+	logit('speakLine selected:'+ $Aselect.selectedIndex +' vox:'+ vox )
 	let sayThis = new SpeechSynthesisUtterance(text)
-	sayThis.pitch = voicePacks[vox].pitch
-	sayThis.rate = voicePacks[vox].rate
-	sayThis.voice = osVoices[vox]
+	if ( vox === 1 ){
+		sayThis.pitch = $Apitch.value
+		sayThis.rate = $Arate.value
+		sayThis.voice = osVoices[$Aselect.selectedIndex]
+	} else {
+		sayThis.pitch = voicePacks[vox].pitch
+		sayThis.rate = voicePacks[vox].rate
+		sayThis.voice = osVoices[vox]
+	}
 	synth.speak(sayThis)
 
 	return new Promise( resolve =>{
