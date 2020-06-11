@@ -2,12 +2,18 @@
 const $synthWrapper = document.getElementById("synthWrapper")
 const $inputForm = document.querySelector('form')
 const $inputTxt = document.querySelector('.txt')
-const $Aselect = document.getElementById('Aselect');
-const $Apitch = document.getElementById('Apitch');
+const $Aselect = document.getElementById('Aselect')
+const $Apitch = document.getElementById('Apitch')
 const $ApitchValue = document.getElementById('ApitchValue')
-const $Arate = document.getElementById('Arate');
+const $Arate = document.getElementById('Arate')
 const $ArateValue = document.getElementById('ArateValue')
 const $Aplay = document.getElementById('Aplay')
+const $Bselect = document.getElementById('Bselect')
+const $Bpitch = document.getElementById('Bpitch')
+const $BpitchValue = document.getElementById('BpitchValue')
+const $Brate = document.getElementById('Brate')
+const $BrateValue = document.getElementById('BrateValue')
+const $Bplay = document.getElementById('Bplay')
 let arrTemp = []
 
 /*
@@ -26,25 +32,33 @@ function populateVoiceList(){
   $Aselect.innerHTML = ''
   for(i = 0; i < osVoices.length ; i++) {
 		// populate array for later use
+		if ( osVoices[i].localService ){
     let tempVoice = {}
-    tempVoice.default = osVoices[i].default
-    tempVoice.lang = osVoices[i].lang
-    tempVoice.localService = osVoices[i].localService
-    tempVoice.name = osVoices[i].name
-    tempVoice.voiceURI = osVoices[i].voiceURI
-    allVoices[i] = tempVoice
+			tempVoice.default = osVoices[i].default
+			tempVoice.lang = osVoices[i].lang
+			tempVoice.name = osVoices[i].name
+			tempVoice.voiceURI = osVoices[i].voiceURI
+			allVoices[i] = tempVoice
 
-    let option = document.createElement('option')
-    option.textContent = tempVoice.name + '/r' + tempVoice.lang;
-    
-    if(tempVoice.default) {
-      option.textContent += ' -- DEFAULT'
-    }
+			let option = document.createElement('option')
+			option.textContent = tempVoice.name + '/r' + tempVoice.lang
+			
+			if(tempVoice.default) {
+				option.textContent += ' -- DEFAULT'
+			}
 
-    option.setAttribute('data-lang', tempVoice.lang)
-    option.setAttribute('data-name', tempVoice.name)
-    $Aselect.appendChild(option);
-  }
+			option.setAttribute('data-lang', tempVoice.lang)
+			option.setAttribute('data-name', tempVoice.name)
+			$Aselect.appendChild(option)
+		}
+	}
+	logit("Bselect exist? ")
+	if ( $Aselect.childElementCount ){
+		let newSelect = $Aselect.cloneNode(true)
+		newSelect.id = 'Bselect'
+		$Bplay.parentNode.appendChild(newSelect)
+	}
+
 	$Aselect.selectedIndex = selectedIndex
 }
 populateVoiceList();
@@ -68,6 +82,9 @@ function speakTest( speaker ){
 $Apitch.onchange = function(){ $ApitchValue.textContent = $Apitch.value }
 $Arate.onchange = function(){ $ArateValue.textContent = $Arate.value }
 $Aselect.onchange = function(){ speakTest() }
+$Bpitch.onchange = function(){ $BpitchValue.textContent = $Bpitch.value }
+$Brate.onchange = function(){ $BrateValue.textContent = $Brate.value }
+$Bselect.onchange = function(){ speakTest() }
 
 function modeSynth(){
 	$mediaWrapper.classList.remove('active')
@@ -166,6 +183,10 @@ async function speakLine({
 		sayThis.pitch = $Apitch.value
 		sayThis.rate = $Arate.value
 		sayThis.voice = osVoices[$Aselect.selectedIndex]
+	} else if ( vox === 2 ){
+		sayThis.pitch = $Bpitch.value
+		sayThis.rate = $Brate.value
+		sayThis.voice = osVoices[$Bselect.selectedIndex]
 	} else {
 		sayThis.pitch = voicePacks[vox].pitch
 		sayThis.rate = voicePacks[vox].rate
