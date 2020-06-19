@@ -5,6 +5,7 @@ const $cbModeMedia = document.getElementById("cbSwitch")
 const $pauseAll = document.getElementById("pauseAll")
 const $toggleLR = document.getElementById("toggleLR")
 const $cueList = document.getElementById("timedtext")
+let cueListLength = $cueList.getElementsByTagName('li').length
 let $curCue = $cueList.firstChild
 let $curCapton = $cueList.firstChild
 const $log = document.getElementById('log')
@@ -76,19 +77,19 @@ async function j( mseconds ){
 		showMediaGUI()
 	}
 	if (!$cbModeMedia.checked){
+		// $mediaPlayer.pause()
 		isPlayToStop = false
 		let arrLines = []
 		curID = Date.now()
 		let i = actions.hear.indexOf(mseconds)
 		logit(`clicked sec=`+ mseconds +` idx=`+ i)
 
-		const len = i + 3
-		for( i; (i<=len); i++ ){
+		for( i; (i<=cueListLength); i++ ){
 			arrLines.push({
 				actID: curID,
 				mseconds: actions.hear[i],
 			})
-			logit(`cued sec=`+ mseconds +` idx=`+ i)
+			// logit(`cued sec=`+ mseconds +` idx=`+ i) // bit of a lag for longer transcripts
 		}
 
 		if (synth.speaking) {
