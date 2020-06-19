@@ -14,10 +14,10 @@
 	<button id="startDemo" onclick="playSpeachDemo()">Play Demo</button>
 	<button id="randomStart" onclick="playSpeachDemo('random')">Play Random</button>
 	<br>
-	<button id="pauseAll" class="hide" onclick="pauseAll()">Pause</button>
+	<button id="pauseAll" class="" onclick="pauseAll()">Pause</button>
 	<br>
-	<span id="toggleMode" class="toggle toggle-off ">
-		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbMode" class="toggle" onclick="toggleTag(this.parentNode)" role="switch"><label for="cbMode" class="toggle">Toggle</label>
+	<span id="toggleLR" class="toggle toggle-off ">
+		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbSwitch" class="toggle" onclick="postSwitch(this.parentNode)" role="switch"><label for="cbSwitch" class="toggle">Toggle</label>
 		<span class="band band-on" onclick="clickBandTag(this.parentNode,true)">MP3</span>
 	</span>
 	<br>
@@ -245,7 +245,7 @@ here that, you know,</li><li class="v1" id=737990 onclick="j(737990)">you've got
 the current user's avatar.</li><li class="v1" id=740970 onclick="j(740970)">Now, I can do a load event
 to tell if this loads.</li><li class="v1" id=744770 onclick="j(744770)">And by that, I can determine
 you are locked into example.com.</li><li class="v1" id=747804 onclick="j(747804)">Bad.</li><li class="v2" id=748803 onclick="j(748803)">Oh, yeah.</li><li class="v2" id=749470 onclick="j(749470)">OK.</li><li class="v1" id=749770 onclick="j(749770)">Right?</li><li class="v2" id=750140 onclick="j(750140)">I see where you're going.</li><li class="v1" id=750950 onclick="j(750950)">So this -0,
-this is a sort of convention.</li><li class="v1" id=753650 onclick="j(753650)">- SPEAKER 2: Dash-0.</li><li class="v1" id=754550 onclick="j(754550)">Dash-0, hello.</li><li class="v1" id=756590 onclick="j(756590)">Dash-0, that's my rap name.</li><li class="v2" id=758704 onclick="j(758704)">[LAUGHS]</li><li class="v1" id=761848 onclick="j(761848)">So, yeah.</li><li class="v1" id=762890 onclick="j(762890)">We've got that -0, it's
+this is a sort of convention.</li><li class="v2" id=753650 onclick="j(753650)">Dash-0?</li><li class="v1" id=754550 onclick="j(754550)">Dash-0, hello.</li><li class="v1" id=756590 onclick="j(756590)">Dash-0, that's my rap name.</li><li class="v0" id=758704 onclick="j(758704)">[LAUGHS]</li><li class="v1" id=761848 onclick="j(761848)">So, yeah.</li><li class="v1" id=762890 onclick="j(762890)">We've got that -0, it's
 the original avatar</li><li class="v1" id=765920 onclick="j(765920)">the user uploaded.</li><li class="v1" id=766855 onclick="j(766855)">But then from that, I can
 get the width and height,</li><li class="v1" id=768980 onclick="j(768980)">and now that's user
 identifiable data.</li><li class="v2" id=771218 onclick="j(771218)">Potentially.</li><li class="v1" id=772010 onclick="j(772010)">Because that's more</li><li class="v1" id=772820 onclick="j(772820)">likely to be unique
@@ -445,78 +445,77 @@ spend a whole episode on that</li><li class="v1" id=1374760 onclick="j(1374760)"
 a lot of interesting things</li><li class="v1" id=1376710 onclick="j(1376710)">happening in that space.</li><li class="v1" id=1377680 onclick="j(1377680)">So that's a shout forward
 to another episode</li><li class="v1" id=1379513 onclick="j(1379513)">some other time.</li><li class="v2" id=1380473 onclick="j(1380473)">Oh, stay
 tuned on that one.</li><li class="v1" id=1381890 onclick="j(1381890)">But
-that's enough for now.</li></ol></article><form id=synthWrapper>
-	<!-- <div>
-		<label for="Arate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
-		<div class="rate-value">1</div>
+that's enough for now.</li></ol></article>
+<fieldset id="Narrator" class="synthWrapper">
+	<legend>Narrator VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="NpitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Npitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
 		<div class="clearfix"></div>
-	</div> -->
-  <fieldset>
-    <legend>VoicePack A:</legend>
-		<div>
-			<label class="lbl-synth">Pitch <span id="ApitchValue">1</span> </label>
-			<input type="range" id="Apitch" min="0" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<div>
-			<label class="lbl-synth">Rate <span id="ArateValue">1</span> </label>
-			<input type="range" id="Arate" min="0.1" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<select id="Aselect"></select>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="NrateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Nrate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
 		<div class="clearfix"></div>
-		<button id="Aplay">Play</button>
-	</fieldset>
-  <fieldset>
-    <legend>VoicePack B:</legend>
-		<div>
-			<label class="lbl-synth">Pitch <span id="BpitchValue">1</span> </label>
-			<input type="range" id="Bpitch" min="0" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<div>
-			<label class="lbl-synth">Rate <span id="BrateValue">1</span> </label>
-			<input type="range" id="Brate" min="0.1" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<!-- <select id="Bselect"></select> -->
+	</div>
+	<!-- <select id="Nselect"></select> -->
+	<br>
+	<button id="Nplay">Test</button>
+	<input type="text" class="txt" value="test Narrator's synthesiser">
+</fieldset>
+
+<fieldset id="Jake" class="synthWrapper">
+	<legend>Jake VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="ApitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Apitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
 		<div class="clearfix"></div>
-		<button id="Bplay">Play</button>
-	</fieldset>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="ArateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Arate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<select id="Aselect"></select>
+	<br>
+	<button id="Aplay">Test</button>
+	<input type="text" class="txt" value="test Jake's synthesiser">
+</fieldset>
 
+<fieldset id="Surma" class="synthWrapper">
+	<legend>Surma VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="BpitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Bpitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="BrateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Brate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<!-- <select id="Bselect"></select> -->
+	<br>
+	<button id="Bplay">Test</button>
+	<input type="text" class="txt" value="test Surma's synthesiser">
+</fieldset>
 
-
-	<input type="text" class="txt" value="test synthesiser">
-</form>
 <textarea id="log" name="out">logOutput</textarea><br>
 <button onclick="copyLog()">Copy log</button>
-<script>let voicePacks = [
-	{
-		name: "none",
-		voice: "Microsoft Hanhan Desktop - Chinese (Taiwan)",
-		rate: 1,
-		pitch: 0.9,
-	},
-	{
-		name: "Jake",
-		voice: "Microsoft David Desktop - English (United States)",
-		rate: 0.9,
-		pitch: 0.1,
-	},
-	{
-		name: "Surma",
-		voice: "Microsoft Zira Desktop - English (United States)",
-		rate: 0.95,
-		pitch: 0.6,
-	},
-];
-let actions = {hear:[32509,42099,43920,46210,49327,50910,52590,54490,57110,58710,59210,60752,63050,64400,65420,67100,68630,69860,70505,71630,73700,75450,78920,80180,81560,82070,82970,83300,84260,85790,87128,89170,91160,93342,95300,97370,98660,100880,102770,103270,105870,109333,110500,111040,112330,116920,119247,119750,120830,122033,122950,124500,125000,125793,127460,130100,131670,133880,137030,139550,142020,142520,144795,145670,147127,149210,151460,155538,156080,157130,157700,159408,160060,161808,162725,164180,167400,169040,169840,170990,172730,173100,173710,175010,176385,178205,180080,180650,181190,181853,183020,183660,185530,186910,188750,190550,191060,192472,194930,196460,197877,200690,203310,203810,206297,207380,207680,209222,210140,210590,212390,213140,217250,220292,221000,222387,224845,227190,229190,230480,233400,235190,237890,241010,245480,246528,248320,249862,252490,253240,253740,255522,256980,259070,260570,261269,262686,264570,266130,268297,269880,271980,275582,276540,277670,278670,281428,281970,283137,286043,286710,288087,289920,292420,294420,296310,299320,302010,304410,306150,307907,308490,309448,310140,312240,317020,318870,320880,322380,326110,326970,329130,330120,334080,336510,338263,339430,341020,342020,344400,346875,348750,350153,350820,353140,355320,356070,357487,363692,364650,366770,368947,369780,370525,371400,373087,375420,376353,376810,377380,378030,380830,384853,386520,390240,391590,392340,394620,395130,395630,398340,400260,401947,403530,406032,406740,408180,412200,413830,416310,418590,421610,425250,426570,428070,430950,434490,436273,437190,438650,440040,442080,443550,443910,446118,448620,450520,452560,454852,456460,457150,459317,462990,464700,466450,466950,469770,471673,472590,473070,475710,477450,478920,481710,486778,488570,489570,491250,491615,492490,493237,494180,495930,497763,499010,500825,502200,503760,504660,506340,509280,511800,513390,514450,514516,515433,516891,518039,523890,525990,527510,528460,530460,531830,534080,535120,536850,537760,539010,540870,543685,544560,546518,547267,549100,550000,552290,553790,555170,557600,559017,560392,561878,562670,564700,565330,566390,567765,569962,572130,574088,575880,576380,578480,579650,581650,584030,586072,587030,589250,590780,591260,592968,594290,595160,597080,597580,600620,602910,605840,606740,609270,609710,610470,612178,615470,617670,620610,623360,626710,627950,632780,635750,638420,641600,644617,646700,647560,649638,651430,652520,656340,659330,659900,660200,662325,664640,667680,668180,668990,669500,672290,673507,674840,680580,682758,684800,687007,689090,691200,693890,696147,698480,700760,702060,703750,705410,706000,707630,708650,710250,710450,711650,712567,714140,716810,717740,718580,719690,720623,723800,724580,726830,729280,731285,732410,734202,735890,737990,740970,744770,747804,748803,749470,749770,750140,750950,753650,754550,756590,758704,761848,762890,765920,766855,768980,771218,772010,772820,774600,776695,779070,781820,784163,785580,787220,789380,790505,792690,795495,796620,797610,800270,803215,804840,806600,807300,808550,811820,814320,814820,817362,819080,821250,822530,822890,823150,825040,825460,827600,828590,830480,832040,835340,836540,839998,841040,841100,841220,842890,844720,845970,849920,852880,853978,856270,860830,862860,865120,867370,869448,871240,873442,875150,878302,880010,881843,883588,885130,886670,889890,892390,893848,897208,898750,899500,900280,902270,903220,903845,905470,909103,911020,912580,913240,914320,915028,916870,918180,919805,921370,923038,925330,926920,930010,931510,932560,934170,936000,937823,940240,941410,941740,943890,945730,948140,948640,948910,950120,952810,955090,956715,958360,960325,962700,963570,964330,965560,966880,969770,973510,976480,978050,980170,980860,983320,984753,986170,986670,989020,991688,992480,994960,997360,1000090,1001767,1002850,1003350,1004225,1004800,1005800,1008100,1011738,1012280,1013040,1013680,1015150,1015790,1016930,1019440,1020130,1020750,1021750,1021960,1022890,1024890,1027099,1029430,1033420,1035994,1038160,1040907,1041490,1044040,1046117,1047700,1049080,1050320,1050470,1050970,1053780,1055410,1058470,1062100,1065280,1066858,1068490,1071880,1072600,1073910,1074410,1074550,1076350,1078168,1080460,1081460,1082920,1085110,1087440,1089643,1091810,1093030,1096450,1098400,1098760,1100870,1101553,1103720,1104280,1106380,1107525,1108650,1110250,1110420,1112000,1113440,1117000,1119600,1122910,1125220,1125920,1128817,1130400,1131540,1132510,1133093,1135540,1137980,1140640,1144000,1147282,1148740,1153040,1157235,1159120,1160355,1161230,1163560,1164560,1167940,1168990,1169523,1171440,1172995,1174120,1174570,1175100,1176990,1178320,1179430,1182010,1184920,1187910,1189900,1190920,1192890,1194040,1195248,1197710,1198210,1198700,1200100,1202660,1203220,1204262,1206263,1208680,1210680,1212345,1214470,1215780,1217030,1218910,1220900,1221460,1222668,1224050,1225035,1226410,1229600,1230850,1232250,1233360,1235540,1236760,1240330,1243585,1247500,1250120,1252930,1254430,1256540,1257040,1261300,1262132,1264590,1265487,1267070,1269470,1269770,1271353,1274150,1276287,1278120,1282030,1283920,1284500,1285100,1287490,1288370,1288990,1289907,1291420,1293880,1294780,1295560,1296580,1297480,1299100,1301142,1302680,1305280,1308280,1311658,1312450,1312780,1313170,1314100,1314600,1315020,1317395,1319830,1320550,1323100,1325350,1327157,1327990,1330208,1331500,1334307,1336390,1337590,1340460,1342355,1344810,1347910,1350010,1351460,1354840,1356940,1359640,1365280,1367275,1368900,1371060,1373140,1374760,1376710,1377680,1379513,1380473,1381890]}
+	<script>// presets for voice synths
+let voicePacks = {
+	Narrator: "Zira 1.8 1.1",
+	Jake: "fake 0 0, James 0.6 1.2, David 0.7 1.2",
+	Surma: "Sean 0.4 1.1, Zira 0.6 1.1",
+	template: "synthVoiceShoertName pitch rate, secondary, etc"
+}
+;let actions = {hear:[32509,42099,43920,46210,49327,50910,52590,54490,57110,58710,59210,60752,63050,64400,65420,67100,68630,69860,70505,71630,73700,75450,78920,80180,81560,82070,82970,83300,84260,85790,87128,89170,91160,93342,95300,97370,98660,100880,102770,103270,105870,109333,110500,111040,112330,116920,119247,119750,120830,122033,122950,124500,125000,125793,127460,130100,131670,133880,137030,139550,142020,142520,144795,145670,147127,149210,151460,155538,156080,157130,157700,159408,160060,161808,162725,164180,167400,169040,169840,170990,172730,173100,173710,175010,176385,178205,180080,180650,181190,181853,183020,183660,185530,186910,188750,190550,191060,192472,194930,196460,197877,200690,203310,203810,206297,207380,207680,209222,210140,210590,212390,213140,217250,220292,221000,222387,224845,227190,229190,230480,233400,235190,237890,241010,245480,246528,248320,249862,252490,253240,253740,255522,256980,259070,260570,261269,262686,264570,266130,268297,269880,271980,275582,276540,277670,278670,281428,281970,283137,286043,286710,288087,289920,292420,294420,296310,299320,302010,304410,306150,307907,308490,309448,310140,312240,317020,318870,320880,322380,326110,326970,329130,330120,334080,336510,338263,339430,341020,342020,344400,346875,348750,350153,350820,353140,355320,356070,357487,363692,364650,366770,368947,369780,370525,371400,373087,375420,376353,376810,377380,378030,380830,384853,386520,390240,391590,392340,394620,395130,395630,398340,400260,401947,403530,406032,406740,408180,412200,413830,416310,418590,421610,425250,426570,428070,430950,434490,436273,437190,438650,440040,442080,443550,443910,446118,448620,450520,452560,454852,456460,457150,459317,462990,464700,466450,466950,469770,471673,472590,473070,475710,477450,478920,481710,486778,488570,489570,491250,491615,492490,493237,494180,495930,497763,499010,500825,502200,503760,504660,506340,509280,511800,513390,514450,514516,515433,516891,518039,523890,525990,527510,528460,530460,531830,534080,535120,536850,537760,539010,540870,543685,544560,546518,547267,549100,550000,552290,553790,555170,557600,559017,560392,561878,562670,564700,565330,566390,567765,569962,572130,574088,575880,576380,578480,579650,581650,584030,586072,587030,589250,590780,591260,592968,594290,595160,597080,597580,600620,602910,605840,606740,609270,609710,610470,612178,615470,617670,620610,623360,626710,627950,632780,635750,638420,641600,644617,646700,647560,649638,651430,652520,656340,659330,659900,660200,662325,664640,667680,668180,668990,669500,672290,673507,674840,680580,682758,684800,687007,689090,691200,693890,696147,698480,700760,702060,703750,705410,706000,707630,708650,710250,710450,711650,712567,714140,716810,717740,718580,719690,720623,723800,724580,726830,729280,731285,732410,734202,735890,737990,740970,744770,747804,748803,749470,749770,750140,750950,753650,754550,756590,758704,761848,762890,765920,766855,768980,771218,772010,772820,774600,776695,779070,781820,784163,785580,787220,789380,790505,792690,795495,796620,797610,800270,803215,804840,806600,807300,808550,811820,814320,814820,817362,819080,821250,822530,822890,823150,825040,825460,827600,828590,830480,832040,835340,836540,839998,841040,841100,841220,842890,844720,845970,849920,852880,853978,856270,860830,862860,865120,867370,869448,871240,873442,875150,878302,880010,881843,883588,885130,886670,889890,892390,893848,897208,898750,899500,900280,902270,903220,903845,905470,909103,911020,912580,913240,914320,915028,916870,918180,919805,921370,923038,925330,926920,930010,931510,932560,934170,936000,937823,940240,941410,941740,943890,945730,948140,948640,948910,950120,952810,955090,956715,958360,960325,962700,963570,964330,965560,966880,969770,973510,976480,978050,980170,980860,983320,984753,986170,986670,989020,991688,992480,994960,997360,1000090,1001767,1002850,1003350,1004225,1004800,1005800,1008100,1011738,1012280,1013040,1013680,1015150,1015790,1016930,1019440,1020130,1020750,1021750,1021960,1022890,1024890,1027099,1029430,1033420,1035994,1038160,1040907,1041490,1044040,1046117,1047700,1049080,1050320,1050470,1050970,1053780,1055410,1058470,1062100,1065280,1066858,1068490,1071880,1072600,1073910,1074410,1074550,1076350,1078168,1080460,1081460,1082920,1085110,1087440,1089643,1091810,1093030,1096450,1098400,1098760,1100870,1101553,1103720,1104280,1106380,1107525,1108650,1110250,1110420,1112000,1113440,1117000,1119600,1122910,1125220,1125920,1128817,1130400,1131540,1132510,1133093,1135540,1137980,1140640,1144000,1147282,1148740,1153040,1157235,1159120,1160355,1161230,1163560,1164560,1167940,1168990,1169523,1171440,1172995,1174120,1174570,1175100,1176990,1178320,1179430,1182010,1184920,1187910,1189900,1190920,1192890,1194040,1195248,1197710,1198210,1198700,1200100,1202660,1203220,1204262,1206263,1208680,1210680,1212345,1214470,1215780,1217030,1218910,1220900,1221460,1222668,1224050,1225035,1226410,1229600,1230850,1232250,1233360,1235540,1236760,1240330,1243585,1247500,1250120,1252930,1254430,1256540,1257040,1261300,1262132,1264590,1265487,1267070,1269470,1269770,1271353,1274150,1276287,1278120,1282030,1283920,1284500,1285100,1287490,1288370,1288990,1289907,1291420,1293880,1294780,1295560,1296580,1297480,1299100,1301142,1302680,1305280,1308280,1311658,1312450,1312780,1313170,1314100,1314600,1315020,1317395,1319830,1320550,1323100,1325350,1327157,1327990,1330208,1331500,1334307,1336390,1337590,1340460,1342355,1344810,1347910,1350010,1351460,1354840,1356940,1359640,1365280,1367275,1368900,1371060,1373140,1374760,1376710,1377680,1379513,1380473,1381890]}
 let synth = window.speechSynthesis
 const $mediaWrapper = document.getElementById("mediaWrapper")
 const $mediaPlayer = document.getElementById("mediaPlayer")
-const $cbModeMedia = document.getElementById("cbMode")
+const $cbModeMedia = document.getElementById("cbSwitch")
 const $pauseAll = document.getElementById("pauseAll")
-const $toggleMode = document.getElementById("toggleMode")
+const $toggleLR = document.getElementById("toggleLR")
 const $cueList = document.getElementById("timedtext")
 let $curCue = $cueList.firstChild
 let $curCapton = $cueList.firstChild
@@ -622,25 +621,25 @@ function pauseAll(){
 		$mediaPlayer.pause()
 	// }
 }
-/* ui.js */
+// @2020 Tom Byrer, release MIT License
 
-function clickBandTag(node, status){
-	// assumes only 1 checkbox per parent group
-	// const $cbModeMedia = id.getElementsByTagName('input')[0];
-	logit(`set `+ $cbModeMedia.id +` to `+ status +` cb=`+ $cbModeMedia.checked)
-	if ( $cbModeMedia.checked !== status ){
-		$cbModeMedia.checked = status
-		toggleTag( node )
+// assumes default state is unchecked
+function clickBandTag($node, status){
+	// should be only 1 input: checkbox that drives toggle
+	const $cbToggle = $node.getElementsByTagName('input')[0]
+	logit(`set `+ $cbToggle.id +` to `+ status +` cb=`+ $cbToggle.checked)
+	if ( $cbToggle.checked !== status ){
+		$cbToggle.checked = status
+		postSwitch( $node )
 	}
 }
-function toggleTag( $node ){
-	isChecked =  $node.getElementsByTagName('input')[0].checked
-	logit(`checkbox `+ $cbModeMedia.id +` to `+ isChecked)
+function postSwitch( $node ){
+	const $cbToggle = $node.getElementsByTagName('input')[0]
+	$cbToggle.focus()
+	const isChecked =  $cbToggle.checked
 	logit(`toggle.id `+ $node.id +` classList `+ $node.classList)
-	$node.classList.toggle('toggle-on', isChecked)
-	$node.classList.toggle('toggle-off', !isChecked)
-	// $node.classList.remove( 'toggle-o'+ (isChecked ? 'ff' : 'n') )
-	// $node.classList.add( 'toggle-o'+ (isChecked ? 'n' : 'ff') )
+	$node.classList.toggle( 'toggle-on', isChecked )
+	$node.classList.toggle( 'toggle-off', !isChecked )
 }
 /* media.js */
 // NOTE times are always in ms, though $mediaPlayer.currentTime is in decimal seconds
@@ -648,6 +647,7 @@ let closest = 0
 let closestOld = 0
 let idxPrevious = 0
 let curTime = 0
+
 function findNearUnder( arr=actions.hear, val=curTime ){
 	return Math.max.apply(null, arr.filter(
 		function( v ){
@@ -656,7 +656,7 @@ function findNearUnder( arr=actions.hear, val=curTime ){
 }
 $mediaPlayer.ontimeupdate = function(){
 	// $curCapton.classList.remove('spoke')
-	curTime = $mediaPlayer.currentTime * 1000
+	curTime = getMediaTime()
 	logit( `play time~`+ curTime )
 	closest = findNearUnder()
 	if ( closest !== closestOld ){	
@@ -680,7 +680,6 @@ $mediaPlayer.ontimeupdate = function(){
 
 function modeAudio(){
 	$mediaWrapper.classList.add('active')
-	// $synthWrapper.classList.remove('active')
 	logit('fliped to audio')
 }
 
@@ -709,22 +708,35 @@ $mediaPlayer.onplaying = function(){
 
 function getMediaTime(){
 	return $mediaPlayer.currentTime*1000 //ms
-}/* synth.js */
-const $synthWrapper = document.getElementById("synthWrapper")
+}
+/* synth.js */
 const $inputForm = document.querySelector('form')
-const $inputTxt = document.querySelector('.txt')
+
 const $Aselect = document.getElementById('Aselect')
 const $Apitch = document.getElementById('Apitch')
 const $ApitchValue = document.getElementById('ApitchValue')
 const $Arate = document.getElementById('Arate')
 const $ArateValue = document.getElementById('ArateValue')
 const $Aplay = document.getElementById('Aplay')
-const $Bselect = document.getElementById('Bselect')
+
+const $Surma = document.getElementById('Surma')
+ // workaround since have to re-assign $Bselect after cloning from $Aselect
+let $Bselect = document.getElementById('Bselect')
 const $Bpitch = document.getElementById('Bpitch')
 const $BpitchValue = document.getElementById('BpitchValue')
 const $Brate = document.getElementById('Brate')
 const $BrateValue = document.getElementById('BrateValue')
 const $Bplay = document.getElementById('Bplay')
+
+const $Narrator = document.getElementById('Narrator')
+ // workaround since have to re-assign $Bselect after cloning from $Aselect
+let $Nselect = document.getElementById('Nselect')
+const $Npitch = document.getElementById('Npitch')
+const $NpitchValue = document.getElementById('NpitchValue')
+const $Nrate = document.getElementById('Nrate')
+const $NrateValue = document.getElementById('NrateValue')
+const $Nplay = document.getElementById('Nplay')
+
 let arrTemp = []
 
 /*
@@ -732,74 +744,131 @@ let arrTemp = []
  */
 let osVoices = []
 let allVoices = []
-function populateVoiceList(){
+let voxDefault = 0
+let voicePackNarrator = []
+let matchedVoicePack = []  //TODO: see if global VP values are needed for state, or just use GUI as state storage
+function ApopulateVoiceList(){
   osVoices = synth.getVoices().sort(function (a, b) {
       const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
       if ( aname < bname ) return -1;
       else if ( aname == bname ) return 0;
       else return +1;
-  });
-  var selectedIndex = $Aselect.selectedIndex < 0 ? 0 : $Aselect.selectedIndex
-  $Aselect.innerHTML = ''
-  for(i = 0; i < osVoices.length ; i++) {
-		// populate array for later use
+  })
+	let words = ''
+	let tVox = []
+	let AvoxSelect = 0
+	let idxFound = 0
+	let optionNames = []
+
+  for(i = 0; i < osVoices.length ; i++ ){
 		if ( osVoices[i].localService ){
-    let tempVoice = {}
+			// populate array for later use
+			let tempVoice = {} 
+			words = osVoices[i].name.split(' ')
 			tempVoice.default = osVoices[i].default
 			tempVoice.lang = osVoices[i].lang
+			tempVoice.localService = osVoices[i].localService
 			tempVoice.name = osVoices[i].name
 			tempVoice.voiceURI = osVoices[i].voiceURI
 			allVoices[i] = tempVoice
 
+			logit('🏗️ add osVoice '+i)
 			let option = document.createElement('option')
-			option.textContent = tempVoice.name + '/r' + tempVoice.lang
-			
+			option.textContent = words[1] +' '+ words[0] +' '+ tempVoice.lang
 			if(tempVoice.default) {
 				option.textContent += ' -- DEFAULT'
+				voxDefault = i
 			}
-
-			option.setAttribute('data-lang', tempVoice.lang)
-			option.setAttribute('data-name', tempVoice.name)
+			option.setAttribute('data-voxid', i)
 			$Aselect.appendChild(option)
+			
+			optionNames.push(words[1])
 		}
-	}
-	logit("Bselect exist? ")
-	if ( $Aselect.childElementCount ){
-		let newSelect = $Aselect.cloneNode(true)
-		newSelect.id = 'Bselect'
-		$Bplay.parentNode.appendChild(newSelect)
+  }
+	
+	// cloning Aselect seems to be the only way to get other Selects filled
+	let Bclone = $Aselect.cloneNode(true)
+	Bclone.id = 'Bselect'
+	$Surma.insertBefore( Bclone, $Surma.getElementsByTagName("br")[0] )
+	$Bselect = document.getElementById('Bselect')
+	let Nclone = $Aselect.cloneNode(true)
+	Nclone.id = 'Nselect'
+	$Narrator.insertBefore( Nclone, $Narrator.getElementsByTagName("br")[0] )
+	$Nselect = document.getElementById('Nselect')
+
+	// use presets to set GUI
+	logit('optionNames: '+ optionNames)
+	let $curVP // node of VoicePack's fieldset
+	let speakerVoices = []
+	let tName = ''
+	let tPitch = 1 // default
+	let tRate = 1
+	let speakerVoice = []
+	let keyVP = ''
+	for ( let h=0; h<3; h++ ){ // h = VoicePack counter
+		keyVP = Object.keys(voicePacks)[h]
+		// logit(keyVP)
+		speakerVoices = voicePacks[keyVP].split(', ')
+		speakerPreferenceLoop:
+		for ( let i=0; i<speakerVoices.length; i++ ){
+			speakerVoice = speakerVoices[i].split(' ')
+			tName = speakerVoice[0]
+			// logit('Jake:'+ tName)
+			for ( let j=0; j<optionNames.length; j++ ){
+				// logit(keyVP +':'+ tName +' opt:'+ optionNames[j])
+				if ( tName === optionNames[j] ){
+					matchedVoicePack[h] = {}
+					$curVP = document.getElementById(keyVP)
+					matchedVoicePack[h].name = tName
+					matchedVoicePack[h].option = j
+					$curVP.getElementsByTagName("select")[0].selectedIndex = j
+					tPitch = speakerVoice[1]
+					matchedVoicePack[h].pitch = tPitch
+					$curVP.getElementsByClassName("pitch-value")[0].innerText = tPitch
+					$curVP.getElementsByClassName("pitch-range")[0].value = tPitch
+					tRate = speakerVoice[2]
+					matchedVoicePack[h].rate = tRate
+					$curVP.getElementsByClassName("rate-value")[0].innerText = tRate
+					$curVP.getElementsByClassName("rate-range")[0].value = tRate
+					break speakerPreferenceLoop
+				}
+			}
+		}
+		logit(keyVP +'='+ matchedVoicePack[h].name +'🍉'+ matchedVoicePack[h].option)
 	}
 
-	$Aselect.selectedIndex = selectedIndex
+	logit('avox:'+ AvoxSelect)
+	logit('voicepacks loaded 🏢')
 }
-populateVoiceList();
+// populateVoiceList();
 if (synth.onvoiceschanged !== undefined) {
-  synth.onvoiceschanged = populateVoiceList;
+	logit('pop voice list')
+	synth.onvoiceschanged = ApopulateVoiceList
 }
-logit(`allVoices = 
-`+ allVoices)
 
-$Aplay.onclick = function(){ speakTest( "A" ) }
-
-function speakTest( speaker ){
-	event.preventDefault()
-	if ($inputTxt.value === '') { $inputTxt.value = 'test synthesiser' }
-	speakLine({
-		text:$inputTxt.value,
-		vox:1
-	})
-  $inputTxt.blur()
-}
+$Nplay.onclick = function(){ speakTest( 0 ) }
+$Npitch.onchange = function(){ $NpitchValue.textContent = $Npitch.value }
+$Nrate.onchange = function(){ $NrateValue.textContent = $Nrate.value }
+$Aplay.onclick = function(){ speakTest( 1 ) }
 $Apitch.onchange = function(){ $ApitchValue.textContent = $Apitch.value }
 $Arate.onchange = function(){ $ArateValue.textContent = $Arate.value }
-$Aselect.onchange = function(){ speakTest() }
+$Bplay.onclick = function(){ speakTest( 2 ) }
 $Bpitch.onchange = function(){ $BpitchValue.textContent = $Bpitch.value }
 $Brate.onchange = function(){ $BrateValue.textContent = $Brate.value }
-$Bselect.onchange = function(){ speakTest() }
+
+function speakTest( vox ){
+	event.preventDefault()
+	// if ($inputTxt.value === '') { $inputTxt.value = 'test synthesiser' }
+	speakLine({
+		text: document.getElementsByClassName('txt')[vox].value,
+		vox: vox,
+	})
+  // $inputTxt.blur()
+}
 
 function modeSynth(){
-	$mediaWrapper.classList.remove('active')
-	$synthWrapper.classList.add('active')
+	// $mediaWrapper.classList.remove('active')
+	// $synthWrapper.classList.add('active')  TODO: synth highlight
 	logit('flip to synth')
 }
 
@@ -816,8 +885,8 @@ function showMediaGUI(){
 	$mediaWrapper.classList.remove('cover')
 	$mediaPlayer.classList.add("show")
 	$mediaPlayer.classList.remove('hide')
-	$toggleMode.classList.add("show")
-	$toggleMode.classList.remove("hide")
+	$toggleLR.classList.add("show")
+	$toggleLR.classList.remove("hide")
 	$pauseAll.classList.add("show")
 	$pauseAll.classList.remove("hide")
 }
@@ -829,7 +898,7 @@ async function queueArray( arr ){
 		curCue = arr[i].mseconds
 		$curCue = document.getElementById( curCue )
 		arr[i].text = $curCue.textContent
-		arr[i].vox = $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
+		arr[i].vox = 1 * $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
 		logit( `prep:`+ curCue +` actID:`+ arr[i].actID +` # `+ i +` voice:`+ arr[i].vox +`
 		`+ arr[i].text )  
 		// highlight
@@ -888,21 +957,25 @@ async function speakLine({
 	text = '',
 	vox = 0,
 }={}){
-	logit('speakLine selected:'+ $Aselect.selectedIndex +' vox:'+ vox )
+	let voxid = 0
 	let sayThis = new SpeechSynthesisUtterance(text)
 	if ( vox === 1 ){
+		voxid = $Aselect.options[$Aselect.selectedIndex].getAttribute('data-voxid')
 		sayThis.pitch = $Apitch.value
 		sayThis.rate = $Arate.value
-		sayThis.voice = osVoices[$Aselect.selectedIndex]
+		sayThis.voice = osVoices[voxid]
 	} else if ( vox === 2 ){
+		voxid = $Bselect.options[$Bselect.selectedIndex].getAttribute('data-voxid')
 		sayThis.pitch = $Bpitch.value
 		sayThis.rate = $Brate.value
-		sayThis.voice = osVoices[$Bselect.selectedIndex]
-	} else {
-		sayThis.pitch = voicePacks[vox].pitch
-		sayThis.rate = voicePacks[vox].rate
-		sayThis.voice = osVoices[vox]
+		sayThis.voice = osVoices[voxid]
+	} else { // Narrator
+		voxid = $Bselect.options[$Nselect.selectedIndex].getAttribute('data-voxid')
+		sayThis.pitch = $Npitch.value
+		sayThis.rate = $Nrate.value
+		sayThis.voice = osVoices[voxid]
 	}
+	logit('speakLine sel:'+ $Aselect.selectedIndex +' mapped:'+ voxid +' vox:'+ vox )
 	synth.speak(sayThis)
 
 	return new Promise( resolve =>{

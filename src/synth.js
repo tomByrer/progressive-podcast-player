@@ -1,19 +1,31 @@
 /* synth.js */
-const $synthWrapper = document.getElementById("synthWrapper")
 const $inputForm = document.querySelector('form')
-const $inputTxt = document.querySelector('.txt')
+
 const $Aselect = document.getElementById('Aselect')
 const $Apitch = document.getElementById('Apitch')
 const $ApitchValue = document.getElementById('ApitchValue')
 const $Arate = document.getElementById('Arate')
 const $ArateValue = document.getElementById('ArateValue')
 const $Aplay = document.getElementById('Aplay')
-const $Bselect = document.getElementById('Bselect')
+
+const $Surma = document.getElementById('Surma')
+ // workaround since have to re-assign $Bselect after cloning from $Aselect
+let $Bselect = document.getElementById('Bselect')
 const $Bpitch = document.getElementById('Bpitch')
 const $BpitchValue = document.getElementById('BpitchValue')
 const $Brate = document.getElementById('Brate')
 const $BrateValue = document.getElementById('BrateValue')
 const $Bplay = document.getElementById('Bplay')
+
+const $Narrator = document.getElementById('Narrator')
+ // workaround since have to re-assign $Bselect after cloning from $Aselect
+let $Nselect = document.getElementById('Nselect')
+const $Npitch = document.getElementById('Npitch')
+const $NpitchValue = document.getElementById('NpitchValue')
+const $Nrate = document.getElementById('Nrate')
+const $NrateValue = document.getElementById('NrateValue')
+const $Nplay = document.getElementById('Nplay')
+
 let arrTemp = []
 
 /*
@@ -21,74 +33,131 @@ let arrTemp = []
  */
 let osVoices = []
 let allVoices = []
-function populateVoiceList(){
+let voxDefault = 0
+let voicePackNarrator = []
+let matchedVoicePack = []  //TODO: see if global VP values are needed for state, or just use GUI as state storage
+function ApopulateVoiceList(){
   osVoices = synth.getVoices().sort(function (a, b) {
       const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
       if ( aname < bname ) return -1;
       else if ( aname == bname ) return 0;
       else return +1;
-  });
-  var selectedIndex = $Aselect.selectedIndex < 0 ? 0 : $Aselect.selectedIndex
-  $Aselect.innerHTML = ''
-  for(i = 0; i < osVoices.length ; i++) {
-		// populate array for later use
+  })
+	let words = ''
+	let tVox = []
+	let AvoxSelect = 0
+	let idxFound = 0
+	let optionNames = []
+
+  for(i = 0; i < osVoices.length ; i++ ){
 		if ( osVoices[i].localService ){
-    let tempVoice = {}
+			// populate array for later use
+			let tempVoice = {} 
+			words = osVoices[i].name.split(' ')
 			tempVoice.default = osVoices[i].default
 			tempVoice.lang = osVoices[i].lang
+			tempVoice.localService = osVoices[i].localService
 			tempVoice.name = osVoices[i].name
 			tempVoice.voiceURI = osVoices[i].voiceURI
 			allVoices[i] = tempVoice
 
+			logit('🏗️ add osVoice '+i)
 			let option = document.createElement('option')
-			option.textContent = tempVoice.name + '/r' + tempVoice.lang
-			
+			option.textContent = words[1] +' '+ words[0] +' '+ tempVoice.lang
 			if(tempVoice.default) {
 				option.textContent += ' -- DEFAULT'
+				voxDefault = i
 			}
-
-			option.setAttribute('data-lang', tempVoice.lang)
-			option.setAttribute('data-name', tempVoice.name)
+			option.setAttribute('data-voxid', i)
 			$Aselect.appendChild(option)
+			
+			optionNames.push(words[1])
 		}
-	}
-	logit("Bselect exist? ")
-	if ( $Aselect.childElementCount ){
-		let newSelect = $Aselect.cloneNode(true)
-		newSelect.id = 'Bselect'
-		$Bplay.parentNode.appendChild(newSelect)
+  }
+	
+	// cloning Aselect seems to be the only way to get other Selects filled
+	let Bclone = $Aselect.cloneNode(true)
+	Bclone.id = 'Bselect'
+	$Surma.insertBefore( Bclone, $Surma.getElementsByTagName("br")[0] )
+	$Bselect = document.getElementById('Bselect')
+	let Nclone = $Aselect.cloneNode(true)
+	Nclone.id = 'Nselect'
+	$Narrator.insertBefore( Nclone, $Narrator.getElementsByTagName("br")[0] )
+	$Nselect = document.getElementById('Nselect')
+
+	// use presets to set GUI
+	logit('optionNames: '+ optionNames)
+	let $curVP // node of VoicePack's fieldset
+	let speakerVoices = []
+	let tName = ''
+	let tPitch = 1 // default
+	let tRate = 1
+	let speakerVoice = []
+	let keyVP = ''
+	for ( let h=0; h<3; h++ ){ // h = VoicePack counter
+		keyVP = Object.keys(voicePacks)[h]
+		// logit(keyVP)
+		speakerVoices = voicePacks[keyVP].split(', ')
+		speakerPreferenceLoop:
+		for ( let i=0; i<speakerVoices.length; i++ ){
+			speakerVoice = speakerVoices[i].split(' ')
+			tName = speakerVoice[0]
+			// logit('Jake:'+ tName)
+			for ( let j=0; j<optionNames.length; j++ ){
+				// logit(keyVP +':'+ tName +' opt:'+ optionNames[j])
+				if ( tName === optionNames[j] ){
+					matchedVoicePack[h] = {}
+					$curVP = document.getElementById(keyVP)
+					matchedVoicePack[h].name = tName
+					matchedVoicePack[h].option = j
+					$curVP.getElementsByTagName("select")[0].selectedIndex = j
+					tPitch = speakerVoice[1]
+					matchedVoicePack[h].pitch = tPitch
+					$curVP.getElementsByClassName("pitch-value")[0].innerText = tPitch
+					$curVP.getElementsByClassName("pitch-range")[0].value = tPitch
+					tRate = speakerVoice[2]
+					matchedVoicePack[h].rate = tRate
+					$curVP.getElementsByClassName("rate-value")[0].innerText = tRate
+					$curVP.getElementsByClassName("rate-range")[0].value = tRate
+					break speakerPreferenceLoop
+				}
+			}
+		}
+		logit(keyVP +'='+ matchedVoicePack[h].name +'🍉'+ matchedVoicePack[h].option)
 	}
 
-	$Aselect.selectedIndex = selectedIndex
+	logit('avox:'+ AvoxSelect)
+	logit('voicepacks loaded 🏢')
 }
-populateVoiceList();
+// populateVoiceList();
 if (synth.onvoiceschanged !== undefined) {
-  synth.onvoiceschanged = populateVoiceList;
+	logit('pop voice list')
+	synth.onvoiceschanged = ApopulateVoiceList
 }
-logit(`allVoices = 
-`+ allVoices)
 
-$Aplay.onclick = function(){ speakTest( "A" ) }
-
-function speakTest( speaker ){
-	event.preventDefault()
-	if ($inputTxt.value === '') { $inputTxt.value = 'test synthesiser' }
-	speakLine({
-		text:$inputTxt.value,
-		vox:1
-	})
-  $inputTxt.blur()
-}
+$Nplay.onclick = function(){ speakTest( 0 ) }
+$Npitch.onchange = function(){ $NpitchValue.textContent = $Npitch.value }
+$Nrate.onchange = function(){ $NrateValue.textContent = $Nrate.value }
+$Aplay.onclick = function(){ speakTest( 1 ) }
 $Apitch.onchange = function(){ $ApitchValue.textContent = $Apitch.value }
 $Arate.onchange = function(){ $ArateValue.textContent = $Arate.value }
-$Aselect.onchange = function(){ speakTest() }
+$Bplay.onclick = function(){ speakTest( 2 ) }
 $Bpitch.onchange = function(){ $BpitchValue.textContent = $Bpitch.value }
 $Brate.onchange = function(){ $BrateValue.textContent = $Brate.value }
-$Bselect.onchange = function(){ speakTest() }
+
+function speakTest( vox ){
+	event.preventDefault()
+	// if ($inputTxt.value === '') { $inputTxt.value = 'test synthesiser' }
+	speakLine({
+		text: document.getElementsByClassName('txt')[vox].value,
+		vox: vox,
+	})
+  // $inputTxt.blur()
+}
 
 function modeSynth(){
-	$mediaWrapper.classList.remove('active')
-	$synthWrapper.classList.add('active')
+	// $mediaWrapper.classList.remove('active')
+	// $synthWrapper.classList.add('active')  TODO: synth highlight
 	logit('flip to synth')
 }
 
@@ -105,8 +174,8 @@ function showMediaGUI(){
 	$mediaWrapper.classList.remove('cover')
 	$mediaPlayer.classList.add("show")
 	$mediaPlayer.classList.remove('hide')
-	$toggleMode.classList.add("show")
-	$toggleMode.classList.remove("hide")
+	$toggleLR.classList.add("show")
+	$toggleLR.classList.remove("hide")
 	$pauseAll.classList.add("show")
 	$pauseAll.classList.remove("hide")
 }
@@ -118,7 +187,7 @@ async function queueArray( arr ){
 		curCue = arr[i].mseconds
 		$curCue = document.getElementById( curCue )
 		arr[i].text = $curCue.textContent
-		arr[i].vox = $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
+		arr[i].vox = 1 * $curCue.classList[0].charAt(1) // assumes voice number is 1st classs
 		logit( `prep:`+ curCue +` actID:`+ arr[i].actID +` # `+ i +` voice:`+ arr[i].vox +`
 		`+ arr[i].text )  
 		// highlight
@@ -177,21 +246,25 @@ async function speakLine({
 	text = '',
 	vox = 0,
 }={}){
-	logit('speakLine selected:'+ $Aselect.selectedIndex +' vox:'+ vox )
+	let voxid = 0
 	let sayThis = new SpeechSynthesisUtterance(text)
 	if ( vox === 1 ){
+		voxid = $Aselect.options[$Aselect.selectedIndex].getAttribute('data-voxid')
 		sayThis.pitch = $Apitch.value
 		sayThis.rate = $Arate.value
-		sayThis.voice = osVoices[$Aselect.selectedIndex]
+		sayThis.voice = osVoices[voxid]
 	} else if ( vox === 2 ){
+		voxid = $Bselect.options[$Bselect.selectedIndex].getAttribute('data-voxid')
 		sayThis.pitch = $Bpitch.value
 		sayThis.rate = $Brate.value
-		sayThis.voice = osVoices[$Bselect.selectedIndex]
-	} else {
-		sayThis.pitch = voicePacks[vox].pitch
-		sayThis.rate = voicePacks[vox].rate
-		sayThis.voice = osVoices[vox]
+		sayThis.voice = osVoices[voxid]
+	} else { // Narrator
+		voxid = $Bselect.options[$Nselect.selectedIndex].getAttribute('data-voxid')
+		sayThis.pitch = $Npitch.value
+		sayThis.rate = $Nrate.value
+		sayThis.voice = osVoices[voxid]
 	}
+	logit('speakLine sel:'+ $Aselect.selectedIndex +' mapped:'+ voxid +' vox:'+ vox )
 	synth.speak(sayThis)
 
 	return new Promise( resolve =>{

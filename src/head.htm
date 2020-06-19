@@ -14,10 +14,10 @@
 	<button id="startDemo" onclick="playSpeachDemo()">Play Demo</button>
 	<button id="randomStart" onclick="playSpeachDemo('random')">Play Random</button>
 	<br>
-	<button id="pauseAll" class="hide" onclick="pauseAll()">Pause</button>
+	<button id="pauseAll" class="" onclick="pauseAll()">Pause</button>
 	<br>
-	<span id="toggleMode" class="toggle toggle-off ">
-		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbMode" class="toggle" onclick="toggleTag(this.parentNode)" role="switch"><label for="cbMode" class="toggle">Toggle</label>
+	<span id="toggleLR" class="toggle toggle-off ">
+		<span class="band band-off" onclick="clickBandTag(this.parentNode,false)">synth</span><input type="checkbox" id="cbSwitch" class="toggle" onclick="postSwitch(this.parentNode)" role="switch"><label for="cbSwitch" class="toggle">Toggle</label>
 		<span class="band band-on" onclick="clickBandTag(this.parentNode,true)">MP3</span>
 	</span>
 	<br>

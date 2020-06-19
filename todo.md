@@ -1,17 +1,14 @@
-[ ] better CSS grid
-[ ] remove mp3
-[ ] refactor to use DOM as data (remove actions?)
-[ ] refactor Synth VoicePack
-[ ] each vox gets GUI
-[ ] testing for bugs
+
 [ ] test on OSX & Windows
-[ ] refactor `line`->`cue`? & 1 highlightLine()
 [ ] ! synth voice presets selection on different browsers / OS
+[ ] fix MP3 highlighting when paused & switched to synth
 
 ## Done
 
-[ ] playing synth moves media timeline marker (staying unplayed)
-[-] choose voices
+[x] playing synth moves media timeline marker (& auto plays)
+[x] choose voices
+[x] refactor Synth VoicePack
+[x] each vox gets GUI
 [x] remake switch to show load status of MP3
 [x] timer 'load' simulation now for media player & $pauseAll
 [x] fix click on media seek for switch to media or stay on synth?
@@ -40,7 +37,13 @@
 [x] refactor build for synth controlls
 [x] improve button GUI
 
+## Backlog
+
+[ ] automated testing
+[ ] better CSS grid
+
 ## Won't Fix
 
 [ ] playing synth moves player head?
 		- moving player head auto-starts
+[ ] refactor `line`->`cue`? & 1 highlightLine()

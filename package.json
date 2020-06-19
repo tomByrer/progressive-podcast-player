@@ -1,6 +1,6 @@
 {
   "name": "progressive-podcast-player",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "build Audio AutoTalk Transscript HTML MVP",
   "main": "index.js",
   "type": "module",

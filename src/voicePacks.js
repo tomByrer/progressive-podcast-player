@@ -1,20 +1,8 @@
-let voicePacks = [
-	{
-		name: "none",
-		voice: "Microsoft Hanhan Desktop - Chinese (Taiwan)",
-		rate: 1,
-		pitch: 0.9,
-	},
-	{
-		name: "Jake",
-		voice: "Microsoft David Desktop - English (United States)",
-		rate: 0.9,
-		pitch: 0.1,
-	},
-	{
-		name: "Surma",
-		voice: "Microsoft Zira Desktop - English (United States)",
-		rate: 0.95,
-		pitch: 0.6,
-	},
-];
+// presets for voice synths
+let voicePacks = {
+	Narrator: "Zira 1.8 1.1",
+	Jake: "fake 0 0, James 0.6 1.2, David 0.7 1.2",
+	Surma: "Sean 0.4 1.1, Zira 0.6 1.1",
+	template: "synthVoiceShoertName pitch rate, secondary, etc"
+}
+;

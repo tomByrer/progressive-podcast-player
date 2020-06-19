@@ -1,45 +1,58 @@
-<form id=synthWrapper>
-	<!-- <div>
-		<label for="Arate">Rate</label><input type="range" min="0.5" max="2" value="1" step="0.1" id="rate">
-		<div class="rate-value">1</div>
-		<div class="clearfix"></div>
-	</div> -->
-  <fieldset>
-    <legend>VoicePack A:</legend>
-		<div>
-			<label class="lbl-synth">Pitch <span id="ApitchValue">1</span> </label>
-			<input type="range" id="Apitch" min="0" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<div>
-			<label class="lbl-synth">Rate <span id="ArateValue">1</span> </label>
-			<input type="range" id="Arate" min="0.1" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<select id="Aselect"></select>
-		<div class="clearfix"></div>
-		<button id="Aplay">Play</button>
-	</fieldset>
-  <fieldset>
-    <legend>VoicePack B:</legend>
-		<div>
-			<label class="lbl-synth">Pitch <span id="BpitchValue">1</span> </label>
-			<input type="range" id="Bpitch" min="0" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<div>
-			<label class="lbl-synth">Rate <span id="BrateValue">1</span> </label>
-			<input type="range" id="Brate" min="0.1" max="2" value="1" step="0.1">
-			<div class="clearfix"></div>
-		</div>
-		<!-- <select id="Bselect"></select> -->
-		<div class="clearfix"></div>
-		<button id="Bplay">Play</button>
-	</fieldset>
 
+<fieldset id="Narrator" class="synthWrapper">
+	<legend>Narrator VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="NpitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Npitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="NrateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Nrate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<!-- <select id="Nselect"></select> -->
+	<br>
+	<button id="Nplay">Test</button>
+	<input type="text" class="txt" value="test Narrator's synthesiser">
+</fieldset>
 
+<fieldset id="Jake" class="synthWrapper">
+	<legend>Jake VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="ApitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Apitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="ArateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Arate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<select id="Aselect"></select>
+	<br>
+	<button id="Aplay">Test</button>
+	<input type="text" class="txt" value="test Jake's synthesiser">
+</fieldset>
 
-	<input type="text" class="txt" value="test synthesiser">
-</form>
+<fieldset id="Surma" class="synthWrapper">
+	<legend>Surma VoicePack</legend>
+	<div>
+		<label class="lbl-synth">Pitch <span id="BpitchValue" class="pitch-value">1</span> </label>
+		<input type="range" id="Bpitch" class="pitch-range" min="0" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<div>
+		<label class="lbl-synth">Rate <span id="BrateValue" class="rate-value">1</span> </label>
+		<input type="range" id="Brate" class="rate-range" min="0.1" max="2" value="1" step="0.1">
+		<div class="clearfix"></div>
+	</div>
+	<!-- <select id="Bselect"></select> -->
+	<br>
+	<button id="Bplay">Test</button>
+	<input type="text" class="txt" value="test Surma's synthesiser">
+</fieldset>
+
 <textarea id="log" name="out">logOutput</textarea><br>
 <button onclick="copyLog()">Copy log</button>
+	

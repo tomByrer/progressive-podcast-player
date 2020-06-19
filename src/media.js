@@ -4,6 +4,7 @@ let closest = 0
 let closestOld = 0
 let idxPrevious = 0
 let curTime = 0
+
 function findNearUnder( arr=actions.hear, val=curTime ){
 	return Math.max.apply(null, arr.filter(
 		function( v ){
@@ -12,7 +13,7 @@ function findNearUnder( arr=actions.hear, val=curTime ){
 }
 $mediaPlayer.ontimeupdate = function(){
 	// $curCapton.classList.remove('spoke')
-	curTime = $mediaPlayer.currentTime * 1000
+	curTime = getMediaTime()
 	logit( `play time~`+ curTime )
 	closest = findNearUnder()
 	if ( closest !== closestOld ){	
@@ -36,7 +37,6 @@ $mediaPlayer.ontimeupdate = function(){
 
 function modeAudio(){
 	$mediaWrapper.classList.add('active')
-	// $synthWrapper.classList.remove('active')
 	logit('fliped to audio')
 }
 

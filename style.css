@@ -188,12 +188,13 @@ button#pauseAll::before {
   background: rgba(0, 0, 0, 0.3819);
 }
 
-#mediaWrapper, #synthWrapper {
+#mediaWrapper, .synthWrapper {
   padding: 1em 0;
 }
 div.active { where talk
   background: rgba(255, 166, 0, 0.1618);
 }
+
 
 /* checkbox toggle */
 :root {
@@ -227,7 +228,7 @@ label.toggle {
   position: relative;
   top: -0.25em;
   text-indent: -99999px;
-  width: calc(2* var(--sw-size));
+  width: calc(1.618 * var(--sw-size));
   height: var(--sw-size);
   background: hsl(var(--sw-off-color));
   border-radius: var(--sw-size);
