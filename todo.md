@@ -1,7 +1,7 @@
 
 [ ] test on OSX & Windows
 [ ] ! synth voice presets selection on different browsers / OS
-[ ] fix MP3 highlighting when paused & switched to synth
+[ ] fix Firefox TimedText scrolling
 
 ## Done
 
@@ -44,6 +44,10 @@
 
 ## Won't Fix
 
-[ ] playing synth moves player head?
-		- moving player head auto-starts
 [ ] refactor `line`->`cue`? & 1 highlightLine()
+
+### needs new player UI
+[ ] playing synth moves player head?
+[ ] fix MP3 highlighting when paused & switched to synth
+	[ ] add move media play head when on synth & paused
+		- moving player head auto-starts

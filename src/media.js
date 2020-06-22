@@ -12,7 +12,7 @@ function findNearUnder( arr=actions.hear, val=curTime ){
 	))
 }
 $mediaPlayer.ontimeupdate = function(){
-	// $curCapton.classList.remove('spoke')
+	// $curCue.classList.remove('spoke')
 	curTime = getMediaTime()
 	logit( `play time~`+ curTime )
 	closest = findNearUnder()

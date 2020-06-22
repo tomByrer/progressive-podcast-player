@@ -7,7 +7,8 @@
 </head><body>
 
 <h1>Progressive Podcast Player</h1>
-<p>Enter some text in the input below and press return  or the "play" button to hear it. change voices using the dropdown menu.</p>
+<p>Inspired by Kent C Dodds' idea he posted on Twitter early 2019.</p>
+<p>Voice synth only works in Chrome, & seems only in Windows, sorry!  But MP3 player works everywhere (default audio tag) & you can read the transcript if the MP3 doesn't load. :)</p>
 
 
 <div class="controls">
@@ -536,7 +537,6 @@ const $toggleLR = document.getElementById("toggleLR")
 const $cueList = document.getElementById("timedtext")
 let cueListLength = $cueList.getElementsByTagName('li').length
 let $curCue = $cueList.firstChild
-let $curCapton = $cueList.firstChild
 const $log = document.getElementById('log')
 
 let isFirstPlay = true
@@ -556,10 +556,10 @@ function getRandomInt(min, max) {
 }
 // switchAudio()  why is this here?  typo?
 async function highlightLine( closest=findNearUnder() ) {
-	$curCapton.classList.remove('speaking')
-	$curCapton = document.getElementById( closest )
-	$curCapton.classList.add('spoke', 'speaking')
-	$curCapton.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
+	$curCue.classList.remove('speaking')
+	$curCue = document.getElementById( closest )
+	$curCue.classList.add('spoke', 'speaking')
+	$curCue.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
 }
 async function playMedia( closest=curCue*0.001 ) {
 	logit(`startPlay `+ $mediaPlayer.currentTime)
@@ -587,7 +587,7 @@ function copyLog(){
 function switchAudio(){
 	if ( $cbModeMedia.checked ){
 		modeSynth()
-		$curCapton.classList.remove('speaking')
+		$curCue.classList.remove('speaking')
 	} else {
 		modeAudio()
 	}
@@ -633,6 +633,8 @@ async function j( mseconds ){
 }
 
 function pauseAll(){
+	logit('⏸️')
+	// $mediaPlayer.currentTime = mseconds * 0.001  can't set time in media scroll bar
 	// if (!$cbModeMedia.checked){
 		clearSpeech({ all:true })
 	// } else {
@@ -673,7 +675,7 @@ function findNearUnder( arr=actions.hear, val=curTime ){
 	))
 }
 $mediaPlayer.ontimeupdate = function(){
-	// $curCapton.classList.remove('spoke')
+	// $curCue.classList.remove('spoke')
 	curTime = getMediaTime()
 	logit( `play time~`+ curTime )
 	closest = findNearUnder()
@@ -721,7 +723,6 @@ $mediaPlayer.addEventListener('pause', function(){
 
 $mediaPlayer.onplaying = function(){
 	logit( `▶️playing time~`+ getMediaTime() +`ms` )
-	// j( findNearUnder() )
 	mediaStatus = 'playing'
 }
 

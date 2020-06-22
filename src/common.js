@@ -7,7 +7,6 @@ const $toggleLR = document.getElementById("toggleLR")
 const $cueList = document.getElementById("timedtext")
 let cueListLength = $cueList.getElementsByTagName('li').length
 let $curCue = $cueList.firstChild
-let $curCapton = $cueList.firstChild
 const $log = document.getElementById('log')
 
 let isFirstPlay = true
@@ -27,10 +26,10 @@ function getRandomInt(min, max) {
 }
 // switchAudio()  why is this here?  typo?
 async function highlightLine( closest=findNearUnder() ) {
-	$curCapton.classList.remove('speaking')
-	$curCapton = document.getElementById( closest )
-	$curCapton.classList.add('spoke', 'speaking')
-	$curCapton.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
+	$curCue.classList.remove('speaking')
+	$curCue = document.getElementById( closest )
+	$curCue.classList.add('spoke', 'speaking')
+	$curCue.scrollIntoViewIfNeeded({behavior: "auto", block: "start", inline: "nearest"})
 }
 async function playMedia( closest=curCue*0.001 ) {
 	logit(`startPlay `+ $mediaPlayer.currentTime)
@@ -58,7 +57,7 @@ function copyLog(){
 function switchAudio(){
 	if ( $cbModeMedia.checked ){
 		modeSynth()
-		$curCapton.classList.remove('speaking')
+		$curCue.classList.remove('speaking')
 	} else {
 		modeAudio()
 	}
@@ -104,6 +103,8 @@ async function j( mseconds ){
 }
 
 function pauseAll(){
+	logit('⏸️')
+	// $mediaPlayer.currentTime = mseconds * 0.001  can't set time in media scroll bar
 	// if (!$cbModeMedia.checked){
 		clearSpeech({ all:true })
 	// } else {
